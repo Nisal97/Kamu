@@ -1,6 +1,11 @@
-buyerButton{
-    position: center;
-    width: 263px;
-    height: 64px;
-    color: #df1f4e;
+.ui-btn{
+    text-align: center;
+    text-decoration: none;
+    font-family: Capriola, serif;
+}
+
+@font-face {
+    font-family: Capriola;
+    src: url('Fonts/Capriola.ttf');
+    font-style: normal;
 }
