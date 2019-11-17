@@ -4,6 +4,26 @@
     font-family: Capriola, serif;
 }
 
+#homeButtons{
+    vertical-align: bottom;
+    width: 263px;
+    height: 64px;
+}
+
+#logo{
+    vertical-align: top;
+}
+
+.home{
+    position: relative;
+}
+
+.home.buttons{
+    position: absolute;
+    bottom: 0;
+}
+
+
 @font-face {
     font-family: Capriola;
     src: url('Fonts/Capriola.ttf');
