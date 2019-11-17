@@ -12,6 +12,8 @@
 
 #logo{
     vertical-align: top;
+    width: 284px;
+    height: 284px;
 }
 
 .home{
@@ -23,6 +25,21 @@
     bottom: 0;
 }
 
+#footer{
+    position: absolute !important;
+    bottom: 0;
+    width: 100%;
+}
+
+#buyerLogin{
+    background: #df1f4e;
+    color: white
+}
+
+#sellerLogin{
+    background: #ee9933;
+    color: white
+}
 
 @font-face {
     font-family: Capriola;
