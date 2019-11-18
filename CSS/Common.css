@@ -5,15 +5,17 @@
 }
 
 #homeButtons{
+    background-position: bottom;
     vertical-align: bottom;
     width: 263px;
     height: 64px;
 }
 
 #logo{
+    width: 50%;
     vertical-align: top;
-    width: 284px;
-    height: 284px;
+    /*width: 284px;*/
+    /*height: 284px;*/
 }
 
 .home{
@@ -29,6 +31,7 @@
     position: absolute !important;
     bottom: 0;
     width: 100%;
+    background: white;
 }
 
 #buyerLogin{

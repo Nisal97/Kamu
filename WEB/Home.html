@@ -13,11 +13,13 @@
 <body>
 <div id="homePage" data-role="page" align="center" class="home">
 
-    <div id="logo" data-role="content">
-        <img src="../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="middle">
+    <div data-role="content">
+        <img id="logo" src="../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="middle"> <!--Logo-->
     </div>
+
     <div id="homeButtons" class="buttons" data-ajax="false" data-inset="true">
-        <a href="BuyerLogin.html" data-role="button" class="ui-btn ui-corner-all" id="buyerLogin">Eat Now</a>
+
+        <a href="BuyerLogin.html" data-role="button" class="ui-btn ui-corner-all" id="buyerLogin">Eat Now</a>  <!--Eat now button-->
         <script type="text/javascript">
             $(document).ready(function () {
                 $("#buyerLogin").click(function () {
@@ -28,7 +30,7 @@
             })
         </script>
 
-        <a href="SellerLogin.html" data-role="button" class="ui-btn ui-corner-all" id="sellerLogin">Sell Now</a>
+        <a href="SellerLogin.html" data-role="button" class="ui-btn ui-corner-all" id="sellerLogin">Sell Now</a> <!--Sell now button-->
         <script type="text/javascript">
             $(document).ready(function () {
                 $("#sellerLogin").click(function () {
