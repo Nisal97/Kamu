@@ -11,6 +11,13 @@
     align-self: center;
 }
 
+#dataArea{
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 20px;
+}
+
+
 #signUpButton{
     background: #df1f4e;
     font-size: 300%;
