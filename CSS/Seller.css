@@ -5,12 +5,8 @@
     font-size: 300%;
 }
 
-#logo{
-    width: 25%;
-    vertical-align: top;
-    alignment: center;
-}
-
 .sellerLoginLogo{
+    width: 10%;
+    vertical-align: top;
     alignment: center;
 }

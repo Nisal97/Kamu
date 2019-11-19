@@ -7,12 +7,14 @@
 #homeButtons{
     background-position: bottom;
     vertical-align: bottom;
-    width: 263px;
-    height: 64px;
+    width: 40%;
+    height: 40%;
+    padding-top: 20%;
 }
 
 #logo{
-    width: 50%;
+    padding-top: 15%;
+    width: 70%;
     vertical-align: top;
     /*width: 284px;*/
     /*height: 284px;*/
@@ -22,10 +24,7 @@
     position: relative;
 }
 
-.home.buttons{
-    position: absolute;
-    bottom: 0;
-}
+
 
 #footer{
     position: absolute !important;
@@ -36,12 +35,18 @@
 
 #buyerLogin{
     background: #df1f4e;
-    color: white
+    color: white;
+    padding-bottom: 10%;
+    padding-top: 10%;
+    width: 100%;
 }
 
 #sellerLogin{
     background: #ee9933;
-    color: white
+    color: white;
+    padding-bottom: 10%;
+    padding-top: 10%;
+    width: 100%;
 }
 
 @font-face {
