@@ -12,16 +12,7 @@
 #dataArea{
     padding-left: 30px;
     padding-right: 30px;
-    height: 20px;
-}
-#buyerUserName{
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    padding-right: 10px;
-}
-#uNameImage{
-    height: 10%;
-    width: 10%;
+    height: 40px;
 }
 
 #signUpButton{
