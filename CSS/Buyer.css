@@ -11,6 +11,12 @@
     align-self: center;
 }
 
-#buyerEmailAddress{
+#signUpButton{
+    background: #df1f4e;
+    font-size: 300%;
+    color: white;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    width: 80%;
 
 }
