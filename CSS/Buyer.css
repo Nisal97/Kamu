@@ -4,19 +4,25 @@
     line-height: 100%;
     font-size: 400%;
 }
-
 #buyerLoginLogo{
     width: 30%;
     vertical-align: top;
     align-self: center;
 }
-
 #dataArea{
     padding-left: 30px;
     padding-right: 30px;
     height: 20px;
 }
-
+#buyerUserName{
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    padding-right: 10px;
+}
+#uNameImage{
+    height: 10%;
+    width: 10%;
+}
 
 #signUpButton{
     background: #df1f4e;
@@ -25,5 +31,4 @@
     padding-bottom: 30px;
     padding-top: 30px;
     width: 80%;
-
 }
