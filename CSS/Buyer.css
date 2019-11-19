@@ -2,11 +2,15 @@
     width: 100%;
     align-content: center;
     line-height: 100%;
-    font-size: 300%;
+    font-size: 400%;
 }
 
-.buyerLoginLogo{
-    width: 10%;
+#buyerLoginLogo{
+    width: 30%;
     vertical-align: top;
-    alignment: center;
+    align-self: center;
+}
+
+#buyerEmailAddress{
+
 }
