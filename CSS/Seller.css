@@ -3,6 +3,10 @@
     background: white;
     font-size: 400%;
     padding-left: 15%;
+    width: 100%;
+    align-content: center;
+    line-height: 100%;
+    font-size: 400%;
 }
 
 #logo1{
@@ -29,6 +33,22 @@
     padding-top: 10%;
     width: 100%;
 }
+
+#dataArea{
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 40px;
+}
+
+#signUpButton{
+    background: #ee9933;
+    font-size: 300%;
+    color: white;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    width: 80%;
+}
+
 
 #sellerSignInFooter{
     position: absolute !important;

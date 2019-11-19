@@ -66,3 +66,37 @@
     src: url('Fonts/Montserrat.ttf');
     font-style: normal;
 }
+
+#contactUSTopic{
+    width: 100%;
+    align-content: center;
+    line-height: 100%;
+    font-size: 400%;
+}
+
+#emailButton{
+    background: #df1f4e;
+    font-size: 300%;
+    color: white;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    width: 50%;
+}
+
+#callButton{
+    background: #df1f4e;
+    font-size: 300%;
+    color: white;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    width: 50%;
+}
+
+#helpButton{
+    background: #df1f4e;
+    font-size: 300%;
+    color: white;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    width: 50%;
+}
