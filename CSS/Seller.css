@@ -10,3 +10,26 @@
     vertical-align: top;
     align-content: center;
 }
+
+#sellerSignInButtonArea{
+    background-position: bottom;
+    vertical-align: bottom;
+    width: 40%;
+    height: 40%;
+    padding-top: 20%;
+}
+
+#sellerSignInButton{
+    background: #ee9933;
+    color: white;
+    padding-bottom: 10%;
+    padding-top: 10%;
+    width: 100%;
+}
+
+#sellerSignInFooter{
+    position: absolute !important;
+    bottom: 0;
+    width: 100%;
+    background: white;
+}

@@ -21,9 +21,29 @@
     </div>
 
     <div class="sellerLoginCredentials" style="text-align: center">
-        <label for="textinput-hide" class="ui-hidden-accessible">User Name</label>
+        <label for="sellerUserName" class="ui-hidden-accessible">User Name</label>
+        <input type="text" name="sellerUserName" id="sellerUserName" placeholder="User Name" value="">
+        <br>
+        <label for="sellerPassword" class="ui-hidden-accessible">Password</label>
+        <input type="password" name="sellerPassword" id="sellerPassword" placeholder="Password" value="">
     </div>
 
+    <div id="sellerSignInButtonArea">
+        <a href="SellerLogin.html" data-role="button" class="ui-btn ui-corner-all" id="sellerSignInButton" data-transition="slidefade">Sign In</a> <!--Sell now button-->
+        <script>
+            $(document).ready(function () {
+                $("#sellerLogin").click(function () {
+                    console.log("redirecting to seller login page");
+                    document.location.href = "./SellerLogin.html";
+                }); {
+                }
+            })
+        </script>
+    </div>
+
+    <div data-role="footer" id="sellerSignInFooter">
+        <p><h1 style="color: black">Don't have an account? </h1><a href="" data-role="text" id="sellerSignUpText" data-transition="slidefade">Sign Up</a></p>
+    </div>
 
 
 </div>
