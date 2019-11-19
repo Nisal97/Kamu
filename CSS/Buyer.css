@@ -1,10 +1,8 @@
-#sellerLoginTopic{
+#buyerLoginTopic{
     width: 70%;
     background: white;
     font-size: 400%;
     padding-left: 15%;
-    align-content: center;
-    line-height: 100%;
 }
 
 #logo1{
@@ -13,8 +11,13 @@
     align-content: center;
     padding-bottom: 25%;
 }
+#dataArea {
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 40px;
+}
 
-#sellerSignInButtonArea{
+#buyerSignInButtonArea{
     background-position: bottom;
     vertical-align: bottom;
     width: 40%;
@@ -24,31 +27,21 @@
     margin-left: 30%;
 }
 
-#sellerSignInButton{
-    background: #ee9933;
+#signUpButton{
+    background: #df1f4e;
+    color: white;
+    width: 100%;
+}
+
+#buyerSignInButton{
+    background: #df1f4e;
     color: white;
     padding-bottom: 10%;
     padding-top: 10%;
     width: 100%;
 }
 
-#dataArea{
-    padding-left: 30px;
-    padding-right: 30px;
-    height: 40px;
-}
-
-#signUpButton{
-    background: #ee9933;
-    font-size: 300%;
-    color: white;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    width: 80%;
-}
-
-
-#sellerSignInFooter{
+#buyerSignInFooter{
     position: absolute !important;
     bottom: 0;
     width: 100%;
@@ -72,6 +65,12 @@
     width: 300px;
 }
 
+#buyerSignInFooter{
+    position: absolute !important;
+    bottom: 0;
+    width: 100%;
+    background: white;
+}
 #passwordTextBox{
     width: 50%;
 }

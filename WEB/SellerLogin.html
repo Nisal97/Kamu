@@ -9,17 +9,45 @@
     <link rel="stylesheet" href="../CSS/Seller.css">
 </head>
 <body>
-<div data-role="page" id="sellerLoginPage" class="sellerSignIn">
+<div data-role="page" id="sellerLoginPage" class="sellerSignIn" style="background: white">
 
-    <div data-role="content">
-        <p align="center" id="sellerLoginTopic"><b>Sign In</b></p>
-        <br>
+    <div data-role="header" id="sellerLoginTopic" style="text-align: left">
+        <a href="Home.html" data-ajax="false" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" style="background: white; width: 20%; height: 88%"></a>
+        <h1><b>Sign In</b></h1>
     </div>
 
-    <div class="sellerLoginLogo">
-        <img id="logo" src="../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="center"> <!--Logo-->
+    <div class="sellerLoginLogo" style="text-align: center">
+        <img id="logo1" src="../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="middle"> <!--Logo-->
     </div>
 
+    <div class="sellerLoginCredentials" style="text-align: center !important;display: flex; flex-direction: row">
+        <img id="usernameIcon" src="../ImageAssets/icons8-user-100.png" alt="usernameIcon"> <!-- username icon -->
+        <label for="sellerUserName" class="ui-hidden-accessible">User Name</label>          <!-- username textbox-->
+        <input type="text" name="sellerUserName" id="sellerUserName" placeholder="User Name" value="">
+    </div>
+    <br>
+    <div class="sellerLoginPassword" style="text-align: center !important;display: flex; flex-direction: row">
+        <img id="passwordIcon" src="../ImageAssets/icons8-password-1-100.png" alt="passwordIcon">  <!-- password icon -->
+        <label for="sellerPassword" class="ui-hidden-accessible">Password</label>                  <!-- password textbox -->
+        <input type="password" name="sellerPassword" id="sellerPassword" placeholder="Password" value="">
+    </div>
+
+    <div id="sellerSignInButtonArea">
+        <a href="SellerRequestForm.html" data-role="button" class="ui-btn ui-corner-all" id="sellerSignInButton" data-transition="slidefade">Sign In</a> <!--sign in button-->
+        <script>
+            $(document).ready(function () {
+                $("#sellerLogin").click(function () {
+                    console.log("redirecting to seller request form");
+                    document.location.href = "./SellerRequestForm.html";
+                }); {
+                }
+            })
+        </script>
+    </div>
+
+    <div data-role="footer" id="sellerSignInFooter">
+        <p><h1 style="color: black; display: inline !important; text-align: center">Don't have an account? </h1><a href="SellerSignUp.html" data-role="text" id="sellerSignUpText" data-transition="slidefade">Sign Up</a></p>
+    </div>
 
 
 </div>
