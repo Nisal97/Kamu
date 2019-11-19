@@ -11,24 +11,28 @@
 <body>
 <div data-role="page" id="sellerLoginPage" class="sellerSignIn" style="background: white">
 
-    <div data-role="header" style="text-align: left">
-        <h1 id="sellerLoginTopic"><b>Sign In</b></h1>
+    <div data-role="header" id="sellerLoginTopic" style="text-align: left">
+        <h1><b>Sign In</b></h1>
     </div>
 
     <div class="sellerLoginLogo" style="text-align: center">
         <img id="logo1" src="../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="middle"> <!--Logo-->
     </div>
 
-    <div class="sellerLoginCredentials" style="text-align: center !important;">
-        <label for="sellerUserName" class="ui-hidden-accessible">User Name</label>
+    <div class="sellerLoginCredentials" style="text-align: center !important;display: flex; flex-direction: row">
+        <img id="usernameIcon" src="../ImageAssets/icons8-user-100.png" alt="usernameIcon"> <!-- username icon -->
+        <label for="sellerUserName" class="ui-hidden-accessible">User Name</label>          <!-- username textbox-->
         <input type="text" name="sellerUserName" id="sellerUserName" placeholder="User Name" value="">
-        <br>
-        <label for="sellerPassword" class="ui-hidden-accessible">Password</label>
+    </div>
+    <br>
+    <div class="sellerLoginPassword" style="text-align: center !important;display: flex; flex-direction: row">
+        <img id="passwordIcon" src="../ImageAssets/icons8-password-1-100.png" alt="passwordIcon">  <!-- password icon -->
+        <label for="sellerPassword" class="ui-hidden-accessible">Password</label>                  <!-- password textbox -->
         <input type="password" name="sellerPassword" id="sellerPassword" placeholder="Password" value="">
     </div>
 
     <div id="sellerSignInButtonArea">
-        <a href="SellerLogin.html" data-role="button" class="ui-btn ui-corner-all" id="sellerSignInButton" data-transition="slidefade">Sign In</a> <!--Sell now button-->
+        <a href="SellerLogin.html" data-role="button" class="ui-btn ui-corner-all" id="sellerSignInButton" data-transition="slidefade">Sign In</a> <!--sign in button-->
         <script>
             $(document).ready(function () {
                 $("#sellerLogin").click(function () {

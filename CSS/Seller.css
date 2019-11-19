@@ -1,15 +1,15 @@
 #sellerLoginTopic{
-    width: 50%;
+    width: 70%;
     background: white;
     font-size: 300%;
-    /*padding-left: 30%;*/
-    padding-right: 30%;
+    padding-left: 15%;
 }
 
 #logo1{
     width: 30%;
     vertical-align: top;
     align-content: center;
+    padding-bottom: 25%;
 }
 
 #sellerSignInButtonArea{
@@ -36,4 +36,24 @@
     width: 100%;
     background: white;
     padding-left: 38%;
+}
+
+#usernameIcon{
+    width: 10%;
+    height: 10%;
+    padding-left: 20%;
+}
+
+#passwordIcon{
+    width: 10%;
+    height: 10%;
+    padding-left: 20%;
+}
+
+#usernameTextBox{
+    width: 300px;
+}
+
+#passwordTextBox{
+    width: 50%;
 }

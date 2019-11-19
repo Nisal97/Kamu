@@ -2,29 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Buyer - Sign In</title>
+    <title>Seller - Sign In</title>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="../CSS/Buyer.css">
 </head>
 <body>
+<div data-role="page" id="buyerLoginPage" class="buyerSignIn" style="background: white">
 
-<div data-role="page" id="buyerLoginPage" class="buyerSignIn">
-
-    <div data-role="content">
-        <p align="center" id="buyerLoginTopic"><b>Sign In</b></p>
-        <br>
+    <div data-role="header" id="buyerLoginTopic" style="text-align: left">
+        <h1><b>Sign In</b></h1>
     </div>
 
-    <div style="text-align : center;">
-        <img id="buyerLoginLogo" src="../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="center"> <!--Logo-->
+    <div class="buyerLoginLogo" style="text-align: center">
+        <img id="logo1" src="../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="middle"> <!--Logo-->
     </div>
 
-    <div id="buyerEmailAddress">
-        <label for="textinput-hide" class="ui-hidden-accessible">Text Input:</label>
-        <input type="text" name="textinput-hide" id="textinput-hide" placeholder="Text input" value="">
+    <div class="buyerLoginCredentials" style="text-align: center !important;display: flex; flex-direction: row">
+        <img id="usernameIcon" src="../ImageAssets/icons8-user-100.png" alt="usernameIcon"> <!-- username icon -->
+        <label for="buyerUserName" class="ui-hidden-accessible">User Name</label>          <!-- username textbox-->
+        <input type="text" name="buyerUserName" id="buyerUserName" placeholder="User Name" value="">
     </div>
+    <br>
+    <div class="buyerLoginPassword" style="text-align: center !important;display: flex; flex-direction: row">
+        <img id="passwordIcon" src="../ImageAssets/icons8-password-1-100.png" alt="passwordIcon">  <!-- password icon -->
+        <label for="buyerPassword" class="ui-hidden-accessible">Password</label>                  <!-- password textbox -->
+        <input type="password" name="buyerPassword" id="buyerPassword" placeholder="Password" value="">
+    </div>
+
+    <div id="buyerSignInButtonArea">
+        <a href="SellerLogin.html" data-role="button" class="ui-btn ui-corner-all" id="buyerSignInButton" data-transition="slidefade">Sign In</a> <!--sign in button-->
+        <script>
+            $(document).ready(function () {
+                $("#sellerLogin").click(function () {
+                    console.log("redirecting to seller login page");
+                    document.location.href = "./SellerLogin.html";
+                }); {
+                }
+            })
+        </script>
+    </div>
+
+    <div data-role="footer" id="buyerSignInFooter">
+        <p><h1 style="color: black; display: inline !important; text-align: center">Don't have an account? </h1><a href="" data-role="text" id="buyerSignUpText" data-transition="slidefade">Sign Up</a></p>
+    </div>
+
 
 </div>
 
