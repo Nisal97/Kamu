@@ -9,18 +9,17 @@
     <link rel="stylesheet" href="../CSS/Seller.css">
 </head>
 <body>
-<div data-role="page" id="sellerLoginPage" class="sellerSignIn">
+<div data-role="page" id="sellerLoginPage" class="sellerSignIn" style="background: white">
 
-    <div data-role="content">
-        <p align="center" id="sellerLoginTopic"><b>Sign In</b></p>
-        <br>
+    <div data-role="header" style="text-align: left">
+        <h1 id="sellerLoginTopic"><b>Sign In</b></h1>
     </div>
 
     <div class="sellerLoginLogo" style="text-align: center">
         <img id="logo1" src="../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="middle"> <!--Logo-->
     </div>
 
-    <div class="sellerLoginCredentials" style="text-align: center">
+    <div class="sellerLoginCredentials" style="text-align: center !important;">
         <label for="sellerUserName" class="ui-hidden-accessible">User Name</label>
         <input type="text" name="sellerUserName" id="sellerUserName" placeholder="User Name" value="">
         <br>
@@ -42,7 +41,7 @@
     </div>
 
     <div data-role="footer" id="sellerSignInFooter">
-        <p><h1 style="color: black">Don't have an account? </h1><a href="" data-role="text" id="sellerSignUpText" data-transition="slidefade">Sign Up</a></p>
+        <p><h1 style="color: black; display: inline !important; text-align: center">Don't have an account? </h1><a href="" data-role="text" id="sellerSignUpText" data-transition="slidefade">Sign Up</a></p>
     </div>
 
 

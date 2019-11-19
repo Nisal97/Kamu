@@ -1,8 +1,9 @@
 #sellerLoginTopic{
-    width: 100%;
-    align-content: center;
-    line-height: 100%;
+    width: 50%;
+    background: white;
     font-size: 300%;
+    /*padding-left: 30%;*/
+    padding-right: 30%;
 }
 
 #logo1{
@@ -17,6 +18,8 @@
     width: 40%;
     height: 40%;
     padding-top: 20%;
+    alignment: center;
+    margin-left: 30%;
 }
 
 #sellerSignInButton{
@@ -32,4 +35,5 @@
     bottom: 0;
     width: 100%;
     background: white;
+    padding-left: 38%;
 }
