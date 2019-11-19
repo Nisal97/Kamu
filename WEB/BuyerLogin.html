@@ -6,10 +6,25 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
+    <link rel="stylesheet" href="../CSS/Buyer.css">
 </head>
 <body>
-<div data-role="page" id="buyerLoginPage">
+
+<div data-role="page" id="buyerLoginPage" class="buyerSignIn">
+
+    <div data-role="content">
+        <p align="center" id="buyerLoginTopic"><b>Sign In</b></p>
+        <br>
+    </div>
+
+    <div style="text-align : center;">
+        <img id="buyerLoginLogo" src="../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="center"> <!--Logo-->
+    </div>
+
+    <div id="buyerEmailAddress">
+        <label for="textinput-hide" class="ui-hidden-accessible">Text Input:</label>
+        <input type="text" name="textinput-hide" id="textinput-hide" placeholder="Text input" value="">
+    </div>
 
 </div>
 
