@@ -23,3 +23,10 @@
     padding-top: 30px;
     width: 80%;
 }
+
+#buyerSignInFooter{
+    position: absolute !important;
+    bottom: 0;
+    width: 100%;
+    background: white;
+}
