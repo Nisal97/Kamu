@@ -10,6 +10,37 @@
 </head>
 <body>
 
+<!--************** Firebase SDK initializing ********************** -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBaZxRtfQlbtYH7BI0aR0Qd6kPaSeGqcbI",
+        authDomain: "kamu-001.firebaseapp.com",
+        databaseURL: "https://kamu-001.firebaseio.com",
+        projectId: "kamu-001",
+        storageBucket: "kamu-001.appspot.com",
+        messagingSenderId: "95423498026",
+        appId: "1:95423498026:web:0d26fa56770e27625d8053",
+        measurementId: "G-RFV4W6PV60"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    function submitSellerSignUpData() {
+        firebase.database.ref("SellerUser").set({
+                username: document.getElementById(")
+            })
+    }
+</script>
+
+
+
 <div data-role="page" id="sellerSignUpPage" class="sellerSignUp">
 
     <div data-role="content">
@@ -46,7 +77,7 @@
         </div>
         <br/>
         <div id="buttonSignUp" align="center">
-            <a href="#" id="signUpButton" class="ui-shadow ui-btn ui-corner-all">Sign Up</a>
+            <a href="#" id="signUpButton" class="ui-shadow ui-btn ui-corner-all" onclick="submitSellerSignUpData()">Sign Up</a>
 
         </div>
 
@@ -56,5 +87,7 @@
     </div>
 
 </div>
+
+
 </body>
 </html>
