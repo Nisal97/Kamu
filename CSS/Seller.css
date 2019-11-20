@@ -38,6 +38,11 @@
     height: 40px;
 }
 
+#dataForm{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 #signUpButton{
     background: #ee9933;
     font-size: 300%;
