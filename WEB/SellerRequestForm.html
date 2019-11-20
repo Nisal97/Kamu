@@ -11,13 +11,99 @@
 <body>
 
 <div data-role="page">
+    <div data-role="header" id="sellerLoginTopic" style="text-align: left; padding-right: 100%; display: flex; flex-direction: row ">
 
-    <div data-role="header" id="sellerLoginTopic" style="text-align: left;display: flex; flex-direction: row ">
-        <img src="../ImageAssets/KamuLogo.png"
-        <h1><b>Request Form</b></h1>
+        <img src="../ImageAssets/KamuLogo.png" id="requestLogo" >
+        <p align="center" id="sellerRequestTopic"><b>Request Form</b></p>
+    </div>
+
+    <div id="dataForm">
+        <p align="center" id="FoodCat"><b>Food Category</b></p>
+        <form>
+            <div class="ui-field-contain">
+                    <select name="select-native-1" id="select-native-1">
+                        <option value="1">Donuts</option>
+                        <option value="2">Burgers</option>
+                        <option value="3">Pizza</option>
+                        <option value="4">Rice and Curry</option>
+                        <option value="5">Biriyani</option>
+                    </select>
+            </div>
+        </form>
+        <br/>
+
+        <p align="center" id="FoodItem"><b>Food Item</b></p>
+        <form>
+            <div class="ui-field-contain">
+                    <select name="select-native-1" id="select-native-2">
+                        <option value="1">50</option>
+                        <option value="2">100</option>
+                        <option value="3">200</option>
+                        <option value="4">300</option>
+                        <option value="5">400</option>
+                        <option value="6">500</option>
+                        <option value="7">1000</option>
+                    </select>
+            </div>
+        </form>
+        <br/>
+        <p align="center" id="FoodVar"><b>Food Variety</b></p>
+        <form>
+            <div class="ui-field-contain">
+                    <select name="select-native-1" id="select-native-3">
+                        <option value="1">50</option>
+                        <option value="2">100</option>
+                        <option value="3">200</option>
+                        <option value="4">300</option>
+                        <option value="5">400</option>
+                        <option value="6">500</option>
+                        <option value="7">1000</option>
+                    </select>
+            </div>
+        </form>
+        <br/>
+        <p align="center" id="Quant"><b>Quantity</b></p>
+        <form>
+            <div class="ui-field-contain">
+                    <select name="select-native-1" id="select-native-4">
+                        <option value="1">50</option>
+                        <option value="2">100</option>
+                        <option value="3">200</option>
+                        <option value="4">300</option>
+                        <option value="5">400</option>
+                        <option value="6">500</option>
+                        <option value="7">1000</option>
+                    </select>
+            </div>
+        </form>
+        <br/>
+    </div>
+    <div id="sellerPrices">
+        <div class="ui-grid-a ui-responsive">
+                <div class="ui-block-a"><div class="ui-body ui-body-d" align="center">Unit Price</div></div>
+                <div class="ui-block-b"><div class="ui-body ui-body-d"align="center">Total Amount</div></div>
+        </div>
+        <div class="ui-grid-a ui-responsive">
+                <div class="ui-block-a"><div class="ui-body ui-body-d"align="center">Rs.50</div></div>
+                <div class="ui-block-b"><div class="ui-body ui-body-d"align="center">Rs.500</div></div>
+        </div>
+
+    </div>
+
+    <div id="buttonSubmit" align="center">
+        <a href="#" id="submitButton" class="ui-shadow ui-btn ui-corner-all">Submit</a>
+
+        <a href="#" id="contactUSButton" class="ui-shadow ui-btn ui-corner-all">Contact Us</a>
+
+
+        <a href="#" id="logoutButton" class="ui-shadow ui-btn ui-corner-all">Logout</a>
+
+    </div>
+
+    <div data-role="footer" id="footer">
+        <h1>Copyrights &copy; 2019 KAMU All Rights Reserved </h1>
     </div>
 
 </div>
-
 </body>
 </html>
