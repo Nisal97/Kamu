@@ -47,13 +47,17 @@
     width: 80%;
 }
 
-
 #sellerSignInFooter{
     position: absolute !important;
     bottom: 0;
     width: 100%;
     background: white;
     padding-left: 38%;
+}
+
+#footer{
+    padding-bottom: 1px;
+    width: 100%;
 }
 
 #usernameIcon{
@@ -73,5 +77,49 @@
 }
 
 #passwordTextBox{
+    width: 50%;
+}
+
+#requestLogo{
+    width: 100px;
+    height: 100px;
+    align-content: center;
+    padding-right: 10%;
+    margin-top: 50px;
+}
+
+#sellerRequestTopic{
+    width: 70%;
+    margin-top: 10%;
+    background: white;
+    font-size: 100%;
+    align-content: center;
+    line-height: 100%;
+}
+
+#submitButton{
+    background: #ee9933;
+    font-size: 300%;
+    color: white;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    width: 50%;
+}
+
+#contactUSButton{
+    background: #ee9933;
+    font-size: 300%;
+    color: white;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    width: 50%;
+}
+
+#logoutButton{
+    background: #ee9933;
+    font-size: 300%;
+    color: white;
+    padding-bottom: 30px;
+    padding-top: 30px;
     width: 50%;
 }
