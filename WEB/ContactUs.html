@@ -1,5 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+
+    /* The popup form - hidden by default */
+    .form-popup {
+        display: none;
+        position: fixed;
+        alignment: center;
+        right: 185px;
+        top: 30%;
+        margin-top: 10px;
+        width: 60%;
+        height: 50%;
+        padding: 10px;
+        z-index: 2; /*stay in front of text*/
+        background-color: white;
+        border-radius: 25px;
+        border: 2px solid #df1f4e;
+        text-align: center;
+    }
+
+    /* Add styles to the form container */
+    .form-container {
+        padding: 20px;
+        height: 95%;
+        margin-bottom: 10px;
+        background-color: white;
+    }
+
+    /* Full-width input fields */
+    .form-container input[type=text], .form-container input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background: #f1f1f1;
+    }
+
+    /* When the inputs get focus, do something */
+    .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+
+    /* Set a style for the submit/login button */
+    .form-container .btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom:10px;
+        opacity: 0.8;
+    }
+
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+        background-color: white;
+    }
+
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover, .emailButton:hover {
+        opacity: 1;
+    }
+    div.ex1 {
+        width: 100%;
+        height: 80%;
+        overflow: scroll;
+    }
+    #closeBtn{
+        margin-bottom: 20px;
+        background-color: #df1f4e;
+        color: white;
+        font-size: 20px;
+
+    }
+</style>
+
 <head>
     <meta charset="UTF-8">
     <title>Buyer - Sign Up</title>
@@ -25,33 +103,47 @@
     <br/>
     <br/>
 
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Help</h1>
 
-    <div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="width:500px;">
-            <div data-role="header" data-theme="a">
-            <h1>Enter Your Message Here</h1>
-            </div>
-            <form>
-                    <textarea name="textarea-1" id="textarea-1"></textarea>
-            </form>
-            <div role="main" class="ui-content">
-                
-                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Cancel</a>
-                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Send</a>
-            </div>
+            <div class="ex1">Lorem <br/>ipsum dolor<br/> sit <br/>amet,<br/> consectetuer adipiscing <br/>elit,
+                sed diam <br/>nonummy <br/>nibh euismod<br/> tincidunt<br/> ut laoreet dolore<br/> magna aliquam erat <br/>volutpat
+                sed diam nonummy<br/> nibh euismod<br/> tincidunt <br/>ut laoreet dolore magna<br/> aliquam erat volutpat
+                sed <br/>diam nonummy <br/>nibh<br/> euismod  <br/>
+                tincidunt ut<br/> laoreet dolore magna<br/> aliquam erat volutpat
+                sed diam nonummy <br/>nibh<br/> euismod tincidunt<br/> ut laoreet dolore <br/>magna aliquam <br/>erat volutpat
+                sed diam nonummy<br/> nibh euismod<br/> tincidunt <br/>ut laoreet dolore magna<br/> aliquam erat volutpat.</div>
+
+                <button type="button" id="closeBtn" class="btn cancel" onclick="closeForm()">Close</button>
+
+        </form>
     </div>
 
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+
     <div id="emailUsBtn" align="center">
-        <a href="#popupDialog" id="emailButton" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ">Email Us</a>
+        <a href="mailto:charithacj4@gmail.com" id="emailButton" class="ui-shadow ui-btn ui-corner-all" >Email Us</a>
 
     </div>
     <br/>
 
     <div id="callUsBtn" align="center">
-        <a href="#" id="callButton" class="ui-shadow ui-btn ui-corner-all">Call Us</a>
+        <a href="tel:0710621042" id="callButton" class="ui-shadow ui-btn ui-corner-all" data-role="button"> Call Us</a>
+
     </div>
     <br/>
     <div id="helpBtn1" align="center">
-        <a href="#" id="helpButton" class="ui-shadow ui-btn ui-corner-all">Help</a>
+        <a id="helpButton" class="ui-shadow ui-btn ui-corner-all" onclick="openForm()">Help</a>
+
     </div>
     <br/>
 
