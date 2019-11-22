@@ -12,14 +12,16 @@
 <h3>Servings</h3>
 <br>
 
-    <form action="">
-        <input type="checkbox" name="foodItem" value="itemOne" checked> 1 Chocolate Donut<br>
+    <form action="" id="checklist" method="get" name="checklist">
+
+        <div id="appendCheckList">
+        <input type="checkbox" name="foodItem" id="box1" value="itemOne" checked> 1 Chocolate Donut<br>
         <input type="checkbox" name="foodItem" value="itemTwo" checked> 1 Strawberry Donut<br>
         <input type="checkbox" name="foodItem" value="itemThree" checked> 1 Cheese Pizza<br>
+        </div>
         <br>
         <br>
         <br>
-
         <hr>
         Total : 2000
         <hr>
@@ -27,6 +29,11 @@
         <input type="submit" value="Place Order">
     </form>
 
+<!--<label id="hilbl">Hi</label>-->
+
+<!--<input id="testBtn" type="button" value="Test" onclick="myFunction()">-->
+
+<script src="../JS/Cart.js"></script>
 
 </body>
 </html>
