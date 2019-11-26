@@ -172,12 +172,8 @@ div.ex1 {
     height: 80%;
     overflow: scroll;
 }
-#noBtn{
-    background-color: #ee9933;
-    color: white;
-    font-size: 20px;
-}
-#yesBtn{
+
+.btnCancel{
     background-color: #ee9933;
     color: white;
     font-size: 20px;
