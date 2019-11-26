@@ -33,27 +33,18 @@
 
     <div class="sellerLoginCredentials" style="text-align: center !important;display: flex; flex-direction: row">
         <img id="usernameIcon" src="../ImageAssets/icons8-user-100.png" alt="usernameIcon"> <!-- username icon -->
-        <label for="sellerUserName" class="ui-hidden-accessible">User Name</label>          <!-- username textbox-->
+        <label for="sellerSignInUserNameInput" class="ui-hidden-accessible">User Name</label>          <!-- username textbox-->
         <input type="text" name="sellerUserName" id="sellerSignInUserNameInput" placeholder="User Name" value="">
     </div>
     <br>
     <div class="sellerLoginPassword" style="text-align: center !important;display: flex; flex-direction: row">
         <img id="passwordIcon" src="../ImageAssets/icons8-password-1-100.png" alt="passwordIcon">  <!-- password icon -->
-        <label for="sellerPassword" class="ui-hidden-accessible">Password</label>                  <!-- password textbox -->
+        <label for="sellerSignInPasswordInput" class="ui-hidden-accessible">Password</label>                  <!-- password textbox -->
         <input type="password" name="sellerPassword" id="sellerSignInPasswordInput" placeholder="Password" value="">
     </div>
 
     <div id="sellerSignInButtonArea">
         <a href="SellerRequestForm.html" data-role="button" class="ui-btn ui-corner-all" id="sellerSignInButton" data-transition="slidefade">Sign In</a> <!--sign in button-->
-        <script>
-            $(document).ready(function () {
-                $("#sellerLogin").click(function () {
-                    console.log("redirecting to seller request form");
-                    document.location.href = "./SellerRequestForm.html";
-                }); {
-                }
-            })
-        </script>
     </div>
 
     <div data-role="footer" id="sellerSignInFooter">
