@@ -10,6 +10,21 @@
 </head>
 <body>
 
+<script>
+
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function logOutForm() {
+        window.location.href = "Home.html";
+    }
+
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    }
+</script>
+
 <div data-role="page">
     <div data-role="header" id="sellerLoginTopic" style="text-align: left; padding-right: 100%; display: flex; flex-direction: row ">
 
@@ -77,6 +92,18 @@
         </form>
 
     </div>
+
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Logout</h1>
+            <h2>Are You sure you want to logout?</h2>
+
+                <button type="button" id="noBtn" class="btn cancel" onclick="closeForm()">No</button>
+                <button type="button" id="yesBtn" class="btn cancel" onclick="logOutForm()">Yes</button>
+
+        </form>
+    </div>
+
     <div>
         <div id="sellerPrices">
             <div class="ui-grid-a ui-responsive">
@@ -94,7 +121,7 @@
     <div id="buttons" align="center">
         <a href="#" id="submitButton" class="ui-shadow ui-btn ui-corner-all">Submit</a>
         <a href = "ContactUs.html" id="contactUSButton" class="ui-shadow ui-btn ui-corner-all" data-ajax ="false">Contact Us</a>
-        <a href="#" id="logoutButton" class="ui-shadow ui-btn ui-corner-all">Logout</a>
+        <a href="#" id="logoutButton" class="ui-shadow ui-btn ui-corner-all" onclick="openForm()" >Logout</a>
     </div>
 
     <div data-role="footer" id="footer">
