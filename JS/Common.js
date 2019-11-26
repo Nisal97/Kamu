@@ -14,7 +14,7 @@ function signOutAllPages() {
         firebase.analytics();
         signOut();
     }catch (error) {
-        var firebaseConfig = {
+        var firebaseConfig1 = {
             apiKey: "AIzaSyBaZxRtfQlbtYH7BI0aR0Qd6kPaSeGqcbI",
             authDomain: "kamu-001.firebaseapp.com",
             databaseURL: "https://kamu-001.firebaseio.com",
@@ -24,7 +24,7 @@ function signOutAllPages() {
             appId: "1:95423498026:web:0d26fa56770e27625d8053",
             measurementId: "G-RFV4W6PV60"
         };
-        firebase.initializeApp(firebaseConfig);
+        firebase.initializeApp(firebaseConfig1);
         firebase.analytics();
         signOut();
     }
