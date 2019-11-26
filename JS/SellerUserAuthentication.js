@@ -33,11 +33,14 @@ function signUpAuthentication() {
     var retypePassword = document.getElementById("sellerRetypePasswordInput").value;
 
     if (retypePassword === password){
-        firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error){
+        firebase.auth().createUserWithEmailAndPassword(email, password).then(function(error){
             var errorMessage = error.message;
             console.log(errorMessage);
             window.location.href = "SellerRequestForm.html";
-        })
+        }).catch(function (error) {
+            var errorMessage = error.message;
+            console.log(errorMessage);
+        });
     }else{
         window.alert("Passwords should be match to proceed");
     }
@@ -52,9 +55,20 @@ function signInAuthentication(){
     console.log(email);
     console.log(password);
 
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error){
+    /*firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error){
         var errorMessage = error.message;
         console.log(errorMessage);
         window.location.href = "SellerRequestForm.html";
-    });
+    });*/
+
+    firebase.auth().signInWithEmailAndPassword(email, password)
+        .then(function(error) {
+            var errorMessage = error.message;
+            console.log(errorMessage);
+            window.location.href = "SellerRequestForm.html";
+        })
+        .catch(function(error) {
+            var errorMessage = error.message;
+            console.log(errorMessage);
+        });
 }
