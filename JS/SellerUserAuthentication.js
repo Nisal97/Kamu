@@ -15,14 +15,14 @@ firebase.analytics();
 
 
 function submitSellerSignUpData() {
-    var sellerUserName = document.getElementById("sellerSignUpUsernameInput").value.toString();
+    var sellerUserName = document.getElementById("sellerSignUpUsernameInput").value;
     var sellerUserRef = firebase.database().ref(sellerUserName);
 
     sellerUserRef.push({
-        entry:{
+        details:{
             username: document.getElementById("sellerSignUpUsernameInput").value,
             sellerEmail: document.getElementById("sellerSignUpEmailInput").value,
-            sellerNumber: document.getElementById("sellerSignUpNumberInput").value,
+            sellerNumber: document.getElementById("sellerSignUpNumberInput").value
         }
     });
 }
@@ -51,15 +51,6 @@ function signInAuthentication(){
 
     var email= document.getElementById("sellerSignInUserNameInput").value;
     var password= document.getElementById("sellerSignInPasswordInput").value;
-
-    console.log(email);
-    console.log(password);
-
-    /*firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error){
-        var errorMessage = error.message;
-        console.log(errorMessage);
-        window.location.href = "SellerRequestForm.html";
-    });*/
 
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then(function(error) {
