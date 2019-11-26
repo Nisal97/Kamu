@@ -3,8 +3,8 @@ function signOut() {
         var errorMessage = value.message;
         console.log(errorMessage);
         window.location.href = "Home.html";
-    }).catch(function (reason) {
-        var errorMessage = reason.message;
+    }).catch(function (error) {
+        var errorMessage = error.message;
         console.log(errorMessage);
     })
 }
