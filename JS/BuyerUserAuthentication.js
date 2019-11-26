@@ -21,7 +21,7 @@ function buyerSignUpAuthentication() {
         firebase.auth().createUserWithEmailAndPassword(email, password).then(function(error){
             var errorMessage = error.message;
             console.log(errorMessage);
-            window.location.href = "SellerRequestForm.html";
+            // window.location.href = "SellerRequestForm.html";
         }).catch(function (error) {
             var errorMessage = error.message;
             console.log(errorMessage);
@@ -36,9 +36,6 @@ function buyerSignInAuthentication(){
 
     var email= document.getElementById("buyerSignInUserName").value;
     var password= document.getElementById("buyerSignInPassword").value;
-
-    console.log(email);
-    console.log(password);
 
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then(function(error) {
