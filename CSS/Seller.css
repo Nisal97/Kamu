@@ -175,9 +175,21 @@ div.ex1 {
 #noBtn{
     background-color: #ee9933;
     color: white;
+    width: 40%;
     font-size: 20px;
 }
 #yesBtn{
+    background-color: #ee9933;
+    color: white;
+    width: 40%;
+    font-size: 20px;
+}
+#cancelBtn{
+    background-color: #ee9933;
+    color: white;
+    font-size: 20px;
+}
+#okBtn{
     background-color: #ee9933;
     color: white;
     font-size: 20px;
