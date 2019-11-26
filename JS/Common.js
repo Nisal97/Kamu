@@ -1,3 +1,14 @@
+function signOut() {
+    firebase.auth().signOut().then(function (value) {
+        var errorMessage = value.message;
+        console.log(errorMessage);
+        window.location.href = "Home.html";
+    }).catch(function (reason) {
+        var errorMessage = reason.message;
+        console.log(errorMessage);
+    })
+}
+
 function signOutAllPages() {
     try{
         var firebaseConfig = {
@@ -30,13 +41,3 @@ function signOutAllPages() {
     }
 }
 
-function signOut() {
-    firebase.auth().signOut().then(function (value) {
-        var errorMessage = value.message;
-        console.log(errorMessage);
-        window.location.href = "Home.html";
-    }).catch(function (reason) {
-        var errorMessage = reason.message;
-        console.log(errorMessage);
-    })
-}
