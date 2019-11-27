@@ -125,8 +125,7 @@
         <form action="/action_page.php" class="form-container">
             <h1>Logout</h1>
             <h2>Are You sure you want to logout?</h2>
-            <div data-role="header" id="button" style=" padding-right: 40%; display: inline-flex; flex-direction: row ">
-
+            <div data-role="header" id="buttonLogout" style=" margin-right:10px; display: flex; flex-direction: row ">
                 <button type="button" id="noBtn" class="btnCancel" onclick="closeForm()">No</button>
                 <button type="button" id="yesBtn" class="btnCancel" onclick="logOutForm()">Yes</button>
             </div>
@@ -137,10 +136,17 @@
         <form action="/action_page.php" class="form-container">
             <h1>Request</h1>
             <h2>Do you want to proceed with the order?</h2>
+            <div data-role="header" id="buttonSubmit" style=" margin-right:10px; display: flex; flex-direction: row ">
+                <button type="button" id="cancelBtn" class="btnCancel" onclick="cancelForm()">Cancel</button>
+                <button type="button" id="okBtn" class="btnCancel" onclick="yesForm()">Ok</button>
+            </div>
+        </form>
+    </div>
 
-            <button type="button" id="cancelBtn" class="btnCancel" onclick="cancelForm()">Cancel</button>
-            <button type="button" id="okBtn" class="btnCancel" onclick="yesForm()">Ok</button>
-
+    <div class="form-popup" id="submitFormPopup">
+        <form action="/action_page.php" class="form-container">
+            <h2>Request Form</h2>
+                <button type="button" id="okButton" class="btnCancel" onclick="yesForm()">Ok</button>
         </form>
     </div>
 
