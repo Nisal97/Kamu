@@ -12,6 +12,13 @@
 </head>
 <body>
 
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-functions.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+
 <script>
 
     function openForm() {
@@ -19,7 +26,7 @@
     }
 
     function logOutForm() {
-        signOutAllPages()
+        signOutFromSeller();
         // window.location.href = "Home.html";
         document.getElementById("myForm").style.display = "none";
     }
