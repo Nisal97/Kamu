@@ -60,12 +60,6 @@
     padding-left: 38%;
 }
 
-#footer{
-    padding-bottom: 1px;
-    width: 100%;
-    margin-bottom: 5px;
-}
-
 #usernameIcon{
     width: 10%;
     height: 10%;
@@ -140,7 +134,7 @@
     top: 30%;
     margin-top: 10px;
     width: 60%;
-    height: 20%;
+    height: 28%;
     padding: 10px;
     z-index: 2; /*stay in front of text*/
     background-color: white;
@@ -176,23 +170,30 @@ div.ex1 {
     background-color: #ee9933;
     color: white;
     width: 45%;
-    font-size: 20px;
+    font-size: 40px;
 }
 #yesBtn{
     background-color: #ee9933;
     color: white;
     width: 45%;
-    font-size: 20px;
+    font-size: 40px;
 }
 #cancelBtn{
     background-color: #ee9933;
     color: white;
     width: 45%;
-    font-size: 20px;
+    font-size: 40px;
 }
 #okBtn{
     background-color: #ee9933;
     color: white;
     width: 45%;
-    font-size: 20px;
+    font-size: 40px;
+}
+.title{
+    font-size: 50px;
+}
+.details{
+    font-size: 30px;
+
 }

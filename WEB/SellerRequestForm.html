@@ -120,11 +120,11 @@
         </form>
 
     </div>
-
+<br/>
     <div class="form-popup" id="myForm">
         <form action="/action_page.php" class="form-container">
-            <h1>Logout</h1>
-            <h2>Are You sure you want to logout?</h2>
+            <h1 class="title">Logout</h1>
+            <h2 class="details">Are You sure you want to logout?</h2>
             <div data-role="header" id="buttonLogout" style=" margin-right:10px; display: flex; flex-direction: row ">
                 <button type="button" id="noBtn" class="btnCancel" onclick="closeForm()">No</button>
                 <button type="button" id="yesBtn" class="btnCancel" onclick="logOutForm()">Yes</button>
@@ -134,8 +134,8 @@
 
     <div class="form-popup" id="mySubmitForm">
         <form action="/action_page.php" class="form-container">
-            <h1>Request</h1>
-            <h2>Do you want to proceed with the order?</h2>
+            <h1 class="title">Request</h1>
+            <h2 class="details">Do you want to proceed with the order?</h2>
             <div data-role="header" id="buttonSubmit" style=" margin-right:10px; display: flex; flex-direction: row ">
                 <button type="button" id="cancelBtn" class="btnCancel" onclick="cancelForm()">Cancel</button>
                 <button type="button" id="okBtn" class="btnCancel" onclick="yesForm()">Ok</button>
@@ -162,7 +162,6 @@
             </div>
         </div>
     </div>
-
 
     <div id="buttons" align="center">
         <a href="#" id="submitButton" class="ui-shadow ui-btn ui-corner-all" onclick="openSubmitForm()">Submit</a>
