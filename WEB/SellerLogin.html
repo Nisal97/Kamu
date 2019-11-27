@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="../CSS/Seller.css">
 </head>
 <body>
+
+<!--************** Firebase SDK initializing ********************** -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-functions.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+<script src="../JS/SellerUserAuthentication.js"></script>
+
 <div data-role="page" id="sellerLoginPage" class="sellerSignIn" style="background: white">
 
     <div data-role="header" id="sellerLoginTopic" style="text-align: left">
@@ -22,31 +33,22 @@
 
     <div class="sellerLoginCredentials" style="text-align: center !important;display: flex; flex-direction: row">
         <img id="usernameIcon" src="../ImageAssets/icons8-user-100.png" alt="usernameIcon"> <!-- username icon -->
-        <label for="sellerUserName" class="ui-hidden-accessible">User Name</label>          <!-- username textbox-->
-        <input type="text" name="sellerUserName" id="sellerUserName" placeholder="User Name" value="">
+        <label for="sellerSignInUserNameInput" class="ui-hidden-accessible">User Name</label>          <!-- username textbox-->
+        <input type="text" name="sellerUserName" id="sellerSignInUserNameInput" placeholder="User Name" value="">
     </div>
     <br>
     <div class="sellerLoginPassword" style="text-align: center !important;display: flex; flex-direction: row">
         <img id="passwordIcon" src="../ImageAssets/icons8-password-1-100.png" alt="passwordIcon">  <!-- password icon -->
-        <label for="sellerPassword" class="ui-hidden-accessible">Password</label>                  <!-- password textbox -->
-        <input type="password" name="sellerPassword" id="sellerPassword" placeholder="Password" value="">
+        <label for="sellerSignInPasswordInput" class="ui-hidden-accessible">Password</label>                  <!-- password textbox -->
+        <input type="password" name="sellerPassword" id="sellerSignInPasswordInput" placeholder="Password" value="">
     </div>
 
     <div id="sellerSignInButtonArea">
-        <a href="SellerRequestForm.html" data-role="button" class="ui-btn ui-corner-all" id="sellerSignInButton" data-transition="slidefade">Sign In</a> <!--sign in button-->
-        <script>
-            $(document).ready(function () {
-                $("#sellerLogin").click(function () {
-                    console.log("redirecting to seller request form");
-                    document.location.href = "./SellerRequestForm.html";
-                }); {
-                }
-            })
-        </script>
+        <a href="SellerRequestForm.html" data-role="button" class="ui-btn ui-corner-all" id="sellerSignInButton" data-transition="slidefade" data-ajax="false" onclick="signInAuthentication()">Sign In</a> <!--sign in button-->
     </div>
 
     <div data-role="footer" id="sellerSignInFooter">
-        <p><h1 style="color: black; display: inline !important; text-align: center">Don't have an account? </h1><a href="SellerSignUp.html" data-role="text" id="sellerSignUpText" data-transition="slidefade">Sign Up</a></p>
+<!--        <p><h1 style="color: black; display: inline !important; text-align: center">Don't have an account? </h1><a href="SellerSignUp.html" data-role="text" id="sellerSignUpText" data-transition="slidefade">Sign Up</a></p>-->
     </div>
 
 
