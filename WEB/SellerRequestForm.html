@@ -7,17 +7,173 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="../CSS/Seller.css">
+    <script src="../JS/Common.js"></script>
+
 </head>
 <body>
 
-<div data-role="page">
+<script>
 
-    <div data-role="header" id="sellerLoginTopic" style="text-align: left;display: flex; flex-direction: row ">
-        <img src="../ImageAssets/KamuLogo.png"
-        <h1><b>Request Form</b></h1>
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function logOutForm() {
+        signOutAllPages()
+        // window.location.href = "Home.html";
+        document.getElementById("myForm").style.display = "none";
+    }
+
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    }
+
+    function openSubmitForm() {
+        document.getElementById("mySubmitForm").style.display = "block";
+    }
+    function yesForm() {
+        // window.location.href = "Home.html";
+        // document.getElementById("mySubmitForm").style.display = "none";
+    }
+
+    function cancelForm() {
+        document.getElementById("mySubmitForm").style.display = "none";
+    }
+
+
+</script>
+
+<!--************** Firebase SDK initializing ********************** -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-functions.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+
+
+<div data-role="page">
+    <div data-role="header" id="sellerLoginTopic" style="text-align: left; padding-right: 100%; display: flex; flex-direction: row ">
+
+        <img src="../ImageAssets/KamuLogo.png" id="requestLogo" >
+        <p align="center" id="sellerRequestTopic"><b>Request Form</b></p>
+    </div>
+
+    <div id="dataForm">
+        <p align="center" id="FoodCat"><b>Food Category</b></p>
+        <form>
+            <div class="ui-field-contain">
+                    <select name="select-native-1" id="select-native-1">
+                        <option value="1">Donuts</option>
+                        <option value="2">Burgers</option>
+                        <option value="3">Pizza</option>
+                        <option value="4">Rice and Curry</option>
+                        <option value="5">Biriyani</option>
+                    </select>
+            </div>
+        </form>
+
+        <p align="center" id="FoodItem"><b>Food Item</b></p>
+        <form>
+            <div class="ui-field-contain">
+                    <select name="select-native-1" id="select-native-2">
+                        <option value="1">50</option>
+                        <option value="2">100</option>
+                        <option value="3">200</option>
+                        <option value="4">300</option>
+                        <option value="5">400</option>
+                        <option value="6">500</option>
+                        <option value="7">1000</option>
+                    </select>
+            </div>
+        </form>
+
+        <p align="center" id="FoodVar"><b>Food Variety</b></p>
+        <form>
+            <div class="ui-field-contain">
+                    <select name="select-native-1" id="select-native-3">
+                        <option value="1">50</option>
+                        <option value="2">100</option>
+                        <option value="3">200</option>
+                        <option value="4">300</option>
+                        <option value="5">400</option>
+                        <option value="6">500</option>
+                        <option value="7">1000</option>
+                    </select>
+            </div>
+        </form>
+
+        <p align="center" id="Quant"><b>Quantity</b></p>
+        <form>
+            <div class="ui-field-contain">
+                    <select name="select-native-1" id="select-native-4">
+                        <option value="1">50</option>
+                        <option value="2">100</option>
+                        <option value="3">200</option>
+                        <option value="4">300</option>
+                        <option value="5">400</option>
+                        <option value="6">500</option>
+                        <option value="7">1000</option>
+                    </select>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Logout</h1>
+            <h2>Are You sure you want to logout?</h2>
+            <div data-role="header" id="buttonLogout" style=" margin-right:10px; display: flex; flex-direction: row ">
+                <button type="button" id="noBtn" class="btnCancel" onclick="closeForm()">No</button>
+                <button type="button" id="yesBtn" class="btnCancel" onclick="logOutForm()">Yes</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-popup" id="mySubmitForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Request</h1>
+            <h2>Do you want to proceed with the order?</h2>
+            <div data-role="header" id="buttonSubmit" style=" margin-right:10px; display: flex; flex-direction: row ">
+                <button type="button" id="cancelBtn" class="btnCancel" onclick="cancelForm()">Cancel</button>
+                <button type="button" id="okBtn" class="btnCancel" onclick="yesForm()">Ok</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-popup" id="submitFormPopup">
+        <form action="/action_page.php" class="form-container">
+            <h2>Request Form</h2>
+                <button type="button" id="okButton" class="btnCancel" onclick="yesForm()">Ok</button>
+        </form>
+    </div>
+
+    <div>
+        <div id="sellerPrices">
+            <div class="ui-grid-a ui-responsive">
+                    <div class="ui-block-a"><div class="ui-body ui-body-d" align="center"><b>Unit Price</b></div></div>
+                    <div class="ui-block-b"><div class="ui-body ui-body-d"align="center"><b>Total Amount</b></div></div>
+            </div>
+            <div class="ui-grid-a ui-responsive">
+                    <div class="ui-block-a"><div class="ui-body ui-body-d"align="center"><b>Rs.50</b></div></div>
+                    <div class="ui-block-b"><div class="ui-body ui-body-d"align="center"><b>Rs.500</b></div></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="buttons" align="center">
+        <a href="#" id="submitButton" class="ui-shadow ui-btn ui-corner-all" onclick="openSubmitForm()">Submit</a>
+        <a href="ContactUs.html" id="contactUSButton" class="ui-shadow ui-btn ui-corner-all" data-ajax ="false" >Contact Us</a>
+        <a href="#" id="logoutButton" class="ui-shadow ui-btn ui-corner-all" onclick="openForm()" >Logout</a>
+    </div>
+
+    <div data-role="footer" id="footer">
+        <h1>Copyrights &copy; 2019 KAMU All Rights Reserved </h1>
     </div>
 
 </div>
-
 </body>
 </html>

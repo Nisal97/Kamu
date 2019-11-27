@@ -38,6 +38,11 @@
     height: 40px;
 }
 
+#dataForm{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 #signUpButton{
     background: #ee9933;
     font-size: 300%;
@@ -47,13 +52,18 @@
     width: 80%;
 }
 
-
 #sellerSignInFooter{
     position: absolute !important;
     bottom: 0;
     width: 100%;
     background: white;
     padding-left: 38%;
+}
+
+#footer{
+    padding-bottom: 1px;
+    width: 100%;
+    margin-bottom: 5px;
 }
 
 #usernameIcon{
@@ -74,4 +84,115 @@
 
 #passwordTextBox{
     width: 50%;
+}
+
+#requestLogo{
+    width: 100px;
+    height: 100px;
+    align-content: center;
+    padding-right: 10%;
+    margin-top: 50px;
+}
+
+#sellerRequestTopic{
+    width: 70%;
+    margin-top: 10%;
+    background: white;
+    font-size: 100%;
+    align-content: center;
+    line-height: 100%;
+}
+
+#submitButton{
+    background: #ee9933;
+    font-size: 300%;
+    color: white;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    width: 50%;
+}
+
+#contactUSButton{
+    background: #ee9933;
+    font-size: 300%;
+    color: white;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    width: 50%;
+}
+
+#logoutButton{
+    background: #ee9933;
+    font-size: 300%;
+    color: white;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    width: 50%;
+}
+
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    alignment: center;
+    right: 185px;
+    top: 30%;
+    margin-top: 10px;
+    width: 60%;
+    height: 20%;
+    padding: 10px;
+    z-index: 2; /*stay in front of text*/
+    background-color: white;
+    border-radius: 25px;
+    border: 2px solid #ee9933;
+    text-align: center;
+}
+
+/* Add styles to the form container */
+.form-container {
+    padding: 20px;
+    height: 80%;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover {
+    opacity: 1;
+}
+div.ex1 {
+    width: 100%;
+    height: 80%;
+    overflow: scroll;
+}
+#noBtn{
+    background-color: #ee9933;
+    color: white;
+    width: 45%;
+    font-size: 20px;
+}
+#yesBtn{
+    background-color: #ee9933;
+    color: white;
+    width: 45%;
+    font-size: 20px;
+}
+#cancelBtn{
+    background-color: #ee9933;
+    color: white;
+    width: 45%;
+    font-size: 20px;
+}
+#okBtn{
+    background-color: #ee9933;
+    color: white;
+    width: 45%;
+    font-size: 20px;
 }

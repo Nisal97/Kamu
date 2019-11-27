@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+
+</style>
+
 <head>
     <meta charset="UTF-8">
     <title>Buyer - Sign Up</title>
@@ -17,7 +21,6 @@
         <br>
     </div>
 
-
     <div style="text-align : center;">
         <img id="buyerLoginLogo" src="../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="center"> <!--Logo-->
     </div>
@@ -26,23 +29,49 @@
     <br/>
     <br/>
 
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Help</h1>
+
+            <div class="ex1">Lorem <br/>ipsum dolor<br/> sit <br/>amet,<br/> consectetuer adipiscing <br/>elit,
+                sed diam <br/>nonummy <br/>nibh euismod<br/> tincidunt<br/> ut laoreet dolore<br/> magna aliquam erat <br/>volutpat
+                sed diam nonummy<br/> nibh euismod<br/> tincidunt <br/>ut laoreet dolore magna<br/> aliquam erat volutpat
+                sed <br/>diam nonummy <br/>nibh<br/> euismod  <br/>
+                tincidunt ut<br/> laoreet dolore magna<br/> aliquam erat volutpat
+                sed diam nonummy <br/>nibh<br/> euismod tincidunt<br/> ut laoreet dolore <br/>magna aliquam <br/>erat volutpat
+                sed diam nonummy<br/> nibh euismod<br/> tincidunt <br/>ut laoreet dolore magna<br/> aliquam erat volutpat.</div>
+
+                <button type="button" id="closeBtn" class="btn cancel" onclick="closeForm()">Close</button>
+
+        </form>
+    </div>
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+
     <div id="emailUsBtn" align="center">
-        <a href="#" id="emailButton" class="ui-shadow ui-btn ui-corner-all">Email Us</a>
+        <a href="mailto:charithacj4@gmail.com" id="emailButton" class="ui-shadow ui-btn ui-corner-all" >Email Us</a>
 
     </div>
     <br/>
 
     <div id="callUsBtn" align="center">
-        <a href="#" id="callButton" class="ui-shadow ui-btn ui-corner-all">Call Us</a>
+        <a href="tel:0710621042" id="callButton" class="ui-shadow ui-btn ui-corner-all" data-role="button"> Call Us</a>
 
     </div>
     <br/>
     <div id="helpBtn1" align="center">
-        <a href="#" id="helpButton" class="ui-shadow ui-btn ui-corner-all">Help</a>
+        <a id="helpButton" class="ui-shadow ui-btn ui-corner-all" onclick="openForm()">Help</a>
 
     </div>
     <br/>
-
 
     <div data-role="footer" id="footer">
         <h1 style="color: black">Copyrights &copy; 2019 KAMU All Rights Reserved </h1>
