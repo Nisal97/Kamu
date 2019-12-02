@@ -63,3 +63,15 @@ function signInAuthentication(){
             console.log(errorMessage);
         });
 }
+
+function signOutFromSeller() {
+    firebase.auth().signOut().then(function(error) {
+        var errorMessage = error.message;
+        console.log(errorMessage);
+        window.location.href = "Home.html";
+    })
+        .catch(function (reason) {
+            var errorMessage = reason.message;
+            console.log(errorMessage);
+        })
+}
