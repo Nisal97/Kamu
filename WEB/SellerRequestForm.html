@@ -61,66 +61,74 @@
     </div>
 
     <div id="dataForm">
-        <p align="center" id="FoodCat"><b>Food Category</b></p>
-        <form>
-            <div class="ui-field-contain">
-                    <select name="select-native-1" id="select-native-1">
-                        <option value="1">Donuts</option>
-                        <option value="2">Burgers</option>
-                        <option value="3">Pizza</option>
-                        <option value="4">Rice and Curry</option>
-                        <option value="5">Biriyani</option>
-                    </select>
-            </div>
-        </form>
+        <p align="center" class="details" id="FoodCat"><b>Food Category</b></p>
 
-        <p align="center" id="FoodItem"><b>Food Item</b></p>
-        <form>
-            <div class="ui-field-contain">
-                    <select name="select-native-1" id="select-native-2">
-                        <option value="1">50</option>
-                        <option value="2">100</option>
-                        <option value="3">200</option>
-                        <option value="4">300</option>
-                        <option value="5">400</option>
-                        <option value="6">500</option>
-                        <option value="7">1000</option>
-                    </select>
-            </div>
-        </form>
+        <select id="selectNumber1">
+            <option>Choose a Food Category</option>
+            <script>
+                var select = document.getElementById("selectNumber1");
+                var options = ["Donuts", "Burgers", "Pizza", "Rice and Curry", "Biriyani"];
+                for(var i = 0; i < options.length; i++) {
+                    var opt = options[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    select.appendChild(el);
+                }
+            </script>
+        </select>
 
-        <p align="center" id="FoodVar"><b>Food Variety</b></p>
-        <form>
-            <div class="ui-field-contain">
-                    <select name="select-native-1" id="select-native-3">
-                        <option value="1">50</option>
-                        <option value="2">100</option>
-                        <option value="3">200</option>
-                        <option value="4">300</option>
-                        <option value="5">400</option>
-                        <option value="6">500</option>
-                        <option value="7">1000</option>
-                    </select>
-            </div>
-        </form>
+        <p align="center" class="details" id="FoodItem"><b>Food Item</b></p>
 
-        <p align="center" id="Quant"><b>Quantity</b></p>
-        <form>
-            <div class="ui-field-contain">
-                    <select name="select-native-1" id="select-native-4">
-                        <option value="1">50</option>
-                        <option value="2">100</option>
-                        <option value="3">200</option>
-                        <option value="4">300</option>
-                        <option value="5">400</option>
-                        <option value="6">500</option>
-                        <option value="7">1000</option>
-                    </select>
-            </div>
-        </form>
+        <select id="selectNumber2">
+            <option>Choose a Food Item</option>
+            <script>
+                var select = document.getElementById("selectNumber2");
+                var options = ["  Chocolate Donut", "Caramel Donut", "Sprinkle Donut", "Nutella Donut", "Bluberry Donut"];
+                for(var i = 0; i < options.length; i++) {
+                    var opt = options[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    select.appendChild(el);
+                }
+            </script>
+        </select>
 
+        <p align="center" class="details"><b>Food Variety</b></p>
+
+        <select id="selectNumber3">
+            <option>Choose a number</option>
+            <script>
+                var select = document.getElementById("selectNumber3");
+                var options = ["50", "100", "200", "300", "400", "500", "1000"];
+                for(var i = 0; i < options.length; i++) {
+                    var opt = options[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    select.appendChild(el);
+                }
+            </script>
+        </select>
+
+        <p align="center" class="details"><b>Quantity</b></p>
+        <select id="selectNumber4">
+            <option>Choose a number</option>
+            <script>
+                var select = document.getElementById("selectNumber4");
+                var options = ["50", "100", "200", "300", "400", "500", "1000"];
+                for(var i = 0; i < options.length; i++) {
+                    var opt = options[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    select.appendChild(el);
+                }
+            </script>
+        </select>
     </div>
-<br/>
+
     <div class="form-popup" id="myForm">
         <form action="/action_page.php" class="form-container">
             <h1 class="title">Logout</h1>

@@ -195,5 +195,15 @@ div.ex1 {
 }
 .details{
     font-size: 30px;
+}
+.ui-block-a{
+    font-size: 30px;
+}
 
+.ui-block-b{
+    font-size: 30px;
+}
+
+select {
+    font-size: 32px;
 }
