@@ -1,0 +1,109 @@
+\@font-face {
+  font-family: Capriola;
+  src: url('Fonts/Capriola.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: BalooBhai;
+  src: url('Fonts/BalooBhai.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url('Fonts/Montserrat.ttf');
+  font-style: normal;
+}
+.imageText {
+width: 30%;
+height: 200px;
+background-size: cover !important;
+border-radius: 25px;
+position: relative;
+color: white;
+}
+
+.centered {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 300%;
+font-weight: 700;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  border-style: solid;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+
+/* .position {
+  width: 50%;
+  height: 50%;
+} */
+
+
+.grid-container {
+display: grid;
+grid-template-columns: auto auto auto auto;
+grid-gap: 20px 50px;
+background-color: #2196F3;
+padding: 10px;
+}
+
+.grid-container > div {
+background-color: rgba(255, 255, 255, 0.8);
+text-align: center;
+padding: 20px 0;
+font-size: 30px;
+}
