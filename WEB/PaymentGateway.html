@@ -1,0 +1,75 @@
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+
+<!--<head>-->
+
+    <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />-->
+    <!--<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>-->
+    <!--<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+    <!--<script src="https://checkout.stripe.com/checkout.js"></script>-->
+
+    <!--&lt;!&ndash; <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">-->
+    <!--<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>-->
+    <!--<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> &ndash;&gt;-->
+
+<!--</head>-->
+
+<!--<body>-->
+
+<!--<form id="frmBooking" name="bookingForm" action="post" action="_self">-->
+    <!--<input id="item_name" name="item_name" type="text" value=”3 Tickets" />-->
+    <!--<input id="item_value" name="item_value" type="text" value="20" />-->
+    <!--<button id="customButton">Purchase</button>-->
+<!--</form>-->
+
+
+<!--<script>-->
+    <!--jQuery(function ($) {-->
+        <!--var $form = $('#frmBooking');-->
+        <!--var handler = StripeCheckout.configure({-->
+            <!--key: 'pk_test_cp21BcECf4kMMUbSlRlZlsMo',-->
+            <!--token: function (token) {-->
+                <!--if (token.id) {-->
+                    <!--$("#thankyouPayment").html("Thank you")-->
+                <!--}9-->
+
+                <!--$('#customButton').on('click', function (e) {-->
+                    <!--handler.open({-->
+                        <!--name: 'Demo Site',-->
+                        <!--currency: 'LKR',-->
+                        <!--description: $('#item_name').val(),-->
+                        <!--amount: $('#item_value').val() * 100-->
+                    <!--});-->
+                    <!--$(window).on('popstate', function () {-->
+                        <!--handler.close();-->
+                    <!--});-->
+                <!--});-->
+            <!--}-->
+        <!--})});-->
+<!--</script>-->
+
+
+<!--</body>-->
+
+<!--</html>-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>QR Scanner</title>
+    <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script> <script src="instascan.min.js"></script>
+</head>
+
+<h1>QR Scanner</h1>
+<video id="preview"></video> <div id="contentText">
+
+</div>
+</html>
+    </body>
+
+    </html>

@@ -15,30 +15,6 @@ itemPriceArray = [1000, 100, 500, 300];
 itemQuantityArray = [1, 3, 2, 1];
 
 
-// readTextFile("file:////Users/charana/Documents/Projects/Kamu/textFiles/testFile.txt");
-
-// function myFunction() {
-//     document.getElementById("hilbl").innerHTML = "Bye";
-// }
-
-// function readTextFile(file)
-// {
-//     var rawFile = new XMLHttpRequest();
-//     rawFile.open("GET", file, false);
-//     rawFile.onreadystatechange = function ()
-//     {
-//         if(rawFile.readyState === 4)
-//         {
-//             if(rawFile.status === 200 || rawFile.status == 0)
-//             {
-//                 var allText = rawFile.responseText;
-//                 alert(allText);
-//             }
-//         }
-//     }
-//     rawFile.send(null);
-// }
-
 numberOfItemsTypes = 4;
 
 foodItemsList(numberOfItemsTypes);
@@ -92,6 +68,27 @@ function checkboxTest(numOfLines) {
             document.getElementById("totalAmountLabel").innerHTML = "Total : " + totalPrice;
         }
 
+}
+
+
+// readTextFile("file:////Users/charana/Documents/Projects/Kamu/textFiles/testFile.txt");
+readTextFile("../FileAssets/testFile.txt");
+
+function readTextFile(file) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function () {
+
+        if(rawFile.readyState === 4) {
+            console.log("Ready state 4");
+            if(rawFile.status === 200 || rawFile.status == 0) {
+                console.log("Raw File state 200");
+                var allText = rawFile.responseText;
+                alert(allText);
+            }
+        }
+    }
+    rawFile.send(null);
 }
 
 
