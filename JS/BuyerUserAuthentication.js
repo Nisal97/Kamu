@@ -1,7 +1,7 @@
 var firebaseConfig = {
     apiKey: "AIzaSyA2u_is25sTED0wh6GdBOjPOtdhxcLwvT4",
     authDomain: "kamu-buyer.firebaseapp.com",
-    databaseURL: "https://kamu-buyer.firebaseio.com",
+    databaseURL: "https://kamu-buyer.firebaseio.com/",
     projectId: "kamu-buyer",
     storageBucket: "kamu-buyer.appspot.com",
     messagingSenderId: "1045811834528",
@@ -21,7 +21,7 @@ function buyerSignUpAuthentication() {
         firebase.auth().createUserWithEmailAndPassword(email, password).then(function(error){
             var errorMessage = error.message;
             console.log(errorMessage);
-            // window.location.href = "SellerRequestForm.html";
+            window.location.href = "FoodCategories.html";
         }).catch(function (error) {
             var errorMessage = error.message;
             console.log(errorMessage);
@@ -41,10 +41,27 @@ function buyerSignInAuthentication(){
         .then(function(error) {
             var errorMessage = error.message;
             console.log(errorMessage);
-            window.location.href = "SellerRequestForm.html";
+            window.location.href = "FoodCategories.html";
         })
         .catch(function(error) {
             var errorMessage = error.message;
             console.log(errorMessage);
         });
+}
+
+function submitBuyerData() {
+    var buyerUserName = document.getElementById("buyerSignUpUserNameInput").value;
+    var buyerUserRef = firebase.database().ref(buyerUserName);
+    console.log(buyerUserName);
+    console.log(buyerUserRef);
+
+    buyerUserRef.set({
+        details:{
+            username: document.getElementById("buyerSignUpUserNameInput").value,
+            buyerEmail: document.getElementById("buyerSignUpEmailInput").value,
+            buyerNumber: document.getElementById("BuyerSignUpNumberInput").value,
+            // cartItems: "1,2",
+            // cartItemQuantities: "10"
+        }
+    });
 }

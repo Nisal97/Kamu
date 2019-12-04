@@ -18,13 +18,14 @@ function submitSellerSignUpData() {
     var sellerUserName = document.getElementById("sellerSignUpUsernameInput").value;
     var sellerUserRef = firebase.database().ref(sellerUserName);
 
-    sellerUserRef.push({
+    sellerUserRef.set({
         details:{
             username: document.getElementById("sellerSignUpUsernameInput").value,
             sellerEmail: document.getElementById("sellerSignUpEmailInput").value,
             sellerNumber: document.getElementById("sellerSignUpNumberInput").value
         }
     });
+
 }
 
 function signUpAuthentication() {
