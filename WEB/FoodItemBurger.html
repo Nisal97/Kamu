@@ -1,137 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.0/qs.min.js"></script>
     <link rel="stylesheet" href="../CSS/Common.css">
     <link rel="stylesheet" href="../CSS/Food.css">
 
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.0/qs.min.js"></script>
+    <script src="../JS/Food.js"></script>
+
     <meta charset="UTF-8">
     <title>Kamu - Burger Food Items</title>
-    
+
 </head>
 
-<body>
-<div id="foodItemBurgerPage" data-role="page" align="center" class="home">
-    
-    <div id="burger1" hidden>
-        <div>
-        <h1 id = "fonts">Beef Pasta</h1>
-        <img id="beefPasta" src="../ImageAssets/Foods/Pasta/beefPasta.jpg" align="center">
-        </div>
-        <hr>
-        <p>This is Beef Pasta</p>    
-    </div>
+<body onload="viewFoodItem()">
+    <div id="foodItemBurgerPage" data-role="page" align="center" class="home">
 
-    <div id="burger2" hidden>
-        <div>
-        <h1 id = "fonts">Chicken Pasta</h1>
-        <img id="chickenPasta" src="../ImageAssets/Foods/Pasta/chickenPasta.jpg" align="center">
-        </div>
-        <hr>
-        <p>This is Chicken Pasta</p>    
-    </div>
-
-    <div id="burger3" hidden>
-        <div>
-        <h1 id = "fonts">Creamy Tomato Pasta</h1>
-        <img id="creamytomatoPasta" src="../ImageAssets/Foods/Pasta/creamytomatoPasta.jpg" align="center">
-        </div>
-        <hr>
-        <p>This is Creamy Tomato Pasta</p>    
-    </div>   
-
-    <div id="burger4" hidden>
-        <div>
-        <h1 id = "fonts">Italian Pasta</h1>
-        <img id="italianPasta" src="../ImageAssets/Foods/Pasta/italianPasta.jpg" align="center">
-        </div>
-        <hr>
-        <p>This is Italian Pasta</p>    
-    </div>
-
-    <div id="burger5" hidden>
-        <div>
-        <h1 id = "fonts">Spaghetti Pasta</h1>
-        <img id="spaghettiPasta" src="../ImageAssets/Foods/Pasta/spaghettiPasta.jpg" align="center">
-        </div>
-        <hr>
-        <p>This is Spaghetti Pasta</p>    
-    </div>
-
-    <div id="burger6" hidden>
+        <div id="burger1" hidden>
             <div>
-            <h1 id = "fonts">Vegan Pasta</h1>
-            <img id="veganPasta" src="../ImageAssets/Foods/Pasta/veganPasta.jpg" align="center">
+                <h1 id="fonts">Beef Pasta</h1>
+                <img id="beefPasta" src="../ImageAssets/Foods/Pasta/beefPasta.jpg" align="center">
             </div>
             <hr>
-            <p>This is Vegan Pasta</p>    
+            <p>This is Beef Pasta</p>
+        </div>
+
+        <div id="burger2" hidden>
+            <div>
+                <h1 id="fonts">Chicken Pasta</h1>
+                <img id="chickenPasta" src="../ImageAssets/Foods/Pasta/chickenPasta.jpg" align="center">
+            </div>
+            <hr>
+            <p>This is Chicken Pasta</p>
+        </div>
+
+        <div id="burger3" hidden>
+            <div>
+                <h1 id="fonts">Creamy Tomato Pasta</h1>
+                <img id="creamytomatoPasta" src="../ImageAssets/Foods/Pasta/creamytomatoPasta.jpg" align="center">
+            </div>
+            <hr>
+            <p>This is Creamy Tomato Pasta</p>
+        </div>
+
+        <div id="burger4" hidden>
+            <div>
+                <h1 id="fonts">Italian Pasta</h1>
+                <img id="italianPasta" src="../ImageAssets/Foods/Pasta/italianPasta.jpg" align="center">
+            </div>
+            <hr>
+            <p>This is Italian Pasta</p>
+        </div>
+
+        <div id="burger5" hidden>
+            <div>
+                <h1 id="fonts">Spaghetti Pasta</h1>
+                <img id="spaghettiPasta" src="../ImageAssets/Foods/Pasta/spaghettiPasta.jpg" align="center">
+            </div>
+            <hr>
+            <p>This is Spaghetti Pasta</p>
+        </div>
+
+        <div id="burger6" hidden>
+            <div>
+                <h1 id="fonts">Vegan Pasta</h1>
+                <img id="veganPasta" src="../ImageAssets/Foods/Pasta/veganPasta.jpg" align="center">
+            </div>
+            <hr>
+            <p>This is Vegan Pasta</p>
+        </div>
+
+        <div class="quantity">
+            <button class="plus-btn" type="button" name="button" onclick="increaseItemCount()">
+                <img src="../ImageAssets/plus.svg" alt="" />
+            </button>
+            <input id="count" type="text" name="name" value="1">
+            <button class="minus-btn" type="button" name="button" onclick="decreaseItemCount()">
+                <img src="../ImageAssets/minus.svg" alt="" />
+            </button>
+        </div>
+
+
+        <p><button>Add to Cart</button></p>
+
+        <div data-role="footer" id="footer">
+            <h6>Copyrights &copy; 2019 KAMU All Rights Reserved </h6>
+        </div>
     </div>
-
-    <div class="quantity">
-        <button class="plus-btn" type="button" name="button">
-          <img src="../ImageAssets/plus.svg" alt="" />
-        </button>
-        <input type="text" name="name" value="1">
-        <button class="minus-btn" type="button" name="button">
-          <img src="../ImageAssets/minus.svg" alt="" />
-        </button>
-      </div>
-
-
-      <p><button>Add to Cart</button></p>
-      
-    <div data-role="footer" id="footer">
-        <h6>Copyrights &copy; 2019 KAMU All Rights Reserved </h6>
-    </div>
-</div>
 </body>
 
-<script>
-        // var qs = new Querystring();
-        // var v1 = qs.get("var");
-        var param = parent.document.URL.substring(parent.document.URL.indexOf('?')+1, parent.document.URL.length);
-        var pizza = param.substring("var=burger1".indexOf('=')+1);
-        console.log('dimalsha - ', pizza);
-
-        document.getElementById(pizza).hidden = false; // to hide    
-       // console.log('dlkmdc - ', document.getElementById(pizza));
-        //http://localhost:8080/Kamu/WEB/FoodItemPizza.html?var=pizza1
-    
-
-
-
-    $('.minus-btn').on('click', function(e) {
-          e.preventDefault();
-          var $this = $(this);
-          var $input = $this.closest('div').find('input');
-          var value = parseInt($input.val());
-          if (value > 1) {
-              value = value - 1;
-          } else {
-              value = 0;
-          }
-
-      $input.val(value);
-
-      });
-
-      $('.plus-btn').on('click', function(e) {
-          e.preventDefault();
-          var $this = $(this);
-          var $input = $this.closest('div').find('input');
-          var value = parseInt($input.val());
-
-          if (value < 100) {
-            value = value + 1;
-          } else {
-              value =100;
-          }
-
-          $input.val(value);
-      });
-
-    </script>
 </html>
