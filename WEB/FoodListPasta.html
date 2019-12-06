@@ -4,8 +4,8 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <link rel="stylesheet" href="../CSS/Food.css">
     <link rel="stylesheet" href="../CSS/Common.css">
+    <link rel="stylesheet" href="../CSS/Food.css">
 
     <meta charset="UTF-8">
     <title>Kamu - Pasta Food List</title>
@@ -13,51 +13,96 @@
 
 <body>
 <div id="foodListPastaPage" data-role="page" align="center" class="home">
-    <div id ="dataArea">
-    
-        <div data-role="header" class="header" id="KamuLogo" style="text-align: center">
-            <img class="header-logo" src="../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="center"> <!--Logo-->
-        </div>
+    <div data-role="header" id="KamuLogo" style="text-align: center">
+        <img id="logo" src="../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="center">
+    </div>
         
         <div>
         <div display: grid>
         <div class="column">
             <h3 id = "fonts">Beef Pasta</h3>
             <img id="beefPasta" src="../ImageAssets/Foods/Pasta/beefPasta.jpg" align="center">
-        </div>
+            <script>
+                    $(document).ready(function () {
+                        $("#beefPasta").click(function () {
+                            document.location.href = "./FoodItemPasta.html?var=pasta1";
+                                    }); {
+                                    }
+                    })
+            </script>
+            </div>
         <div class="column">
             <h3 id = "fonts">Chicken Pasta</h3>
             <img id="chickenPasta" src="../ImageAssets/Foods/Pasta/chickenPasta.jpg" align="center">
-        </div>
+            <script>
+                    $(document).ready(function () {
+                        $("#chickenPasta").click(function () {
+                            document.location.href = "./FoodItemPasta.html?var=pasta2";
+                                    }); {
+                                    }
+                    })
+            </script>
+            </div>
         </div>
           
         <div display: grid>
         <div class="column">
             <h3 id = "fonts">Creamy Tomato Pasta</h3>
             <img id="creamytomatoPasta" src="../ImageAssets/Foods/Pasta/creamytomatoPasta.jpg" align="middle">
-        </div>
+            <script>
+                    $(document).ready(function () {
+                        $("#creamytomatoPasta").click(function () {
+                            document.location.href = "./FoodItemPasta.html?var=pasta3";
+                                    }); {
+                                    }
+                    })
+            </script>
+            </div>
         <div class="column">
             <h3 id = "fonts">Italian Pasta</h3>
             <img id="italianPasta" src="../ImageAssets/Foods/Pasta/italianPasta.jpg" align="middle">
-        </div>
+            <script>
+                    $(document).ready(function () {
+                        $("#italianPasta").click(function () {
+                            document.location.href = "./FoodItemPasta.html?var=pasta4";
+                                    }); {
+                                    }
+                    })
+            </script>
+            </div>
         </div>
 
         <div display: grid; >
         <div class="column">
             <h3 id = "fonts">Spaghetti Pasta</h3>
             <img id="spaghettiPasta" src="../ImageAssets/Foods/Pasta/spaghettiPasta.jpg" align="middle">
-        </div>
+            <script>
+                    $(document).ready(function () {
+                        $("#spaghettiPasta").click(function () {
+                            document.location.href = "./FoodItemPasta.html?var=pasta5";
+                                    }); {
+                                    }
+                    })
+            </script>
+            </div>
         <div class="column">
             <h3 id = "fonts">Vegan Pasta</h3>
             <img id="veganPasta" src="../ImageAssets/Foods/Pasta/veganPasta.jpg" align="middle">
-        </div>
+            <script>
+                    $(document).ready(function () {
+                        $("#veganPasta").click(function () {
+                            document.location.href = "./FoodItemPasta.html?var=pasta6";
+                            }); {
+                                }
+                    })
+            </script>
+            </div>
         </div>
 
         </div>
-        <div data-role="footer" id="footer">
+
+    <div data-role="footer" id="footer">
         <h6>Copyrights &copy; 2019 KAMU All Rights Reserved </h6>
-        </div>
-        
     </div>
 </div>
 </body>
