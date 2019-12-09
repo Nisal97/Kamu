@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:text-align="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Seller Request Form</title>
@@ -8,6 +8,7 @@
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="../CSS/Seller.css">
     <script src="../JS/Common.js"></script>
+
 
 </head>
 <body>
@@ -56,7 +57,7 @@
 <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
 
 
-<div data-role="page">
+<div data-role="page" id="page-container">
     <div data-role="header" id="sellerLoginTopic" style="text-align: left; padding-right: 100%; display: flex; flex-direction: row ">
 
         <img src="../ImageAssets/KamuLogo.png" id="requestLogo" >
@@ -80,6 +81,7 @@
             window.onload = function() {
                 // cats is an object but you can think of it as a lookup table
                 var cats = {
+                        'Choose a Food Category': ['Choose a Food Category first'],
                         'Donuts': ['Chocolate Donut', 'Caramel Donut', 'Sprinkle Donut', 'Nutella Donut', 'Bluberry Donut'],
                         'Burgers': ['Chicken Burger', 'Fish Burger', 'Cheese Burger', 'Vegi Burger', 'Chicken and Cheese Burger'],
                         'Pasta': ['Chicken Pasta', 'Fish Pasta', 'Cheese Pasta', 'Vegi Pasta', 'Chicken and Cheese Pasta'],
@@ -161,14 +163,20 @@
 
     <div>
         <div id="sellerPrices">
-            <div class="ui-grid-a ui-responsive">
-                    <div class="ui-block-a"><div class="ui-body ui-body-d" align="center"><b>Unit Price</b></div></div>
-                    <div class="ui-block-b"><div class="ui-body ui-body-d"align="center"><b>Total Amount</b></div></div>
-            </div>
-            <div class="ui-grid-a ui-responsive">
-                    <div class="ui-block-a"><div class="ui-body ui-body-d"align="center"><b>Rs.50</b></div></div>
-                    <div class="ui-block-b"><div class="ui-body ui-body-d"align="center"><b>Rs.500</b></div></div>
-            </div>
+
+            <table  width="100%">
+                <tr >
+                    <th >Unit Price</th>
+                    <th >Total Amount</th>
+                </tr>
+                <br/> <br/>
+                <tr>
+                    <td  >Rs.50</td>
+                    <td >Rs.500</td>
+                </tr>
+
+            </table>
+            <br/> <br/>
         </div>
     </div>
 
@@ -178,10 +186,9 @@
         <a href="#" id="logoutButton" class="ui-shadow ui-btn ui-corner-all" onclick="openForm()" >Logout</a>
     </div>
 
-    <div data-role="footer" id="footer">
-        <h1>Copyrights &copy; 2019 KAMU All Rights Reserved </h1>
+    <div data-role="footer" class="footer">
+        <p>Copyrights &copy; 2019 KAMU All Rights Reserved</p>
     </div>
-
 </div>
 </body>
 </html>
