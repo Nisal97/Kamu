@@ -25,6 +25,9 @@
     }
 
     function closeForm() {
+        // if(sessionStorage.getItem("FoodCategory") == "Donuts"){
+        //     console.log("Hello");
+        // }
         document.getElementById("myForm").style.display = "none";
     }
 
@@ -32,6 +35,7 @@
         document.getElementById("mySubmitForm").style.display = "block";
     }
     function yesForm() {
+
         // window.location.href = "Home.html";
         // document.getElementById("mySubmitForm").style.display = "none";
     }
@@ -39,7 +43,6 @@
     function cancelForm() {
         document.getElementById("mySubmitForm").style.display = "none";
     }
-
 
 </script>
 
@@ -63,54 +66,52 @@
     <div id="dataForm">
         <p align="center" class="details" id="FoodCat"><b>Food Category</b></p>
 
-        <select id="selectNumber1">
+        <select id="cat">
             <option>Choose a Food Category</option>
-            <script>
-                var select = document.getElementById("selectNumber1");
-                var options = ["Donuts", "Burgers", "Pizza", "Rice and Curry", "Biriyani"];
-                for(var i = 0; i < options.length; i++) {
-                    var opt = options[i];
-                    var el = document.createElement("option");
-                    el.textContent = opt;
-                    el.value = opt;
-                    select.appendChild(el);
-                }
-            </script>
         </select>
 
         <p align="center" class="details" id="FoodItem"><b>Food Item</b></p>
 
-        <select id="selectNumber2">
+        <select id="item">
             <option>Choose a Food Item</option>
-            <script>
-                var select = document.getElementById("selectNumber2");
-                var options = ["  Chocolate Donut", "Caramel Donut", "Sprinkle Donut", "Nutella Donut", "Bluberry Donut"];
-                for(var i = 0; i < options.length; i++) {
-                    var opt = options[i];
-                    var el = document.createElement("option");
-                    el.textContent = opt;
-                    el.value = opt;
-                    select.appendChild(el);
-                }
-            </script>
         </select>
 
-        <p align="center" class="details"><b>Food Variety</b></p>
+        <script>
+            window.onload = function() {
+                // cats is an object but you can think of it as a lookup table
+                var cats = {
+                        'Donuts': ['Chocolate Donut', 'Caramel Donut', 'Sprinkle Donut', 'Nutella Donut', 'Bluberry Donut'],
+                        'Burgers': ['Chicken Burger', 'Fish Burger', 'Cheese Burger', 'Vegi Burger', 'Chicken and Cheese Burger'],
+                        'Pasta': ['Chicken Pasta', 'Fish Pasta', 'Cheese Pasta', 'Vegi Pasta', 'Chicken and Cheese Pasta'],
+                        'Noodles': ['Chicken Noodles', 'Fish Noodles', 'Cheese Noodles', 'Noodles Kottu', 'Chicken and Cheese Noodles'],
+                        'Rice': ['Chicken Rice and Curry', 'Fish Rice and Curry', 'Egg Rice and Curry', 'Biriyani', 'Nasi Gourang'],
+                    },
+                    // just grab references to the two drop-downs
+                    cat_select = document.querySelector('#cat'),
+                    item_select = document.querySelector('#item');
 
-        <select id="selectNumber3">
-            <option>Choose a number</option>
-            <script>
-                var select = document.getElementById("selectNumber3");
-                var options = ["50", "100", "200", "300", "400", "500", "1000"];
-                for(var i = 0; i < options.length; i++) {
-                    var opt = options[i];
-                    var el = document.createElement("option");
-                    el.textContent = opt;
-                    el.value = opt;
-                    select.appendChild(el);
+                // populate the catinces drop-down
+                setOptions(cat_select, Object.keys(cats));
+                // populate the item drop-down
+                setOptions(item_select, cats[cat_select.value]);
+
+                // attach a change event listener to the catinces drop-down
+                cat_select.addEventListener('change', function() {
+                    // get the items in the selected catince
+                    setOptions(item_select, cats[cat_select.value]);
+                });
+
+                function setOptions(dropDown, options) {
+                    // clear out any existing values
+                    dropDown.innerHTML = '';
+                    // insert the new options into the drop-down
+                    options.forEach(function(value) {
+                        dropDown.innerHTML += '<option name="' + value + '">' + value + '</option>';
+                    });
                 }
-            </script>
-        </select>
+            };
+
+        </script>
 
         <p align="center" class="details"><b>Quantity</b></p>
         <select id="selectNumber4">
