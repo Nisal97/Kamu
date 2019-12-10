@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <link rel="stylesheet" href="../CSS/Seller.css">
+    <link rel="stylesheet" href="../../CSS/Seller.css">
 </head>
 <body>
 
@@ -18,27 +18,27 @@
 <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-functions.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
-<script src="../JS/SellerUserAuthentication.js"></script>
+<script src="../../JS/SellerUserAuthentication.js"></script>
 
 <div data-role="page" id="sellerLoginPage" class="sellerSignIn" style="background: white">
 
     <div data-role="header" id="sellerLoginTopic" style="text-align: left">
-        <a href="Home.html" data-ajax="false" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" style="background: white; width: 20%; height: 88%"></a>
+        <a href="../Common/Home.html" data-ajax="false" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" style="background: white; width: 20%; height: 88%"></a>
         <h1><b>Sign In</b></h1>
     </div>
 
     <div class="sellerLoginLogo" style="text-align: center">
-        <img id="logo1" src="../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="middle"> <!--Logo-->
+        <img id="logo1" src="../../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="middle"> <!--Logo-->
     </div>
 
     <div class="sellerLoginCredentials" style="text-align: center !important;display: flex; flex-direction: row">
-        <img id="usernameIcon" src="../ImageAssets/icons8-user-100.png" alt="usernameIcon"> <!-- username icon -->
+        <img id="usernameIcon" src="../../ImageAssets/icons8-user-100.png" alt="usernameIcon"> <!-- username icon -->
         <label for="sellerSignInUserNameInput" class="ui-hidden-accessible">User Name</label>          <!-- username textbox-->
         <input type="text" name="sellerUserName" id="sellerSignInUserNameInput" placeholder="User Name" value="">
     </div>
     <br>
     <div class="sellerLoginPassword" style="text-align: center !important;display: flex; flex-direction: row">
-        <img id="passwordIcon" src="../ImageAssets/icons8-password-1-100.png" alt="passwordIcon">  <!-- password icon -->
+        <img id="passwordIcon" src="../../ImageAssets/icons8-password-1-100.png" alt="passwordIcon">  <!-- password icon -->
         <label for="sellerSignInPasswordInput" class="ui-hidden-accessible">Password</label>                  <!-- password textbox -->
         <input type="password" name="sellerPassword" id="sellerSignInPasswordInput" placeholder="Password" value="">
     </div>
@@ -48,7 +48,7 @@
     </div>
 
     <div data-role="footer" id="sellerSignInFooter">
-<!--        <p><h1 style="color: black; display: inline !important; text-align: center">Don't have an account? </h1><a href="SellerSignUp.html" data-role="text" id="sellerSignUpText" data-transition="slidefade">Sign Up</a></p>-->
+        <p><h1 style="color: black; display: inline !important; text-align: center">Don't have an account? </h1><a href="SellerSignUp.html" data-role="text" id="sellerSignUpText" data-transition="slidefade">Sign Up</a></p>
     </div>
 
 

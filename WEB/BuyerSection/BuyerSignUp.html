@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <link rel="stylesheet" href="../CSS/Buyer.css">
+    <link rel="stylesheet" href="../../CSS/Buyer.css">
 </head>
 <body>
 
@@ -20,7 +20,7 @@
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
-<script src="../JS/BuyerUserAuthentication.js"></script>
+<script src="../../JS/BuyerUserAuthentication.js"></script>
 
 <div data-role="page" id="buyerSignUpPage" class="buyerSignUp">
 
@@ -30,7 +30,7 @@
     </div>
     <div id ="dataArea">
         <div style="text-align : center;">
-            <img id="buyerLoginLogo" src="../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="center"> <!--Logo-->
+            <img id="buyerLoginLogo" src="../../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="center"> <!--Logo-->
         </div>
 
         <div id="buyerUserName">
@@ -58,12 +58,12 @@
         </div>
         <br/>
         <div id="buttonSignUp" align="center">
-            <a href="#" id="signUpButton" class="ui-shadow ui-btn ui-corner-all" data-ajax="false" onclick="buyerSignUpAuthentication()">Sign Up</a>
+            <a href="#" id="signUpButton" class="ui-shadow ui-btn ui-corner-all" data-ajax="false" onclick="buyerSignUpAuthentication();submitBuyerData();">Sign Up</a>
 
         </div>
 
         <div data-role="footer" id="buyerSignInFooter">
-<!--            <p><h1 style="color: black">Already have an account? </h1><a href="" data-role="text" id="buyerSignUpText" data-transition="slidefade">Sign In</a></p>-->
+            <p><h1 style="color: black">Already have an account? </h1><a href="" data-role="text" id="buyerSignUpText" data-transition="slidefade">Sign In</a></p>
         </div>
     </div>
 
