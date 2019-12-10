@@ -1,7 +1,7 @@
 var firebaseConfig = {
     apiKey: "AIzaSyA2u_is25sTED0wh6GdBOjPOtdhxcLwvT4",
     authDomain: "kamu-buyer.firebaseapp.com",
-    databaseURL: "https://kamu-buyer.firebaseio.com/",
+    databaseURL: "https://kamu-buyer.firebaseio.com",
     projectId: "kamu-buyer",
     storageBucket: "kamu-buyer.appspot.com",
     messagingSenderId: "1045811834528",
