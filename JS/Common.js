@@ -49,3 +49,7 @@ function signOutFromBuyer() {
 //     }
 // }
 
+function initMaps() {
+    
+}
+
