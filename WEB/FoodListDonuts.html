@@ -5,7 +5,7 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="../CSS/Food.css">
-    <script type="text/javascript" src="../JS/Common.js"></script>
+    <link rel="stylesheet" href="../CSS/Common.css">
 
     <meta charset="UTF-8">
     <title>Kamu - Donuts Food List</title>
@@ -13,48 +13,98 @@
 
 <body>
 <div id="foodListDonutsPage" data-role="page" align="center" class="home">
-
-    <div data-role="header" id="KamuLogo" style="text-align: Center">
-        <img id="logo" src="../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="middle" height="42" width="42"> <!--Logo-->
-    </div>
-
-    <div class="row1">
-        <div class="column" style="background-color: white;">
-            <h2 style="font-family:Montserrat;">Chocolate Donut</h2>
-            <img id="chocalateDonut" src="../ImageAssets/ChocalateDonut.png" align="middle">
+     
+        <div data-role="header" class="header" id="KamuLogo" style="text-align: center">
+            <img class="header-logo" src="../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="center"> <!--Logo-->
         </div>
-        <div class="column" style="background-color:white;">
-            <h2 style="font-family:Montserrat;">Strawberry Donut</h2>
-            <img id="StrawberryDonut" src="../ImageAssets/StrawberryDonut.png" align="middle">
+        
+        <div>
+        <div display: grid>
+        <div class="column">
+            <h3 id = "fonts">Chocalate Donut</h3>
+            <img id="chocolateDonut" src="../ImageAssets/Foods/Donuts/chocolateDonut.png" align="center">
+            <script>
+                $(document).ready(function () {
+                    $("#chocolateDonut").click(function () {
+                        document.location.href = "./FoodItemPasta.html?var=donuts1";
+                                }); {
+                                }
+                })
+            </script>
         </div>
-    </div>
+        <div class="column">
+            <h3 id = "fonts">Vanilla Donut</h3>
+            <img id="vanillaDonut" src="../ImageAssets/Foods/Donuts/vanillaDonut.png" align="center">
+            <script>
+                $(document).ready(function () {
+                    $("#vanillaDonut").click(function () {
+                        document.location.href = "./FoodItemPasta.html?var=donuts2";
+                                }); {
+                                }
+                })
+            </script>
+        </div>
+        </div>
           
-    <div class="row2">
-        <div class="column" style="background-color: white;">
-            <h2 style="font-family:Montserrat;">Vanilla Donut</h2>
-            <img id="vanillaDonut" src="../ImageAssets/VanillaDonut.png" align="middle">
+        <div display: grid>
+        <div class="column">
+            <h3 id = "fonts">Strawberry Donut</h3>
+            <img id="strawberryDonut" src="../ImageAssets/Foods/Donuts/strawberryDonut.png" align="middle">
+            <script>
+                $(document).ready(function () {
+                    $("#strawberryDonut").click(function () {
+                        document.location.href = "./FoodItemPasta.html?var=donuts3";
+                                }); {
+                                }
+                })
+            </script>
+            </div>
+        <div class="column">
+            <h3 id = "fonts">Blueberry Donut</h3>
+            <img id="blueberryDonut" src="../ImageAssets/Foods/Donuts/blueberryDonut.png" align="middle">
+            <script>
+                $(document).ready(function () {
+                    $("#blueberryDonut").click(function () {
+                        document.location.href = "./FoodItemPasta.html?var=donuts4";
+                                }); {
+                                }
+                })
+            </script>
+            </div>
         </div>
-        <div class="column" style="background-color:white;">
-            <h2 style="font-family:Montserrat;">Blueberry Donut</h2>
-            <img id="BlueberryDonut" src="../ImageAssets/BlueberryDonut.png" align="middle">
-        </div>
-    </div>
 
-    <div class="row3">
-        <div class="column" style="background-color: white;">
-            <h2 style="font-family:Montserrat;">Sprinkle Donut</h2>
-            <img id="SprinkleDonut" src="../ImageAssets/SprinkleDonut.png" align="middle">
+        <div display: grid; >
+        <div class="column">
+            <h3 id = "fonts">Caramel Donut</h3>
+            <img id="caramelDonut" src="../ImageAssets/Foods/Donuts/caramelDonut.jpeg" align="middle">
+            <script>
+                $(document).ready(function () {
+                    $("#caramelDonut").click(function () {
+                        document.location.href = "./FoodItemPasta.html?var=donuts5";
+                                }); {
+                                }
+                })
+            </script>
+            </div>
+        <div class="column">
+            <h3 id = "fonts">Sprinkle Donut</h3>
+            <img id="sprinkleDonut" src="../ImageAssets/Foods/Donuts/sprinkleDonut.png" align="middle">
+            <script>
+                $(document).ready(function () {
+                    $("#sprinkleDonut").click(function () {
+                        document.location.href = "./FoodItemPasta.html?var=donuts6";
+                                }); {
+                                }
+                })
+            </script>
+            </div>
         </div>
-        <div class="column" style="background-color:white;">
-            <h2 style="font-family:Montserrat;">Caramel Donut</h2>
-            <img id="CaramelDonut" src="../ImageAssets/CaramelDonut.png" align="middle">
+
         </div>
-    </div>
-
-    <div data-role="footer" id="footer">
-        <h1 style="color: black">Copyrights &copy; 2019 KAMU All Rights Reserved </h1>
-    </div>
-
+        <div data-role="footer" id="footer">
+        <h6>Copyrights &copy; 2019 KAMU All Rights Reserved </h6>
+        </div>
+        
 </div>
 </body>
 
