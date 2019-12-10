@@ -18,13 +18,14 @@ function submitSellerSignUpData() {
     var sellerUserName = document.getElementById("sellerSignUpUsernameInput").value;
     var sellerUserRef = firebase.database().ref(sellerUserName);
 
-    sellerUserRef.push({
+    sellerUserRef.set({
         details:{
             username: document.getElementById("sellerSignUpUsernameInput").value,
             sellerEmail: document.getElementById("sellerSignUpEmailInput").value,
             sellerNumber: document.getElementById("sellerSignUpNumberInput").value
         }
     });
+
 }
 
 function signUpAuthentication() {
@@ -62,4 +63,16 @@ function signInAuthentication(){
             var errorMessage = error.message;
             console.log(errorMessage);
         });
+}
+
+function signOutFromSeller() {
+    firebase.auth().signOut().then(function(error) {
+        var errorMessage = error.message;
+        console.log(errorMessage);
+        window.location.href = "Home.html";
+    })
+        .catch(function (reason) {
+            var errorMessage = reason.message;
+            console.log(errorMessage);
+        })
 }

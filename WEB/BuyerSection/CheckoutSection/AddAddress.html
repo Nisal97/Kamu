@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter Address</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<!--    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6kurwo4XaVtFuO3zHsNlv8_rsy6s4KdU&callback=myMap"></script>-->
+    <link rel="stylesheet" href="../../../CSS/Common.css">
+
+    <style>
+        .ui-page{
+            background: transparent;
+        }
+        .ui-content{
+            background: transparent;
+        }
+
+    </style>
+</head>
+<body>
+
+<div data-role="page" id="addAddressPage">
+    <div data-role="header" id="addLocationHeader">
+        <a href="../../Common/Home.html" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" style="background: white; width: 20%; height: 88%"></a>
+        <h1><b>Add Address</b></h1>
+    </div>
+
+    <div  id="map">
+        <script>
+            function initMap() {
+                //location we want to enter
+                var location = {lat: 6.865152, lng: 79.859856};
+                //centering at the location
+                var map = new google.maps.Map(document.getElementById("map"), {zoom:4, center: location});
+                //setting the marker at the location
+                var marker = new google.maps.Marker({position: location, map: map})
+            }
+        </script>
+
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6kurwo4XaVtFuO3zHsNlv8_rsy6s4KdU&callback=initMap" type="text/javascript">
+        </script>
+
+    </div>
+
+</div>
+
+</body>
+</html>

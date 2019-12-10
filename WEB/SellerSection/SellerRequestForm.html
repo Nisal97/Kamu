@@ -6,11 +6,18 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <link rel="stylesheet" href="../CSS/Seller.css">
-    <script src="../JS/Common.js"></script>
+    <link rel="stylesheet" href="../../CSS/Seller.css">
+    <script src="../../JS/SellerUserAuthentication.js"></script>
 
 </head>
 <body>
+
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-functions.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
 
 <script>
 
@@ -19,7 +26,7 @@
     }
 
     function logOutForm() {
-        signOutAllPages()
+        signOutFromSeller();
         // window.location.href = "Home.html";
         document.getElementById("myForm").style.display = "none";
     }
@@ -56,7 +63,7 @@
 <div data-role="page">
     <div data-role="header" id="sellerLoginTopic" style="text-align: left; padding-right: 100%; display: flex; flex-direction: row ">
 
-        <img src="../ImageAssets/KamuLogo.png" id="requestLogo" >
+        <img src="../../ImageAssets/KamuLogo.png" id="requestLogo" >
         <p align="center" id="sellerRequestTopic"><b>Request Form</b></p>
     </div>
 
@@ -167,7 +174,7 @@
 
     <div id="buttons" align="center">
         <a href="#" id="submitButton" class="ui-shadow ui-btn ui-corner-all" onclick="openSubmitForm()">Submit</a>
-        <a href="ContactUs.html" id="contactUSButton" class="ui-shadow ui-btn ui-corner-all" data-ajax ="false" >Contact Us</a>
+        <a href="../Common/ContactUs.html" id="contactUSButton" class="ui-shadow ui-btn ui-corner-all" data-ajax ="false" >Contact Us</a>
         <a href="#" id="logoutButton" class="ui-shadow ui-btn ui-corner-all" onclick="openForm()" >Logout</a>
     </div>
 
