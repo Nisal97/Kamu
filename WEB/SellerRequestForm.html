@@ -35,11 +35,6 @@
     function openSubmitForm() {
         document.getElementById("mySubmitForm").style.display = "block";
     }
-    function yesForm() {
-
-        // window.location.href = "Home.html";
-        // document.getElementById("mySubmitForm").style.display = "none";
-    }
 
     function cancelForm() {
         document.getElementById("mySubmitForm").style.display = "none";
@@ -73,7 +68,7 @@
 
         <p align="center" class="details" id="FoodItem"><b>Food Item</b></p>
 
-        <select id="item">
+        <select id="item" onchange="changePrice">
             <option>Choose a Food Item</option>
         </select>
 
@@ -149,7 +144,7 @@
             <h2 class="details">Do you want to proceed with the order?</h2>
             <div data-role="header" id="buttonSubmit" style=" margin-right:10px; display: flex; flex-direction: row ">
                 <button type="button" id="cancelBtn" class="btnCancel" onclick="cancelForm()">Cancel</button>
-                <button type="button" id="okBtn" class="btnCancel" onclick="yesForm()">Ok</button>
+                <button type="button" id="okBtn" class="btnCancel" onClick="window.location.reload();">Ok</button>
             </div>
         </form>
     </div>
@@ -164,15 +159,15 @@
     <div>
         <div id="sellerPrices">
 
-            <table  width="100%">
+            <table id="table"  width="100%">
                 <tr >
                     <th >Unit Price</th>
                     <th >Total Amount</th>
                 </tr>
                 <br/> <br/>
                 <tr>
-                    <td  >Rs.50</td>
-                    <td >Rs.500</td>
+                    <td id = "unitPrice" >Rs.50</td>
+                    <td id = "totalAmount">Rs.500</td>
                 </tr>
 
             </table>
