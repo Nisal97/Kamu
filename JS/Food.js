@@ -17,7 +17,15 @@ function getItem() {
 }
 
 function viewFoodItem() {
-    document.getElementById(getItem()).hidden = false;
+    var itemId = getItem();
+    if(typeof foodList == 'undefined') {
+        document.getElementById(itemId).hidden = false;
+    }
+    else {
+        var item = foodList[itemId];
+        // console.log('item = ', item);
+        populateItems(item);
+    }
 }
 
 function increaseItemCount() {
@@ -33,4 +41,16 @@ function decreaseItemCount() {
 
     console.log("[item, count] = [" + getItem() + ", " + getItemCount() + "]");
 
+}
+
+function populateItems(item) {
+    var foodItemPizzaPage = document.getElementById("foodItem");
+    foodItemPizzaPage.innerHTML = '<div id="'+ item.id+'">'+
+    "<div>" +
+        '<h1 id="fonts">'+ item.name +'</h1>'+
+        '<img class="foodList" id="chickenbaconPizza" src="'+ item.imageUrl +'" align="center">'+
+    '</div>'+
+    '<hr>'+
+    item.description+
+    '</div>';
 }
