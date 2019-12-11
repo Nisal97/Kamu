@@ -115,6 +115,11 @@ Original Formating
   margin-bottom: 20px;
 }
 
+.foodList {
+  width: 250px;
+  height: 200px;
+}
+
 .centered {
   position: absolute;
   top: 50%;
