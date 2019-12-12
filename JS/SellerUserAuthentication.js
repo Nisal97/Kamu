@@ -17,6 +17,7 @@ firebase.analytics();
 function submitSellerSignUpData() {
     var sellerUserName = document.getElementById("sellerSignUpUsernameInput").value;
     var sellerUserRef = firebase.database().ref(sellerUserName);
+    console.log("submit about to start");
 
     sellerUserRef.set({
         details:{
@@ -25,7 +26,7 @@ function submitSellerSignUpData() {
             sellerNumber: document.getElementById("sellerSignUpNumberInput").value
         }
     });
-
+    console.log("submit done");
 }
 
 function signUpAuthentication() {
