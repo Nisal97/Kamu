@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="../../../../CSS/Common.css">
+    <link rel="stylesheet" href="../../../../CSS/Food.css">
+
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.0/qs.min.js"></script>
+    <script src="../../../../JS/Food/freshJuice.js"></script>
+    <script src="../../../../JS/Food.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Kamu - Fresh Juice Items</title>
+
+</head>
+
+<body onload="viewFoodItem()">
+    <div id="foodItemPizzaPage" data-role="page" align="center" class="home">
+
+        <div id="foodItem"></div>
+
+        <div class="quantity">
+            <button class="plus-btn" type="button" name="button" onclick="increaseItemCount()">
+                <img src="../../../../ImageAssets/plus.svg" alt="" />
+            </button>
+            <input id="count" type="text" name="name" value="1">
+            <button class="minus-btn" type="button" name="button" onclick="decreaseItemCount()">
+                <img src="../../../../ImageAssets/minus.svg" alt="" />
+            </button>
+        </div>
+
+
+        <p><button>Add to Cart</button></p>
+
+        <div data-role="footer" id="footer">
+            <h6>Copyrights &copy; 2019 KAMU All Rights Reserved </h6>
+        </div>
+    </div>
+</body>
+
+</html>
