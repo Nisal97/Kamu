@@ -59,9 +59,9 @@ function submitBuyerData() {
         details:{
             username: document.getElementById("buyerSignUpUserNameInput").value,
             buyerEmail: document.getElementById("buyerSignUpEmailInput").value,
-            buyerNumber: document.getElementById("BuyerSignUpNumberInput").value,
-            // cartItems: "1,2",
-            // cartItemQuantities: "10"
+            buyerNumber: document.getElementById("BuyerSignUpNumberInput").value
+            // cartItems: "0",
+            // cartItemQuantities: "0"
         }
     });
 }
