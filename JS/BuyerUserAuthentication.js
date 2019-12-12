@@ -55,13 +55,13 @@ function submitBuyerData() {
     console.log(buyerUserName);
     console.log(buyerUserRef);
 
-    buyerUserRef.push({
+    buyerUserRef.set({
         details:{
             username: document.getElementById("buyerSignUpUserNameInput").value,
             buyerEmail: document.getElementById("buyerSignUpEmailInput").value,
-            buyerNumber: document.getElementById("BuyerSignUpNumberInput").value,
-            cartItems: "0",
-            cartItemQuantities: "0"
+            buyerNumber: document.getElementById("BuyerSignUpNumberInput").value
+            // cartItems: "0",
+            // cartItemQuantities: "0"
         }
     });
 }
