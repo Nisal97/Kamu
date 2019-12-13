@@ -1,13 +1,14 @@
 
 table{
-border: red;
+border: #ee9933;
   margin-top: 100px;
 }
 td {
-  width:140px;
-  height:140px;
-  text-align:center;
-  font-size:25px;
+    width:150px;
+    height:150px;
+    text-align:center;
+    font-size:25px;
+    background-color: #dddddd;
 }
 .abcde {
   display: flex;
@@ -16,7 +17,9 @@ td {
 }
 
 .sky14 {
-  color: #262626;
+  color: #ffffff;
+    font-size: 80px;
+    font-family: BalooBhai;
   display: block;
   flex-grow: 1;
   overflow: hidden;
@@ -26,11 +29,19 @@ td {
 }
 
 .abcde .Fresh.Mango {
-  background-image: url(https://image.flaticon.com/icons/svg/8/8764.svg);
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
+    background-image: url(https://image.flaticon.com/icons/svg/8/8764.svg);
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
     margin: 20px;
+}
+
+p{
+    margin: 20px;
+    font-size: 40px;
+    font-family: BalooBhai;
+    color: #ffffff;
+
 }
 
 .wrapper {

@@ -15,9 +15,8 @@
 <div class="abcde" id="abcde">
     <div class="Fresh Mango" onClick="GoBack();"></div>
     <h1 class="sky14">Kamu Games</h1>
-    <div class="Fresh Orange"></div>
 </div>
-<p>Solve the Puzzle within 5 minutes and win a free Sprinkle Donut </p>
+<p> Solve the Puzzle within 5 minutes and win a free Sprinkle Donut </p>
 
     <link href="style.css" rel="stylesheet">
     <script src="clock.js"></script>
@@ -232,8 +231,13 @@ Countdown Timer: &nbsp; <span id="showmns">00</span>:<span id="showscs">00</span
         for(i=0;i<14;i++) {
             if(l[i]!=i+1) {a = 0;}
         }
-        if(a==1) {alert('You Won !');}
+        if(a==1) {
+            alert('You Won !');
+
+        }
+
     }
+
 //https://www.youtube.com/watch?v=9TMesBpOm9c
     drawPuzzle();
 </script>
