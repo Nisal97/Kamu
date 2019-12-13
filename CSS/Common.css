@@ -151,6 +151,24 @@ div.ex1 {
 }
 
 #map{
+    padding-top: 50%;
     width: 100%;
-    height: 35%;
+    height: 50%;
+}
+
+#addLocationHeader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    font-size: 30%;
+    color: black;
+    text-align: center;
+}
+
+#selectAreaText{
+    alignment: center;
+    padding-top: 15%;
+    padding-left: 5%;
+    font-size: 45%;
 }

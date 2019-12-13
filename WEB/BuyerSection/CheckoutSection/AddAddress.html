@@ -12,12 +12,17 @@
 <body>
 
 <div data-role="page" id="addAddressPage">
+
     <div data-role="header" id="addLocationHeader">
         <a href="../../Common/Home.html" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" style="background: white; width: 20%; height: 88%"></a>
         <h1><b>Add Address</b></h1>
     </div>
 
-    <div  id="map">
+    <div id="selectAreaText">
+        <b>Select your area here</b>
+    </div>
+
+    <div  id="map" style="height: 50%">
         <script>
             function initMap() {
                 //location we want to enter
@@ -29,9 +34,11 @@
             }
         </script>
 
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6kurwo4XaVtFuO3zHsNlv8_rsy6s4KdU&callback=initMap" type="text/javascript">
-        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6kurwo4XaVtFuO3zHsNlv8_rsy6s4KdU&callback=initMap" type="text/javascript"></script>
+    </div>
 
+    <div data-role="footer" class="footer" style="position: fixed; left: 0;bottom: 0;width: 100%;font-size: 30%;color: black;text-align: center">
+        <p>Copyrights &copy; 2019 KAMU All Rights Reserved</p>
     </div>
 
 </div>
