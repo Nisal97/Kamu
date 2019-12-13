@@ -156,19 +156,37 @@ div.ex1 {
     height: 50%;
 }
 
-#addLocationHeader{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    font-size: 30%;
-    color: black;
-    text-align: center;
-}
+/*#addLocationHeader{*/
+/*    position: fixed;*/
+/*    left: 0;*/
+/*    top: 0;*/
+/*    width: 100%;*/
+/*    font-size: 30%;*/
+/*    color: black;*/
+/*    text-align: center;*/
+/*}*/
 
 #selectAreaText{
     alignment: center;
     padding-top: 15%;
     padding-left: 5%;
     font-size: 45%;
+}
+
+.addLocationHeader .Fresh.Mango {
+    background-image: url(https://image.flaticon.com/icons/svg/8/8764.svg);
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+}
+
+.addAddressTopic {
+    color: #262626;
+    display: block;
+    flex-grow: 1;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
