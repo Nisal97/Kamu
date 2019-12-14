@@ -1,4 +1,3 @@
-
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -16,6 +15,7 @@
   float: left;
   width: 50%;
   padding: 10px;
+  height: 500px;
 }
 
 /* Clear floats after the columns */
@@ -42,13 +42,6 @@
   color: white;
 }
 
-
-/* .position {
-  width: 50%;
-  height: 50%;
-} */
-
-
 .grid-container {
 display: grid;
 grid-template-columns: auto auto auto auto;
@@ -64,11 +57,6 @@ padding: 20px 0;
 font-size: 30px;
 }
 
-
-/*
-Original Formating
-*/
-
 .home{
   position: relative;
 }
@@ -81,13 +69,13 @@ Original Formating
 
 #logo {
   padding-top: 0%;
-  width: 50%;
+  width: 20%;
 }
 
 #footer{
   padding-bottom: 1px;
   width: 100%;
-  margin-bottom: 5px;
+  background-color: white;
 }
 
 .column {
@@ -98,10 +86,12 @@ Original Formating
   background-color: white;
   border-radius: 25px;
   border-style: solid;
+  margin-bottom: 60px;
 }
 
 #fonts {
   font-family: Montserrat;
+  font-size: xx-large;
 }
 
 .imageText {
@@ -115,9 +105,23 @@ Original Formating
   margin-bottom: 20px;
 }
 
+#KamuLogo{
+  text-align: center;
+  border-color: white;
+  background-color: white;
+ }
+ 
 .foodList {
-  width: 250px;
-  height: 200px;
+  width: 350px;
+  height: 350px;
+}
+
+.foodItem {
+  width: 500px;
+  height: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .centered {
@@ -126,8 +130,22 @@ Original Formating
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: BalooBhai;
-  font-size: 300%;
+  font-size: 600%;
   font-weight: 700;
+}
+
+#foodItemTopic{
+  font-size: 70px;
+  font-family: Montserrat;
+  font-weight: 300; 
+}
+
+#foodItemDes{
+  padding-left: 150px;
+  padding-right: 150px;
+  font-size: 35px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .header-logo {
@@ -136,9 +154,15 @@ Original Formating
   vertical-align: top;
   margin: 5px;
 }
+.foodItemBtn{
+  height: 100px;
+  width: 100px;
+  margin-top: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
 
-
-.quantity {
+ .quantity {
   padding-top: 20px;
   margin-right: 60px;
 }
@@ -153,7 +177,7 @@ Original Formating
 }
 
 button[class*=btn] {
-  width: 200px;
+  width: 50px;
   height: 30px;
   background-color: #E1E8EE;
   border-radius: 6px;
@@ -170,3 +194,45 @@ button:focus,
 input:focus {
   outline:0;
 }
+
+.line {
+  border: 2px solid #df1f4e;
+  border-radius: 2px;
+}
+
+#addToCart{
+  background: #df1f4e;
+  color: white;
+  padding-bottom: 10%;
+  padding-top: 10%;
+  width: 100%;
+}
+
+#CartButtons{
+  background-position: bottom;
+  vertical-align: bottom;
+  width: 40%;
+  height: 40%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.plusMinusBtn{
+  display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.row{
+  margin-right: -15px;
+    margin-left: -15px;
+}
+ 

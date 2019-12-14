@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <link rel="stylesheet" href="../../../../CSS/Common.css">
@@ -9,19 +8,43 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.0/qs.min.js"></script>
-    <script src="../../../../JS/Food/donuts.js"></script>
+    <script src="../../../../JS/Food/FoodItemDonut.js"></script>
     <script src="../../../../JS/Food.js"></script>
 
     <meta charset="UTF-8">
     <title>Kamu - Donut Items</title>
-
 </head>
 
 <body onload="viewFoodItem()">
-    <div id="foodItemPizzaPage" data-role="page" align="center" class="home">
+    <div id="foodItemDonutPage" data-role="page" align="center" class="home">
+        <div data-role="header" id="KamuLogo" style="text-align: center; height:200px">
+        <div>
+            <img src ="../../../../ImageAssets/backButton.png" id="backBtn" class="foodItemBtn" align="left">
+            <script>
+                $(document).ready(function () {
+                    $("#backBtn").click(function () {
+                        document.location.href = "../../../BuyerSection/FoodList/FoodListDonuts.html";
+                            }); {
+                            }
+                })
+            </script>
+        </div>
 
+        <div>
+            <img src ="../../../../ImageAssets/shareButton.svg" id="shareBtn" class="foodItemBtn" align="right">
+            <script>
+                $(document).ready(function () {
+                    $("#shareBtn").click(function () {
+                        document.location.href = "";
+                            }); {
+                            }
+                })
+            </script>
+        </div>
+
+    </div>
+        
         <div id="foodItem"></div>
-
         <div class="quantity">
             <button class="plus-btn" type="button" name="button" onclick="increaseItemCount()">
                 <img src="../../../../ImageAssets/plus.svg" alt="" />
@@ -32,13 +55,14 @@
             </button>
         </div>
 
-
-        <p><button>Add to Cart</button></p>
+        <div id="CartButtons" class="buttons"  data-inset="true">
+            <a href="../../ShoppingCart.html" data-role="button" data-ajax="false" class="ui-btn ui-corner-all" id="addToCart" data-transition="slidefade">Add to Cart</a>  
+        </div>
 
         <div data-role="footer" id="footer">
             <h6>Copyrights &copy; 2019 KAMU All Rights Reserved </h6>
         </div>
+
     </div>
 </body>
-
 </html>

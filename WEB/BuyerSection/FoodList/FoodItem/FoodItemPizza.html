@@ -10,6 +10,8 @@
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.0/qs.min.js"></script>
     <script src="../../../../JS/Food.js"></script>
+    <script src="../../../../JS/instascan.min.js"></script>
+    <script type="text/javascript" src="jquery.qrcode.min.js"></script>
 
     <meta charset="UTF-8">
     <title>Kamu - Pizza Food Items</title>
@@ -19,13 +21,21 @@
 <body onload="viewFoodItem()">
     <div id="foodItemPizzaPage" data-role="page" align="center" class="home">
 
+
+        <div data-role="header" id="buyerLoginTopic" style="text-align: left">
+            <a href="../Common/Home.html" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" style="background: white; width: 20%; height: 88%"></a>
+            <h1><b>Sign In</b></h1>
+        </div>
+
         <div id="pizza1" hidden>
             <div>
                 <h1 id="fonts">Chicken Bacon</h1>
-                <img id="chickenbaconPizza" src="../../../../ImageAssets/Foods/Pizza/chickenbaconPizza.jpg" align="center">
+                <br>
+                <img class="foodItem" id="chickenbaconPizza" src="../../../../ImageAssets/Foods/Pizza/chickenbaconPizza.jpg" align="center">
             </div>
-            <hr>
-            <p>This is Chicken Bacon Pizza</p>
+            <br>
+            <hr class="line">
+            <p id="fonts">Chicken Bacon Pizzais with onions & green chillies with a double layer of mozzarella cheese.</p>
         </div>
 
         <div id="pizza2" hidden>
@@ -74,18 +84,80 @@
         </div>
 
 
-        <div class="quantity">
-            <button class="plus-btn" type="button" name="button" onclick="increaseItemCount()">
-                <img src="../../../../ImageAssets/plus.svg" alt="" />
-            </button>
-            <input id="count" type="text" name="name" value="1">
-            <button class="minus-btn" type="button" name="button" onclick="decreaseItemCount()">
-                <img src="../../../../ImageAssets/minus.svg" alt="" />
-            </button>
+        <div id="qr-example"></div>
+        <input type="text" value=" <?php echo get_permalink(); ?>" id="gn-val"/>
+        <input type="button" value="Generate QRCode" id="gn-btn"/>
+
+        <a href="
+
+    mailto:johndoe@gmail.com
+
+    ?subject=Kamu URL
+
+    &body=This+is+an+awesome+email
+
+    &cc=janedoe@gmail.com
+
+    &bcc=billybob@yahoo.com"> Click here to send email! </a>
+
+<br>
+
+<a href="whatsapp://send?text=[TITLE] : [Link]?utm_source=site%26utm_medium=social_share%26utm_content=whatsapp" data-action="[Link]">Whtsap</a>
+<!-- 
+        <h1>QR Scanner</h1>
+        <video id="preview"></video>
+        <div id="contentText">
         </div>
 
 
-        <p><button>Add to Cart</button></p>
+
+        <script type="text/javascript">
+
+            var scanner = new Instascan.Scanner ({ video: document.getElementById('preview') });
+            scanner.addListener ('scan', function (content) {
+            $("#contentText").html(content);
+            window.open (content, '_blank');
+            });
+
+            Instascan.Camera.getCameras().then(function (cameras) {
+if (cameras.length > 0) {
+scanner.start(cameras[0]);
+} else {
+console.error('No cameras found.');
+}
+}).catch(function (e) {
+console.error(e);
+});
+
+</script> -->
+
+
+
+
+
+        <!-- <div>
+            <button class="quantity" type="button" name="button" onclick="increaseItemCount()">
+                <img src="../../../../ImageAssets/plus.svg" alt="" />
+            </button>
+            <input id="count" type="text" name="name" value="1">
+            <button class="quantity" type="button" name="button" onclick="decreaseItemCount()">
+                <img src="../../../../ImageAssets/minus.svg" alt="" />
+            </button>
+        </div> -->
+
+
+
+        <div class="quantity buttons_added">
+            <input type="button" value="-" class="minus" onclick="decreaseItemCount()">
+            <input id="count" type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
+            <input type="button" value="+" class="plus" onclick="increaseItemCount()">
+        </div>
+
+        <div id="CartButtons" class="buttons"  data-inset="true">
+            <a href="../../ShoppingCart.html" data-role="button" data-ajax="false" class="ui-btn ui-corner-all" id="addToCart" data-transition="slidefade">Add to Cart</a>
+        
+            
+        </div>
 
         <div data-role="footer" id="footer">
             <h6>Copyrights &copy; 2019 KAMU All Rights Reserved </h6>
