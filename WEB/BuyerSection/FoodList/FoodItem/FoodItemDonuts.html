@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
@@ -27,8 +28,8 @@
                     $(document).ready(function () {
                         $("#backBtn").click(function () {
                             document.location.href = "../../../BuyerSection/FoodList/FoodListDonuts.html";
-                                }); {
-                                }
+                        }); {
+                        }
                     })
                 </script>
             </div>
@@ -40,33 +41,33 @@
                     $(document).ready(function () {
                         $("#shareBtn").click(function () {
                             document.location.href = "";
-                                }); {
-                                }
+                        }); {
+                        }
                     })
                 </script>
             </div>
-    </div>
-        
-        <div id="foodItem"></div>
-        <div class="quantity">
-                <div class="ui-grid-b">
-                        <div class="ui-block-a">
-                            <button type="button" name="button" onclick="increaseItemCount()">
-                                <i class="fas fa-plus"></i>
-                            </button></div>
-                        <div class="ui-block-b">
-                            <input id="count" class="count" type="text" name="name" value="1"></div>
-                        <div class="ui-block-c">
-                            <button type="button" name="button" onclick="decreaseItemCount()">
-                                <i class="fas fa-minus"></i>
-                            </button></div>
-                    </div>            
-            
-            
         </div>
 
-        <div id="CartButtons" class="buttons"  data-inset="true">
-            <a href="../../ShoppingCart.html" data-role="button" data-ajax="false" class="ui-btn ui-corner-all" id="addToCart" data-transition="slidefade">Add to Cart</a>  
+        <div id="foodItem"></div>
+        <div class="quantity">
+            <div class="ui-grid-b">
+                <div class="ui-block-a">
+                    <button type="button" name="button" onclick="decreaseItemCount()">
+                        <i class="fas fa-minus"></i>
+                    </button></div>
+                <div class="ui-block-b">
+                    <input id="count" class="count" type="text" name="name" value="1"></div>
+
+                <div class="ui-block-c">
+                    <button type="button" name="button" onclick="increaseItemCount()">
+                        <i class="fas fa-plus"></i>
+                    </button></div>
+            </div>
+        </div>
+
+        <div id="CartButtons" class="buttons" data-inset="true">
+            <a href="../../ShoppingCart.html" data-role="button" data-ajax="false" class="ui-btn ui-corner-all"
+                id="addToCart" data-transition="slidefade">Add to Cart</a>
         </div>
 
         <div data-role="footer" data-position="fixed" class="footer">
@@ -75,4 +76,5 @@
 
     </div>
 </body>
+
 </html>
