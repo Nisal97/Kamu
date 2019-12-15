@@ -3,165 +3,122 @@
 
 <head>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
     <link rel="stylesheet" href="../../../../CSS/Common.css">
     <link rel="stylesheet" href="../../../../CSS/Food.css">
 
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.0/qs.min.js"></script>
-    <script src="../../../../JS/Food.js"></script>
     <script src="../../../../JS/instascan.min.js"></script>
-    <script type="text/javascript" src="jquery.qrcode.min.js"></script>
+    <script src="../../../../JS/Food/FoodItemPizza.js"></script>
+    <script src="../../../../JS/Food.js"></script>
 
     <meta charset="UTF-8">
-    <title>Kamu - Pizza Food Items</title>
-
+    <title>Kamu - Pizza Items</title>
 </head>
 
 <body onload="viewFoodItem()">
     <div id="foodItemPizzaPage" data-role="page" align="center" class="home">
-
-
-        <div data-role="header" id="buyerLoginTopic" style="text-align: left">
-            <a href="../Common/Home.html" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" style="background: white; width: 20%; height: 88%"></a>
-            <h1><b>Sign In</b></h1>
-        </div>
-
-        <div id="pizza1" hidden>
-            <div>
-                <h1 id="fonts">Chicken Bacon</h1>
-                <br>
-                <img class="foodItem" id="chickenbaconPizza" src="../../../../ImageAssets/Foods/Pizza/chickenbaconPizza.jpg" align="center">
+        <div id="header-food-item" data-role="header" data-position="fixed">
+            <div style="float: left;">
+                <i id="backBtn" class="fas fa-chevron-left fa-5x foodItemBtn"></i>
+                <script>
+                    $(document).ready(function () {
+                        $("#backBtn").click(function () {
+                            document.location.href = "../../../BuyerSection/FoodList/FoodListPizza.html";
+                        }); {
+                        }
+                    })
+                </script>
             </div>
-            <br>
-            <hr class="line">
-            <p id="fonts">Chicken Bacon Pizzais with onions & green chillies with a double layer of mozzarella cheese.</p>
-        </div>
 
-        <div id="pizza2" hidden>
-            <div>
-                <h1 id="fonts">Devilled Beef</h1>
-                <img id="devilledbeefPizza" src="../../../../ImageAssets/Foods/Pizza/devilledbeefPizza.jpg" align="center">
+            <div style="float: right;">
+               <i id="shareBtn" class="fas fa-share-alt fa-5x foodItemBtn" onclick="populateModel()"></i>
             </div>
-            <hr>
-            <p>This is Devilled Beef Pizza</p>
-        </div>
-
-        <div id="pizza3" hidden>
-            <div>
-                <h1 id="fonts">Devilled Chicken</h1>
-                <img id="devilledchickenPizza" src="../../../../ImageAssets/Foods/Pizza/devilledchickenPizza.jpg" align="center">
-            </div>
-            <hr>
-            <p>This is Devilled Chicken Pizza</p>
-        </div>
-
-        <div id="pizza4" hidden>
-            <div>
-                <h1 id="fonts">Hot Butter Cuttle Fish</h1>
-                <img id="hotbuttercuttlefishPizza" src="../../../../ImageAssets/Foods/Pizza/hotbuttercuttlefishPizza.jpg" align="center">
-            </div>
-            <hr>
-            <p>This is Hot Butter Cuttle Fish Pizza</p>
-        </div>
-
-        <div id="pizza5" hidden>
-            <div>
-                <h1 id="fonts">Hot and Spicy Chicken</h1>
-                <img id="hotspicychickenPizza" src="../../../../ImageAssets/Foods/Pizza/hotspicychickenPizza.jpg" align="center">
-            </div>
-            <hr>
-            <p>This is Hot and Spicy Chicken Pizza</p>
-        </div>
-
-        <div id="pizza6" hidden>
-            <div>
-                <h1 id="fonts">Sausage Delight</h1>
-                <img id="sausagedelightPizza" src="../../../../ImageAssets/Foods/Pizza/sausagedelightPizza.jpg" align="center">
-            </div>
-            <hr>
-            <p>This is Sausage Delight Pizza</p>
-        </div>
-
-
-        <div id="qr-example"></div>
-        <input type="text" value=" <?php echo get_permalink(); ?>" id="gn-val"/>
-        <input type="button" value="Generate QRCode" id="gn-btn"/>
-
-        <a href="
-
-    mailto:johndoe@gmail.com
-
-    ?subject=Kamu URL
-
-    &body=This+is+an+awesome+email
-
-    &cc=janedoe@gmail.com
-
-    &bcc=billybob@yahoo.com"> Click here to send email! </a>
-
-<br>
-
-<a href="whatsapp://send?text=[TITLE] : [Link]?utm_source=site%26utm_medium=social_share%26utm_content=whatsapp" data-action="[Link]">Whtsap</a>
-<!-- 
-        <h1>QR Scanner</h1>
-        <video id="preview"></video>
-        <div id="contentText">
-        </div>
-
-
-
-        <script type="text/javascript">
-
-            var scanner = new Instascan.Scanner ({ video: document.getElementById('preview') });
-            scanner.addListener ('scan', function (content) {
-            $("#contentText").html(content);
-            window.open (content, '_blank');
-            });
-
-            Instascan.Camera.getCameras().then(function (cameras) {
-if (cameras.length > 0) {
-scanner.start(cameras[0]);
-} else {
-console.error('No cameras found.');
-}
-}).catch(function (e) {
-console.error(e);
-});
-
-</script> -->
-
-
-
-
-
-        <!-- <div>
-            <button class="quantity" type="button" name="button" onclick="increaseItemCount()">
-                <img src="../../../../ImageAssets/plus.svg" alt="" />
-            </button>
-            <input id="count" type="text" name="name" value="1">
-            <button class="quantity" type="button" name="button" onclick="decreaseItemCount()">
-                <img src="../../../../ImageAssets/minus.svg" alt="" />
-            </button>
-        </div> -->
-
-
-
-        <div class="quantity buttons_added">
-            <input type="button" value="-" class="minus" onclick="decreaseItemCount()">
-            <input id="count" type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
-            <input type="button" value="+" class="plus" onclick="increaseItemCount()">
-        </div>
-
-        <div id="CartButtons" class="buttons"  data-inset="true">
-            <a href="../../ShoppingCart.html" data-role="button" data-ajax="false" class="ui-btn ui-corner-all" id="addToCart" data-transition="slidefade">Add to Cart</a>
-        
             
+<!-- Start model -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <div style="float: left;">
+                    <i id="copyBtn" class="far fa-copy fa-5x foodItemBtn"></i>
+                    <input type="text" value="Dimalshax" id="copyURL"/>
+                    <p onload="getURL()"> </p>
+                </div>
+                <hr>
+
+
+
+                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                        <img src="../../../../ImageAssets/qr-code.png" id="gn-btn">
+                            <div id="qr-example"></div>
+                            <input type="text" value=getURL() id="gn-val"/>
+                        </div>
+                    <div class="ui-block-b">
+                        <img src="../../../../ImageAssets/gmail.png" id="bt">
+                    </div>    
+                    <div class="ui-block-c">
+                        <img src="../../../../ImageAssets/twitter.png" id="md-btn">
+                        </div>
+                </div>
+
+    
+    
+    <input type="image" src="../../../../ImageAssets/emailBtn.jpg" alt="Submit" width="48" height="48">
+    <a href="
+    
+        mailto:johndoe@gmail.com
+    
+        ?subject=Kamu URL
+    
+        &body=This+is+an+awesome+email"> Click here to send email! </a>
+    
+    
+        <br/>
+    
+        
+                
+        <a href="http://www.twitter.com/share?url=http://www.google.com/">Tweet</a>
+    
+    </div>
+              
+              </div>
+    
+
+<!-- End Model -->
+
         </div>
 
-        <div data-role="footer" id="footer">
+        <div id="foodItem"></div>
+        <div class="quantity">
+            <div class="ui-grid-b">
+                <div class="ui-block-a">
+                    <button type="button" name="button" onclick="decreaseItemCount()">
+                        <i class="fas fa-minus"></i>
+                    </button></div>
+                <div class="ui-block-b">
+                    <input id="count" class="count" type="text" name="name" value="1"></div>
+
+                <div class="ui-block-c">
+                    <button type="button" name="button" onclick="increaseItemCount()">
+                        <i class="fas fa-plus"></i>
+                    </button></div>
+            </div>
+        </div>
+
+        <div id="CartButtons" class="buttons" data-inset="true">
+            <a href="../../ShoppingCart.html" data-role="button" data-ajax="false" class="ui-btn ui-corner-all"
+                id="addToCart" data-transition="slidefade">Add to Cart</a>
+        </div>
+
+        <div data-role="footer" data-position="fixed" class="footer">
             <h6>Copyrights &copy; 2019 KAMU All Rights Reserved </h6>
         </div>
+
     </div>
 </body>
 
