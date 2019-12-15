@@ -47,7 +47,6 @@ function populateItems(item) {
     var foodItemPizzaPage = document.getElementById("foodItem");
     foodItemPizzaPage.innerHTML = '<div id="'+ item.id+'">'+
     "<div>" +
-        '<p id="foodItemTopic"><b>'+ item.name +'</b></p>'+
         '<img class="foodItem" id="chickenbaconPizza" src="'+ item.imageUrl +'" align="center">'+
     '</div>'+
     '<hr class="line">'+
