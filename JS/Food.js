@@ -54,4 +54,10 @@ function populateItems(item) {
         '<p id="foodItemDes">'+
  item.description+'</p>'+
     '</div>';
+
+    var header = document.getElementById('header-food-item');
+    var elementItemName = document.createElement('div');
+    elementItemName.innerHTML = '<p id="foodItemTopic"><b>'+ item.name +'</b></p>';
+
+    header.appendChild(elementItemName);
 }
