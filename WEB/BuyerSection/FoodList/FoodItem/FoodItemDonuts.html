@@ -10,6 +10,7 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.0/qs.min.js"></script>
+    <script src="../../../../JS/instascan.min.js"></script>
     <script src="../../../../JS/Food/FoodItemDonut.js"></script>
     <script src="../../../../JS/Food.js"></script>
 
@@ -21,8 +22,6 @@
     <div id="foodItemDonutPage" data-role="page" align="center" class="home">
         <div id="header-food-item" data-role="header" data-position="fixed">
             <div style="float: left;">
-                <!-- <img src ="../../../../ImageAssets/backButton.png" id="backBtn" class="foodItemBtn" align="left"> -->
-
                 <i id="backBtn" class="fas fa-chevron-left fa-5x foodItemBtn"></i>
                 <script>
                     $(document).ready(function () {
@@ -35,17 +34,91 @@
             </div>
 
             <div style="float: right;">
-                <!-- <img src ="../../../../ImageAssets/shareButton.svg" id="shareBtn" class="foodItemBtn" align="right"> -->
-                <i id="shareBtn" class="fas fa-share-alt fa-5x foodItemBtn"></i>
-                <script>
-                    $(document).ready(function () {
-                        $("#shareBtn").click(function () {
-                            document.location.href = "";
-                        }); {
-                        }
-                    })
-                </script>
+               <i id="shareBtn" class="fas fa-share-alt fa-5x foodItemBtn"></i>
             </div>
+
+
+
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <div style="float: left;">
+                    <i id="copyBtn" class="far fa-copy fa-5x foodItemBtn"></i>
+                    <input type="text" value="Dimalshax" id="copyURL"/>
+                    <p onload="getURL()"> </p>
+                </div>
+                <hr>
+
+
+
+                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                        <img src="../../../../ImageAssets/qr-code.png" id="gn-btn">
+                            <div id="qr-example"></div>
+                            <input type="text" value=getURL() id="gn-val"/>
+                        </div>
+                    <div class="ui-block-b">
+                        <img src="../../../../ImageAssets/gmail.png" id="bt">
+                    </div>    
+                    <div class="ui-block-c">
+                        <img src="../../../../ImageAssets/twitter.png" id="md-btn">
+                        </div>
+                </div>
+
+    
+    
+    <input type="image" src="../../../../ImageAssets/emailBtn.jpg" alt="Submit" width="48" height="48">
+    <a href="
+    
+        mailto:johndoe@gmail.com
+    
+        ?subject=Kamu URL
+    
+        &body=This+is+an+awesome+email"> Click here to send email! </a>
+    
+    
+        <br/>
+    
+        
+                
+        <a href="http://www.twitter.com/share?url=http://www.google.com/">Tweet</a>
+    
+    </div>
+              
+              </div>
+    
+              <script>
+                // Get the modal
+                var modal = document.getElementById("myModal");
+                
+                // Get the button that opens the modal
+                var btn = document.getElementById("shareBtn");
+                
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+                
+                // When the user clicks the button, open the modal 
+                btn.onclick = function() {
+                  modal.style.display = "block";
+                }
+                
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() {
+                  modal.style.display = "none";
+                }
+                
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                  if (event.target == modal) {
+                    modal.style.display = "none";
+                  }
+                }
+                </script>
+
+
+
         </div>
 
         <div id="foodItem"></div>
