@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
     <link rel="stylesheet" href="../../../../CSS/Common.css">
     <link rel="stylesheet" href="../../../../CSS/Food.css">
 
@@ -17,49 +18,58 @@
 
 <body onload="viewFoodItem()">
     <div id="foodItemDonutPage" data-role="page" align="center" class="home">
-        <div data-role="header" id="KamuLogo" style="text-align: center; height:200px">
-        <div>
-            <img src ="../../../../ImageAssets/backButton.png" id="backBtn" class="foodItemBtn" align="left">
-            <script>
-                $(document).ready(function () {
-                    $("#backBtn").click(function () {
-                        document.location.href = "../../../BuyerSection/FoodList/FoodListDonuts.html";
-                            }); {
-                            }
-                })
-            </script>
-        </div>
+        <div id="header-food-item" data-role="header" data-position="fixed">
+            <div style="float: left;">
+                <!-- <img src ="../../../../ImageAssets/backButton.png" id="backBtn" class="foodItemBtn" align="left"> -->
 
-        <div>
-            <img src ="../../../../ImageAssets/shareButton.svg" id="shareBtn" class="foodItemBtn" align="right">
-            <script>
-                $(document).ready(function () {
-                    $("#shareBtn").click(function () {
-                        document.location.href = "";
-                            }); {
-                            }
-                })
-            </script>
-        </div>
+                <i id="backBtn" class="fas fa-chevron-left fa-5x foodItemBtn"></i>
+                <script>
+                    $(document).ready(function () {
+                        $("#backBtn").click(function () {
+                            document.location.href = "../../../BuyerSection/FoodList/FoodListDonuts.html";
+                                }); {
+                                }
+                    })
+                </script>
+            </div>
 
+            <div style="float: right;">
+                <!-- <img src ="../../../../ImageAssets/shareButton.svg" id="shareBtn" class="foodItemBtn" align="right"> -->
+                <i id="shareBtn" class="fas fa-share-alt fa-5x foodItemBtn"></i>
+                <script>
+                    $(document).ready(function () {
+                        $("#shareBtn").click(function () {
+                            document.location.href = "";
+                                }); {
+                                }
+                    })
+                </script>
+            </div>
     </div>
         
         <div id="foodItem"></div>
         <div class="quantity">
-            <button class="plus-btn" type="button" name="button" onclick="increaseItemCount()">
-                <img src="../../../../ImageAssets/plus.svg" alt="" />
-            </button>
-            <input id="count" type="text" name="name" value="1">
-            <button class="minus-btn" type="button" name="button" onclick="decreaseItemCount()">
-                <img src="../../../../ImageAssets/minus.svg" alt="" />
-            </button>
+                <div class="ui-grid-b">
+                        <div class="ui-block-a">
+                            <button type="button" name="button" onclick="increaseItemCount()">
+                                <i class="fas fa-plus"></i>
+                            </button></div>
+                        <div class="ui-block-b">
+                            <input id="count" class="count" type="text" name="name" value="1"></div>
+                        <div class="ui-block-c">
+                            <button type="button" name="button" onclick="decreaseItemCount()">
+                                <i class="fas fa-minus"></i>
+                            </button></div>
+                    </div>            
+            
+            
         </div>
 
         <div id="CartButtons" class="buttons"  data-inset="true">
             <a href="../../ShoppingCart.html" data-role="button" data-ajax="false" class="ui-btn ui-corner-all" id="addToCart" data-transition="slidefade">Add to Cart</a>  
         </div>
 
-        <div data-role="footer" id="footer">
+        <div data-role="footer" data-position="fixed" class="footer">
             <h6>Copyrights &copy; 2019 KAMU All Rights Reserved </h6>
         </div>
 
