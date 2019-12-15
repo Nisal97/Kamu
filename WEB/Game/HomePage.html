@@ -5,33 +5,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body onkeydown="keyPressed(event)" style="background-image: url('../../ImageAssets/Game/BackgroundGame.png');">
+<!--overlay enable script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script>
+
     function GoBack() {
         alert("do something here");
     }
 </script>
 
+
 <div class="abcde" id="abcde">
     <div class="Fresh Mango" onClick="GoBack();"></div>
     <h1 class="sky14">Kamu Games</h1>
 </div>
-<p> Solve the Puzzle within 5 minutes and win a free Sprinkle Donut </p>
+<p> Solve the Puzzle within 5 minutes and win a free Sprinkle Donut. </p>
 
-    <link href="style.css" rel="stylesheet">
     <script src="clock.js"></script>
 </head>
 
-<form action="#" method="post">
+//setting the time for the clock
+<form action="#" method="post" style="opacity: 0">
     Minutes: <input type="text" id="mns" name="mns" value="5" size="3" maxlength="3" /> &nbsp; &nbsp; Seconds: <input type="text" id="scs" name="scs" value="00" size="2" maxlength="2" /><br/>
-    <input style="alignment: center" class="button button1"  type="button" id="btnct" value="START" />
-    <input type="button" id="btnct_res" value="RESTART" />
-<!--    <input type="button" id="btnct_end" value="END" />-->
+<!--    <input style="alignment: center"  type="button"  value="START" />-->
+<!--    <input type="button" id="btnct_res" value="RESTART" />-->
 </form>
 
+<div id="countDown">
+    <button  style="alignment: center ; background: url(../../ImageAssets/Game/startgame.png)" value="START" id="btnct" ></button>
+    <br/>
+    <span id="showmns">5</span>:<span id="showscs">00</span>
 
-Countdown Timer: &nbsp; <span id="showmns">00</span>:<span id="showscs">00</span>
+</div>
+
 <script>
+
     function CountdownTimer(obnm){
         var endct =0;  // it is set to 1 when script starts
         var ctmnts =0;  // minutes
@@ -146,12 +155,27 @@ Countdown Timer: &nbsp; <span id="showmns">00</span>:<span id="showscs">00</span
 </table>
 
 <div class="wrapper">
-    <button  style="alignment: center" class="button button1" onClick="window.location.reload();">Start</button>
-    <button  style="alignment: center" class="button button1" onClick="window.location.reload();">Refresh</button>
+
+    <br/>
+    <button  style="alignment: center; background: url(../../ImageAssets/Game/leaderboard.png)" id="leaderBtn"  onclick="$('.overlay').show();"></button>
+    <button  style="alignment: center; background: url(../../ImageAssets/Game/restart.png)" id="restartBtn" onClick="window.location.reload();"></button>
 
 </div>
 
+<div class="overlay">
+    <div class="modal">
+        This is the modal. You can put whatever you like in here.
+    </div>
+</div>
+
 <script>
+
+    $('.overlay').on('click', function(e) {
+        if (e.target !== this) {
+            return;
+        }
+        $('.overlay').hide();
+    });
 
     var g = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0];
     var l = [];
@@ -235,7 +259,6 @@ Countdown Timer: &nbsp; <span id="showmns">00</span>:<span id="showscs">00</span
             alert('You Won !');
 
         }
-
     }
 
 //https://www.youtube.com/watch?v=9TMesBpOm9c
