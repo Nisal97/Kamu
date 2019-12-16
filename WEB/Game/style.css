@@ -1,0 +1,220 @@
+
+table{
+border: #ee9933;
+  margin-top: 20px;
+}
+td {
+    width:150px;
+    height:150px;
+    text-align:center;
+    font-size:25px;
+    background-color: #dddddd;
+}
+.abcde {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sky14 {
+    color: #ffffff;
+    font-size: 80px;
+    font-family: BalooBhai;
+    display: block;
+    flex-grow: 1;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.abcde .Fresh.Mango {
+    background-image: url(https://image.flaticon.com/icons/svg/8/8764.svg);
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+}
+
+p{
+    margin: 20px;
+    font-size: 40px;
+    font-family: BalooBhai;
+    color: #ffffff;
+
+}
+
+.wrapper {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.countdown {
+  margin: 0 auto;
+  max-width: 350px;
+  background: #000;
+  font-family: Impact, Charcoal, sans-serif;
+  text-align: center;
+}
+.countdown .header {
+  color: #c61d1d;
+  text-align: center;
+  font-weight: normal;
+  margin: 5px 0 10px 0;
+}
+.countdown .square {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+}
+.countdown .digits {
+  font-size: 24px;
+  background: #fff;
+  color: #000;
+  padding: 20px 10px;
+  border-radius: 5px;
+}
+.countdown .text {
+  margin-top: 10px;
+  color: #ddd;
+}
+
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.time {
+  color: #3D4852;
+  font-size: 2rem;
+  padding: 2rem 0;
+}
+
+button {
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+/*popup display none*/
+#myForm{
+    display: none;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    alignment: center;
+    right: 185px;
+    top: 30%;
+    margin-top: 10px;
+    width: 60%;
+    height: 50%;
+    padding: 10px;
+    z-index: 2; /*stay in front of text*/
+    background-color: white;
+    border-radius: 25px;
+    border: 2px solid #df1f4e;
+    text-align: center;
+}
+
+/* Add styles to the form container */
+.form-container {
+    padding: 20px;
+    height: 95%;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover {
+    opacity: 1;
+}
+div.ex1 {
+    width: 100%;
+    height: 80%;
+    overflow: scroll;
+}
+
+#closeBtn{
+    margin-bottom: 20px;
+    background-color: #df1f4e;
+    color: white;
+    font-size: 20px;
+}
+
+#countDown{
+    color: white;
+    font-size: 100px;
+    font-family: BalooBhai;
+    text-align: center;
+}
+
+#btnct{
+    width: 250px;
+    height: 250px;
+    border: none;
+
+}
+
+#leaderBtn{
+    width: 150px;
+    height: 150px;
+    border: none;
+}
+
+#restartBtn{
+    width: 150px;
+    height: 150px;
+    border: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(128,128,128,0.5);
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+    height: 800px;
+    width: 800px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#leadermodal{
+    text-align: center;
+    font-size: 60px;
+}
+
+#leaderTable{
+    table-layout: fixed;
+    width: 90%;
+    margin: 0 auto;
+    align-content: center;
+    background-color: white;
+}
+

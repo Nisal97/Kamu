@@ -21,7 +21,7 @@ function buyerSignUpAuthentication() {
         firebase.auth().createUserWithEmailAndPassword(email, password).then(function(error){
             var errorMessage = error.message;
             console.log(errorMessage);
-            // window.location.href = "SellerRequestForm.html";
+            window.location.href = "FoodCategories.html";
         }).catch(function (error) {
             var errorMessage = error.message;
             console.log(errorMessage);
@@ -41,10 +41,27 @@ function buyerSignInAuthentication(){
         .then(function(error) {
             var errorMessage = error.message;
             console.log(errorMessage);
-            window.location.href = "SellerRequestForm.html";
+            window.location.href = "FoodCategories.html";
         })
         .catch(function(error) {
             var errorMessage = error.message;
             console.log(errorMessage);
         });
+}
+
+function submitBuyerData() {
+    var buyerUserName = document.getElementById("buyerSignUpUserNameInput").value;
+    var buyerUserRef = firebase.database().ref(buyerUserName);
+    console.log(buyerUserName);
+    console.log(buyerUserRef);
+
+    buyerUserRef.set({
+        details:{
+            username: document.getElementById("buyerSignUpUserNameInput").value,
+            buyerEmail: document.getElementById("buyerSignUpEmailInput").value,
+            buyerNumber: document.getElementById("BuyerSignUpNumberInput").value
+            // cartItems: "0",
+            // cartItemQuantities: "0"
+        }
+    });
 }

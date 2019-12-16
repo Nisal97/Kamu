@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="../../JS/navbar.js"></script>
+
+    <link rel="stylesheet" href="../../CSS/Food.css">
+    <link rel="stylesheet" href="../../CSS/navbar.css">
+
+
+    <meta charset="UTF-8">
+    <title>Kamu - Food Categories</title>
+</head>
+
+<body>
+    <div id="foodcategoriesPage" data-role="page" align="center" class="home">
+
+        <div data-role="header" id="KamuLogo" data-position="fixed">
+            <img id="logo" src="../../ImageAssets/KamuLogo.png" alt="Kamu Logo" style="margin-left: -50px;"
+                align="center">
+
+            <!-- Navigation -->
+            <div id="toggle" type="button" class="toggle">
+                <i class="fas fa-bars fa-3x"></i>
+            </div>
+            <div>
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu 2</a></li>
+                    <li><a href="#">Menu 3</a></li>
+                    <li><a href="#">Menu 4</a></li>
+                    <li><a href="#">Menu 5</a></li>
+                    <li><a href="#">Menu 6</a></li>
+                    <li><a href="#">Menu 7</a></li>
+                </ul>
+            </div>
+            <!-- End Navigation-->
+
+        </div>
+
+        <div class="imageText" id="foodCategoryDonut" data-inset="true"
+            style="background: url(../../ImageAssets/Foods/Categories/CDonuts.jpg);">
+            <div class="centered">DONUTS</div>
+            <script>
+                $(document).ready(function () {
+                    $("#foodCategoryDonut").click(function () {
+                        document.location.href = "../BuyerSection/FoodList/FoodListDonuts.html";
+                    }); {
+                    }
+                })
+            </script>
+        </div>
+
+        <div class="imageText" id="foodCategoryCake" data-inset="true"
+            style="background: url(../../ImageAssets/Foods/Categories/CCake.jpg);">
+            <div class="centered">CAKE</div>
+            <script>
+                $(document).ready(function () {
+                    $("#foodCategoryCake").click(function () {
+                        document.location.href = "../BuyerSection/FoodList/FoodListCake.html";
+                    }); {
+                    }
+                })
+            </script>
+        </div>
+
+        <div class="imageText" id="foodCategoryPizza" data-inset="true"
+            style="background: url(../../ImageAssets/Foods/Categories/CPizza.jpg);">
+            <div class="centered">PIZZA</div>
+            <script>
+                $(document).ready(function () {
+                    $("#foodCategoryPizza").click(function () {
+                        document.location.href = "../BuyerSection/FoodList/FoodListPizza.html";
+                    }); {
+                    }
+                })
+            </script>
+        </div>
+
+        <div class="imageText" id="foodCategorySavoury" data-inset="true"
+            style="background: url(../../ImageAssets/Foods/Categories/CSavoury.jpg);">
+            <div class="centered">SAVOURY</div>
+            <script>
+                $(document).ready(function () {
+                    $("#foodCategorySavoury").click(function () {
+                        document.location.href = "../BuyerSection/FoodList/FoodListSavoury.html";
+                    }); {
+                    }
+                })
+            </script>
+        </div>
+
+        <div class="imageText" id="foodCategoryFreshJuice" data-inset="true"
+            style="background: url(../../ImageAssets/Foods/Categories/CFreshJuice.jpg);">
+            <div class="centered">FRESH JUICE</div>
+            <script>
+                $(document).ready(function () {
+                    $("#foodCategoryFreshJuice").click(function () {
+                        document.location.href = "../BuyerSection/FoodList/FoodListFreshJuice.html";
+                    }); {
+                    }
+                })
+            </script>
+        </div>
+
+        <div class="imageText" id="foodCategorySoup" data-inset="true"
+            style="background: url(../../ImageAssets/Foods/Categories/CSoup.jpg);">
+            <div class="centered">SOUP</div>
+            <script>
+                $(document).ready(function () {
+                    $("#foodCategorySoup    ").click(function () {
+                        document.location.href = "../BuyerSection/FoodList/FoodListSoup.html";
+                    }); {
+                    }
+                })
+            </script>
+        </div>
+
+        <div id="footer" class="footer" data-role="footer" data-position="fixed">
+            <h6 style="color: black">Copyrights &copy; 2019 KAMU All Rights Reserved </h6>
+        </div>
+
+    </div>
+</body>
+
+</html>

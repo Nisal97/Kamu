@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <link rel="stylesheet" href="../../../CSS/Common.css">
+    <link rel="stylesheet" href="../../../CSS/Food.css">
+
+    <meta charset="UTF-8">
+    <title>Kamu - Fresh Juice Food List</title>
+</head>
+
+<body>
+<div id="foodListFreshJuicePage" data-role="page" align="center" class="home">
+    <div data-role="header" id="KamuLogo" style="text-align: center">
+        <div style="float: left;">
+            <i id="backBtn" class="fas fa-chevron-left fa-5x foodItemBtn"></i>
+            <script>
+                $(document).ready(function () {
+                    $("#backBtn").click(function () {
+                        document.location.href = "../FoodCategories.html";
+                            }); {
+                            }
+                })
+            </script>
+        </div>
+        <img id="logo" src="../../../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="center">
+    </div>
+        
+        <div>
+        <div display: grid>
+        <div class="column">
+            <h3 id = "fonts">Carrot Juice</h3>
+            <img class="foodList" id="carrotFreshJuice" src="../../../ImageAssets/Foods/FreshJuice/carrotFreshJuice.jpg" align="center">
+            <script>
+                    $(document).ready(function () {
+                        $("#carrotFreshJuice").click(function () {
+                            document.location.href = "./FoodItem/FoodItemFreshJuice.html?var=freshJuice1";
+                                    }); {
+                                    }
+                    })
+            </script>
+        </div>
+
+        <div class="column">
+            <h3 id = "fonts">Lime Juice</h3>
+            <img class="foodList" id="limeFreshJuice" src="../../../ImageAssets/Foods/FreshJuice/limeFreshJuice.jpg" align="center">
+            <script>
+                    $(document).ready(function () {
+                        $("#limeFreshJuice").click(function () {
+                            document.location.href = "./FoodItem/FoodItemFreshJuice.html?var=freshJuice2";
+                                    }); {
+                                    }
+                    })
+            </script>
+        </div>
+        </div>
+          
+        <div display: grid>
+        <div class="column">
+            <h3 id = "fonts">Orange Juice</h3>
+            <img class="foodList" id="orangeFreshJuice" src="../../../ImageAssets/Foods/FreshJuice/orangeFreshJuice.jpg" align="middle">
+            <script>
+                    $(document).ready(function () {
+                        $("#orangeFreshJuice").click(function () {
+                            document.location.href = "./FoodItem/FoodItemFreshJuice.html?var=freshJuice3";
+                                    }); {
+                                    }
+                    })
+            </script>
+        </div>
+
+        <div class="column">
+            <h3 id = "fonts">Papaya Juice</h3>
+            <img class="foodList" id="papayaFreshJuice" src="../../../ImageAssets/Foods/FreshJuice/papayaFreshJuice.jpg" align="middle">
+            <script>
+                    $(document).ready(function () {
+                        $("#papayaFreshJuice").click(function () {
+                            document.location.href = "./FoodItem/FoodItemFreshJuice.html?var=freshJuice4";
+                                    }); {
+                                    }
+                    })
+            </script>
+        </div>
+        </div>
+
+        <div display: grid; >
+        <div class="column">
+            <h3 id = "fonts">Pineapple Juice</h3>
+            <img class="foodList" id="pineappleFreshJuice" src="../../../ImageAssets/Foods/FreshJuice/pineappleFreshJuice.jpg" align="middle">
+            <script>
+                    $(document).ready(function () {
+                        $("#pineappleFreshJuice").click(function () {
+                            document.location.href = "./FoodItem/FoodItemFreshJuice.html?var=freshJuice5";
+                                    }); {
+                                    }
+                    })
+            </script>
+        </div>
+
+        <div class="column">
+            <h3 id = "fonts">Watermelon Juice</h3>
+            <img class="foodList" id="watermelonFreshJuice" src="../../../ImageAssets/Foods/FreshJuice/watermelonFreshJuice.jpg" align="middle">
+            <script>
+                    $(document).ready(function () {
+                        $("#watermelonFreshJuice").click(function () {
+                            document.location.href = "./FoodItem/FoodItemFreshJuice.html?var=freshJuice6";
+                                    }); {
+                                    }
+                    })
+            </script>
+        </div>
+        </div>
+
+        </div>
+
+    <div data-role="footer" id="footer">
+        <h6>Copyrights &copy; 2019 KAMU All Rights Reserved </h6>
+    </div>
+        
+    </div>
+</div>
+</body>
+
+</html>

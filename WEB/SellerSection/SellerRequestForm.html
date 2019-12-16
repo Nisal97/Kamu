@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:text-align="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Seller Request Form</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="../../CSS/Seller.css">
+    <script src="../../JS/SellerUserAuthentication.js"></script>
+
+</head>
+<body>
+
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-functions.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+
+<script>
+
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function logOutForm() {
+        signOutFromSeller();
+        // window.location.href = "Home.html";
+        document.getElementById("myForm").style.display = "none";
+    }
+
+    function closeForm() {
+        // if(sessionStorage.getItem("FoodCategory") == "Donuts"){
+        //     console.log("Hello");
+        // }
+        document.getElementById("myForm").style.display = "none";
+    }
+
+    function openSubmitForm() {
+        document.getElementById("mySubmitForm").style.display = "block";
+    }
+
+    function cancelForm() {
+        document.getElementById("mySubmitForm").style.display = "none";
+    }
+
+</script>
+
+<!--************** Firebase SDK initializing ********************** -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-functions.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+
+
+<div data-role="page" id="page-container">
+    <div data-role="header" id="sellerLoginTopic" style="text-align: left; padding-right: 100%; display: flex; flex-direction: row ">
+
+        <img src="../../ImageAssets/KamuLogo.png" id="requestLogo" >
+        <p align="center" id="sellerRequestTopic"><b>Request Form</b></p>
+    </div>
+
+    <div id="dataForm">
+        <p align="center" class="details" id="FoodCat"><b>Food Category</b></p>
+
+        <select id="cat">
+            <option>Choose a Food Category</option>
+        </select>
+
+        <p align="center" class="details" id="FoodItem"><b>Food Item</b></p>
+
+        <select id="item" onchange="changePrice">
+            <option>Choose a Food Item</option>
+        </select>
+
+        <script>
+            window.onload = function() {
+                // cats is an object but you can think of it as a lookup table
+                var cats = {
+                        'Choose a Food Category': ['Choose a Food Category first'],
+                        'Donuts': ['Chocolate Donut', 'Caramel Donut', 'Sprinkle Donut', 'Nutella Donut', 'Bluberry Donut'],
+                        'Burgers': ['Chicken Burger', 'Fish Burger', 'Cheese Burger', 'Vegi Burger', 'Chicken and Cheese Burger'],
+                        'Pasta': ['Chicken Pasta', 'Fish Pasta', 'Cheese Pasta', 'Vegi Pasta', 'Chicken and Cheese Pasta'],
+                        'Noodles': ['Chicken Noodles', 'Fish Noodles', 'Cheese Noodles', 'Noodles Kottu', 'Chicken and Cheese Noodles'],
+                        'Rice': ['Chicken Rice and Curry', 'Fish Rice and Curry', 'Egg Rice and Curry', 'Biriyani', 'Nasi Gourang'],
+                    },
+                    // just grab references to the two drop-downs
+                    cat_select = document.querySelector('#cat'),
+                    item_select = document.querySelector('#item');
+
+                // populate the catinces drop-down
+                setOptions(cat_select, Object.keys(cats));
+                // populate the item drop-down
+                setOptions(item_select, cats[cat_select.value]);
+
+                // attach a change event listener to the catinces drop-down
+                cat_select.addEventListener('change', function() {
+                    // get the items in the selected catince
+                    setOptions(item_select, cats[cat_select.value]);
+                });
+
+                function setOptions(dropDown, options) {
+                    // clear out any existing values
+                    dropDown.innerHTML = '';
+                    // insert the new options into the drop-down
+                    options.forEach(function(value) {
+                        dropDown.innerHTML += '<option name="' + value + '">' + value + '</option>';
+                    });
+                }
+            };
+
+        </script>
+
+        <p align="center" class="details"><b>Quantity</b></p>
+        <select id="selectNumber4">
+            <option>Choose a number</option>
+            <script>
+                var select = document.getElementById("selectNumber4");
+                var options = ["50", "100", "200", "300", "400", "500", "1000"];
+                for(var i = 0; i < options.length; i++) {
+                    var opt = options[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    select.appendChild(el);
+                }
+            </script>
+        </select>
+    </div>
+
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1 class="title">Logout</h1>
+            <h2 class="details">Are You sure you want to logout?</h2>
+            <div data-role="header" id="buttonLogout" style=" margin-right:10px; display: flex; flex-direction: row ">
+                <button type="button" id="noBtn" class="btnCancel" onclick="closeForm()">No</button>
+                <button type="button" id="yesBtn" class="btnCancel" onclick="logOutForm()">Yes</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-popup" id="mySubmitForm">
+        <form action="/action_page.php" class="form-container">
+            <h1 class="title">Request</h1>
+            <h2 class="details">Do you want to proceed with the order?</h2>
+            <div data-role="header" id="buttonSubmit" style=" margin-right:10px; display: flex; flex-direction: row ">
+                <button type="button" id="cancelBtn" class="btnCancel" onclick="cancelForm()">Cancel</button>
+                <button type="button" id="okBtn" class="btnCancel" onClick="window.location.reload();">Ok</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-popup" id="submitFormPopup">
+        <form action="/action_page.php" class="form-container">
+            <h2>Request Form</h2>
+                <button type="button" id="okButton" class="btnCancel" onclick="yesForm()">Ok</button>
+        </form>
+    </div>
+
+    <div>
+        <div id="sellerPrices">
+
+            <table id="table"  width="100%">
+                <tr >
+                    <th >Unit Price</th>
+                    <th >Total Amount</th>
+                </tr>
+                <br/> <br/>
+                <tr>
+                    <td id = "unitPrice" >Rs.50</td>
+                    <td id = "totalAmount">Rs.500</td>
+                </tr>
+
+            </table>
+            <br/> <br/>
+        </div>
+    </div>
+
+    <div id="buttons" align="center">
+        <a href="#" id="submitButton" class="ui-shadow ui-btn ui-corner-all" onclick="openSubmitForm()">Submit</a>
+        <a href="../Common/ContactUs.html" id="contactUSButton" class="ui-shadow ui-btn ui-corner-all" data-ajax ="false" >Contact Us</a>
+        <a href="#" id="logoutButton" class="ui-shadow ui-btn ui-corner-all" onclick="openForm()" >Logout</a>
+    </div>
+
+    <div data-role="footer" class="footer">
+        <p>Copyrights &copy; 2019 KAMU All Rights Reserved</p>
+    </div>
+</div>
+</body>
+</html>

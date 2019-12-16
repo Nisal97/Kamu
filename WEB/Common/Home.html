@@ -4,8 +4,8 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <link rel="stylesheet" href="../CSS/Common.css">
-    <script type="text/javascript" src="../JS/Common.js"></script>
+    <link rel="stylesheet" href="../../CSS/Common.css">
+    <script type="text/javascript" src="../../JS/Common.js"></script>
 
     <meta charset="UTF-8">
     <title>Kamu - Home</title>
@@ -15,27 +15,27 @@
 <div id="homePage" data-role="page" align="center" class="home">
 
     <div data-role="content">
-        <img id="logo" src="../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="middle"> <!--Logo-->
+        <img id="logo" src="../../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="middle"> <!--Logo-->
     </div>
 
     <div id="homeButtons" class="buttons"  data-inset="true">
-        <a href="BuyerLogin.html" data-role="button" data-ajax="false" class="ui-btn ui-corner-all" id="buyerLogin" data-transition="slidefade">Eat Now</a>  <!--Eat now button-->
+        <a href="../BuyerSection/BuyerLogin.html" data-role="button" data-ajax="false" class="ui-btn ui-corner-all" id="buyerLogin" data-transition="slidefade">Eat Now</a>  <!--Eat now button-->
         <script>
             $(document).ready(function () {
                 $("#buyerLogin").click(function () {
                     console.log("redirecting to buyer login page");
-                    document.location.href = "./BuyerLogin.html";
+                    document.location.href = "../BuyerSection/BuyerLogin.html";
                 }); {
                 }
             })
         </script>
         <br>
-        <a href="SellerLogin.html" data-role="button" data-ajax="false" class="ui-btn ui-corner-all" id="sellerLogin" data-transition="slidefade">Sell Now</a> <!--Sell now button-->
+        <a href="../SellerSection/SellerLogin.html" data-role="button" data-ajax="false" class="ui-btn ui-corner-all" id="sellerLogin" data-transition="slidefade">Sell Now</a> <!--Sell now button-->
         <script>
             $(document).ready(function () {
                 $("#sellerLogin").click(function () {
                     console.log("redirecting to seller login page");
-                    document.location.href = "./SellerLogin.html";
+                    document.location.href = "../SellerSection/SellerLogin.html";
                 }); {
                 }
             })

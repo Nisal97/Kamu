@@ -1,0 +1,117 @@
+body {
+    background: #3498db;
+}
+
+.mobile-menu {
+    background: #34495e;
+    padding: 10px;
+    position: relative;
+}
+
+.mobile-menu:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.toggle {
+    display: inline-block;
+    float: left;
+    margin: 40px 20px 40px 20px;
+}
+
+/* .toggle a {
+    background: #2c8ac8;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 22px;
+    line-height: 40px;
+    color: #ffffff;
+    border-radius: 3px;
+    vertical-align: top;
+} */
+/* 
+.toggle .fa:before {
+    content: '\f0c9';
+    transition: .3s;
+} */
+
+.menu {
+    width: 200px;
+    background: #34495e;
+    position: absolute;
+    top: 131px;
+    /*height of mobile menu container*/
+    left: -200px;
+    /*must be same as width*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: .3s;
+}
+
+.menu li a {
+    color: #fff;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid #2c3e50;
+}
+
+.menu li a:hover {
+    background: #2c3e50;
+}
+
+/*start the trick*/
+
+/*position the checkbox directly beneath the toggle*/
+
+.hidden-toggle {
+    height: 41px;
+    width: 41px;
+    vertical-align: top;
+    float: right;
+    margin-left: 0px;
+    cursor: pointer;
+    opacity: 0;
+    /*make it invisible*/
+    transition: .3s;
+}
+
+/*show the menu when checkbox is active*/
+
+.hidden-toggle:checked~.menu {
+    left: 0;
+}
+
+/*change icon when menu is active*/
+
+.hidden-toggle:checked~.toggle .fa:before {
+    content: '\f00d';
+}
+
+.indexcity {
+    z-index: 9999;
+}
+
+.right {
+    right: 0 !important;
+    left: 0 !important;
+}
+
+@media only screen and (max-width: 100px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 12%;
+        transition: all 0.8s ease-out;
+        height: 100%;
+        width: 25%;
+        right: 100px;
+    }
+    .navbar-inverse .navbar-nav>li>a {
+        color: #000;
+    }
+}

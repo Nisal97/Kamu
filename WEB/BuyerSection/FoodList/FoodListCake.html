@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <link rel="stylesheet" href="../../../CSS/Common.css">
+    <link rel="stylesheet" href="../../../CSS/Food.css">
+
+    <meta charset="UTF-8">
+    <title>Kamu - Cake Food List</title>
+</head>
+
+<body>
+<div id="foodListCakePage" data-role="page" align="center" class="home">
+    <div data-role="header" id="KamuLogo" style="text-align: center">
+        <div style="float: left;">
+            <i id="backBtn" class="fas fa-chevron-left fa-5x foodItemBtn"></i>
+            <script>
+                $(document).ready(function () {
+                    $("#backBtn").click(function () {
+                        document.location.href = "../FoodCategories.html";
+                            }); {
+                            }
+                })
+            </script>
+        </div>
+        <img id="logo" src="../../../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="center">
+    </div>
+        
+        <div>
+        <div display: grid>
+        <div class="column">
+            <h3 id = "fonts">Chocalate Cake</h3>
+            <img class="foodList" id="chocalateCake" src="../../../ImageAssets/Foods/Cake/chocalateCake.jpg" align="center">
+            <script>
+                    $(document).ready(function () {
+                        $("#chocalateCake").click(function () {
+                            document.location.href = "./FoodItem/FoodItemCake.html?var=cake1";
+                                    }); {
+                                    }
+                    })
+            </script>
+        </div>
+
+        <div class="column">
+            <h3 id = "fonts">Ribbon Cake</h3>
+            <img class="foodList" id="ribbonCake" src="../../../ImageAssets/Foods/Cake/ribbonCake.jpg" align="center">
+            <script>
+                    $(document).ready(function () {
+                        $("#ribbonCake").click(function () {
+                            document.location.href = "./FoodItem/FoodItemCake.html?var=cake2";
+                                    }); {
+                                    }
+                    })
+            </script>
+        </div>
+        </div>
+          
+        <div display: grid>
+        <div class="column">
+            <h3 id = "fonts">Vanilla Fudge Cake</h3>
+                <img class="foodList" id="vanillafudgeCake" src="../../../ImageAssets/Foods/Cake/vanillafudgeCake.jpg" align="middle">
+                <script>
+                        $(document).ready(function () {
+                            $("#vanillafudgeCake").click(function () {
+                                document.location.href = "./FoodItem/FoodItemCake.html?var=cake3";
+                                        }); {
+                                        }
+                        })
+            </script>
+        </div>
+
+        <div class="column">
+            <h3 id = "fonts">Chocalate Coffee Cake</h3>
+            <img class="foodList" id="chocalatecoffeeCake" src="../../../ImageAssets/Foods/Cake/chocalatecoffeeCake.jpg" align="middle">
+            <script>
+                    $(document).ready(function () {
+                        $("#chocalatecoffeeCake").click(function () {
+                            document.location.href = "./FoodItem/FoodItemCake.html?var=cake4";
+                                    }); {
+                                    }
+                    })
+            </script>
+        </div>
+        </div>
+
+        <div display: grid; >
+        <div class="column">
+            <h3 id = "fonts">Chocalate Chip Cake</h3>
+            <img class="foodList" id="chocalatechipCake" src="../../../ImageAssets/Foods/Cake/chocalatechipCake.jpg" align="middle">
+            <script>
+                    $(document).ready(function () {
+                        $("#chocalatechipCake").click(function () {
+                            document.location.href = "./FoodItem/FoodItemCake.html?var=cake5";
+                                    }); {
+                                    }
+                    })
+            </script>
+        </div>
+
+        <div class="column">
+            <h3 id = "fonts">Marble Cake</h3>
+            <img class="foodList" id="marbleCake" src="../../../ImageAssets/Foods/Cake/marbleCake.jpg" align="middle">
+            <script>
+                    $(document).ready(function () {
+                        $("#marbleCake").click(function () {
+                            document.location.href = "./FoodItem/FoodItemCake.html?var=cake6";
+                                    }); {
+                                    }
+                    })
+            </script>
+        </div>
+        </div>
+
+        </div>
+
+    <div data-role="footer" id="footer">
+        <h6>Copyrights &copy; 2019 KAMU All Rights Reserved </h6>
+    </div>
+        
+    </div>
+</div>
+</body>
+
+</html>
