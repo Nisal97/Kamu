@@ -157,6 +157,10 @@
     outline: none;
 }
 
+#buttonSets{
+    margin-top: 150px;
+}
+
 /* Add some hover effects to buttons */
 .form-container .btn:hover {
     opacity: 1;
@@ -192,9 +196,12 @@ div.ex1 {
 }
 .title{
     font-size: 50px;
+    text-align: center;
 }
 .details{
     font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
 }
 .ui-block-a{
     font-size: 30px;
@@ -230,4 +237,57 @@ select {
 }
 th,td {
     text-align: center;
+}
+
+
+#leaderBtn{
+    width: 150px;
+    height: 150px;
+    border: none;
+}
+
+#restartBtn{
+    width: 150px;
+    height: 150px;
+    border: none;
+}
+
+.overlay1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(128,128,128,0.5);
+    display: none;
+}
+.overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(128,128,128,0.5);
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+    height: 400px;
+    width: 750px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#leadermodal{
+    text-align: center;
+    font-size: 60px;
+}
+
+.foodlst{
+    font-size: 40px;
 }
