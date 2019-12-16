@@ -6,17 +6,41 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="../../../CSS/Common.css">
 </head>
 <body>
+<script>
+    function GoBack(){
+        window.location.href = "AddAddressByText.html";
+    }
+</script>
+
 <div data-role="page">
 
-    <div data-role="header" id="addLocationByTextHeader">
-        <a href="../../Common/Home.html" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" style="background: white; width: 20%; height: 88%"></a>
-        <h1><b>Add Address</b></h1>
+    <div class="addLocationHeader">
+        <div class="Fresh Mango" onClick="GoBack();"></div>
+        <h1 class="addAddressTopic"><b>Add Address</b></h1>
     </div>
 
     <div class="addAddressByText">
-        <b>><h4>select your area here</h4></b>
+        <b><h4>select your area here</h4></b>
+    </div>
+
+    <div class="addressDropdowns">
+        <p align="center" class="details"><b>select your area here</b></p>
+        <select id="selectNumber4">
+            <option>Choose a number</option>
+            <script>
+                var select = document.getElementById("selectNumber4");
+                var options = ["Colombo 1", "Colombo 2", "Colombo 3", "Colombo 4", "Colombo 5", "Colombo 6", "Colombo 7","Colombo 8","Colombo 9","Colombo 10","Colombo 11","Colombo 12","Colombo 13","Colombo 14","Colombo 15"];
+                for(var i = 0; i < options.length; i++) {
+                    var opt = options[i];
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    select.appendChild(el);
+                }
+            </script>
     </div>
 
     <div data-role="footer" id="addLocationByTextFooter">

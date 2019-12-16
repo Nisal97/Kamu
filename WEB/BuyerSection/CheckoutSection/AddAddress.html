@@ -13,14 +13,13 @@
 
 <script>
     function GoBack(){
-        window.location.href = "../ShoppingCart.html";
+        window.location.href = "AddAddressByText.html";
     }
 </script>
 
 <div data-role="page" id="addAddressPage">
 
     <div class="addLocationHeader">
-<!--        <a href="../../Common/Home.html" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" style="background: white; width: 20%; height: 88%"></a>-->
         <div class="Fresh Mango" onClick="GoBack();"></div>
         <h1 class="addAddressTopic"><b>Add Address</b></h1>
     </div>
@@ -29,7 +28,8 @@
         <b>Select your area here</b>
     </div>
 
-    <div  id="map" style="height: 50%">
+    <div class="mapArea"></div>
+    <div  id="map">
         <script>
             function initMap() {
                 //location we want to enter
@@ -42,6 +42,7 @@
         </script>
 
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6kurwo4XaVtFuO3zHsNlv8_rsy6s4KdU&callback=initMap" type="text/javascript"></script>
+    </div>
     </div>
 
     <div data-role="footer" class="footer" style="position: fixed; left: 0;bottom: 0;width: 100%;font-size: 30%;color: black;text-align: center">
