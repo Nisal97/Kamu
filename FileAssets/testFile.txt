@@ -1,0 +1,5 @@
+101, Cheese Pizza, 1000
+102, Chocolate Donut, 100
+103, Chicken Submarine, 500
+104, Cream Pasta, 300
+105, Vanilla Donut, 80

@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
     <link rel="stylesheet" href="../../../CSS/Common.css">
     <link rel="stylesheet" href="../../../CSS/Food.css">
 
@@ -14,6 +15,17 @@
 <body>
 <div id="foodListFreshJuicePage" data-role="page" align="center" class="home">
     <div data-role="header" id="KamuLogo" style="text-align: center">
+        <div style="float: left;">
+            <i id="backBtn" class="fas fa-chevron-left fa-5x foodItemBtn"></i>
+            <script>
+                $(document).ready(function () {
+                    $("#backBtn").click(function () {
+                        document.location.href = "../FoodCategories.html";
+                            }); {
+                            }
+                })
+            </script>
+        </div>
         <img id="logo" src="../../../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="center">
     </div>
         
@@ -43,7 +55,7 @@
                                     }
                     })
             </script>
-            </div>
+        </div>
         </div>
           
         <div display: grid>
@@ -58,7 +70,7 @@
                                     }
                     })
             </script>
-            </div>
+        </div>
 
         <div class="column">
             <h3 id = "fonts">Papaya Juice</h3>
@@ -71,7 +83,7 @@
                                     }
                     })
             </script>
-            </div>
+        </div>
         </div>
 
         <div display: grid; >
@@ -86,7 +98,7 @@
                                     }
                     })
             </script>
-            </div>
+        </div>
 
         <div class="column">
             <h3 id = "fonts">Watermelon Juice</h3>
@@ -99,7 +111,7 @@
                                     }
                     })
             </script>
-            </div>
+        </div>
         </div>
 
         </div>

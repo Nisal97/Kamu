@@ -3,41 +3,103 @@
 
 <head>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
     <link rel="stylesheet" href="../../../../CSS/Common.css">
     <link rel="stylesheet" href="../../../../CSS/Food.css">
 
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.0/qs.min.js"></script>
-    <script src="../../../../JS/Food/donuts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+    <script src="../../../../JS/Food/FoodItemDonut.js"></script>
     <script src="../../../../JS/Food.js"></script>
+
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
     <meta charset="UTF-8">
     <title>Kamu - Donut Items</title>
-
 </head>
 
 <body onload="viewFoodItem()">
-    <div id="foodItemPizzaPage" data-role="page" align="center" class="home">
+    <div id="foodItemDonutPage" data-role="page" align="center" class="home">
+        <div id="header-food-item" data-role="header" data-position="fixed">
+            <div style="float: left;">
+                <i id="backBtn" class="fas fa-chevron-left fa-5x foodItemBtn"></i>
+                <script>
+                    $(document).ready(function () {
+                        $("#backBtn").click(function (e) {
+                            // document.location.href = "../../../BuyerSection/FoodList/FoodListDonuts.html";
+                            e.preventDefault();
+                            window.history.back();
+                        }); {
+                        }
+                    })
+                </script>
+            </div>
+
+            <div style="float: right;" onclick="openShareModal()">
+                <i id="shareBtn" class="fas fa-share-alt fa-5x foodItemBtn"></i>
+            </div>
+
+            <div id="shareModal" class="modal">
+
+                <div class="modal-header">
+                    <i class="far fa-clone"></i>
+                    <div id="item-url" class="copy-url"></div>
+                </div>
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="ui-grid-b">
+                        <div class="ui-block-a">
+                            <img src="../../../../ImageAssets/qr-code.png" onclick="openModal()" id="gn-btn">
+                        </div>
+                        <div class="ui-block-b">
+                            <img src="../../../../ImageAssets/gmail.png" id="bt">
+                        </div>
+                        <div class="ui-block-c">
+                            <img src="../../../../ImageAssets/twitter.png" id="md-btn">
+                        </div>
+                    </div>
+
+                    <a href="http://www.twitter.com/share?url=http://www.google.com/">Tweet</a>
+                </div>
+            </div>
+
+            <div id="qr-modal" class="modal">
+                <div id="qrcode"></div>
+            </div>
+
+        </div>
 
         <div id="foodItem"></div>
 
         <div class="quantity">
-            <button class="plus-btn" type="button" name="button" onclick="increaseItemCount()">
-                <img src="../../../../ImageAssets/plus.svg" alt="" />
-            </button>
-            <input id="count" type="text" name="name" value="1">
-            <button class="minus-btn" type="button" name="button" onclick="decreaseItemCount()">
-                <img src="../../../../ImageAssets/minus.svg" alt="" />
-            </button>
+            <div class="ui-grid-b" style="width: 50%;">
+                <div class="ui-block-a">
+                    <button type="button" name="button" onclick="decreaseItemCount()">
+                        <i class="fas fa-minus"></i>
+                    </button></div>
+                <div class="ui-block-b">
+                    <input id="count" class="count" type="text" name="name" value="1"></div>
+
+                <div class="ui-block-c">
+                    <button type="button" name="button" onclick="increaseItemCount()">
+                        <i class="fas fa-plus"></i>
+                    </button></div>
+            </div>
         </div>
 
+        <div id="CartButtons" class="buttons" data-inset="true">
+            <a href="../../ShoppingCart.html" data-role="button" data-ajax="false" class="ui-btn ui-corner-all"
+                id="addToCart" data-transition="slidefade">Add to Cart</a>
+        </div>
 
-        <p><button>Add to Cart</button></p>
-
-        <div data-role="footer" id="footer">
+        <div data-role="footer" data-position="fixed" class="footer">
             <h6>Copyrights &copy; 2019 KAMU All Rights Reserved </h6>
         </div>
+
     </div>
 </body>
 
