@@ -109,7 +109,6 @@ button {
     display: none;
 }
 
-
 /* The popup form - hidden by default */
 .form-popup {
     display: none;
@@ -151,6 +150,7 @@ div.ex1 {
     height: 80%;
     overflow: scroll;
 }
+
 #closeBtn{
     margin-bottom: 20px;
     background-color: #df1f4e;
@@ -183,6 +183,7 @@ div.ex1 {
     height: 150px;
     border: none;
 }
+
 .overlay {
     position: fixed;
     top: 0;
@@ -192,12 +193,28 @@ div.ex1 {
     background-color: rgba(128,128,128,0.5);
     display: none;
 }
+
 .modal {
     position: fixed;
     top: 50vh;
     left: 50vw;
     transform: translate(-50%,-50%);
-    height: 400px;
-    width: 600px;
+    height: 800px;
+    width: 800px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#leadermodal{
+    text-align: center;
+    font-size: 60px;
+}
+
+#leaderTable{
+    table-layout: fixed;
+    width: 90%;
+    margin: 0 auto;
+    align-content: center;
     background-color: white;
 }
+
