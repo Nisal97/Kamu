@@ -16,7 +16,12 @@ function getItem() {
     return item;
 }
 
+function getUrl() {
+    var params = parent.document.URL.substring(parent.document.URL.indexOf('?'), parent.document.URL.length);
+
+}
 function viewFoodItem() {
+    bindModalEvents();
     var itemId = getItem();
     if(typeof foodList == 'undefined') {
         document.getElementById(itemId).hidden = false;
@@ -61,30 +66,30 @@ function populateItems(item) {
     header.appendChild(elementItemName);
 }
 
-function populateModel(){
-// Get the modal
-var modal = document.getElementById("myModal");
-                
-// Get the button that opens the modal
-var btn = document.getElementById("shareBtn");
+// Modal
+function bindModalEvents() {
+    $(document).ready(function () {
+        $('#shareModal').on($.modal.OPEN, function (event, modal) {
+            $('#item-url').html(parent.document.URL);
+        });
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
+        $('#qr-modal').on($.modal.BEFORE_CLOSE, function (event, modal) {
+            document.getElementById('qrcode').innerHTML = '';
+        });
+    });
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+function openModal() {
+    gen();
+    $('#qr-modal').modal({
+        closeExisting: false
+    });
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+function gen() {
+    $('#qrcode').qrcode(parent.document.URL);
 }
+
+function openShareModal() {
+    $('#shareModal').modal();
 }
