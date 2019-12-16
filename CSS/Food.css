@@ -230,49 +230,45 @@ input:focus {
   font-size: larger;
 }
 
-.ui-grid-b {
-  width: 50%;
-}
-
 [data-role="header"] {
   background-color: white !important;
 }
 
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 300px;
+  padding: 0 !important;
+}
+.modal-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #e9ecef;
+  border-top-left-radius: .3rem;
+  border-top-right-radius: .3rem;
 }
 
-/* Modal Content */
+.copy-url {
+  white-space: nowrap;
+  font-size: x-small;
+}
+
 .modal-content {
-  background-color: #fefefe;
-  margin: auto;
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
 }
 
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+#shareModal {
+  position: fixed;
+  bottom: 10%;
+  left: 25%;
 }
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+#qr-modal {
+  width: 31%;
+}
+
+#qrcode {
+  padding: 12px;
 }
