@@ -7,6 +7,8 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="../../CSS/Seller.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 <body>
 
@@ -20,30 +22,67 @@
 <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
 <script src="../../JS/SellerUserAuthentication.js"></script>
 
-<div data-role="page" id="sellerLoginPage" class="sellerSignIn" style="background: white">
 
-    <div data-role="header" id="sellerLoginTopic" style="text-align: left">
-        <a href="../Common/Home.html" data-ajax="false" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" style="background: white; width: 20%; height: 88%"></a>
-        <h1><b>Sign In</b></h1>
+<div data-role="page" id="sellerLoginPage" class="sellerSignIn" >
+
+    <script>
+        function GoBack() {
+            window.location.href = "../Common/Home.html"
+        }
+    </script>
+
+    <div class="abcde" id="abcde">
+        <div class="Fresh Mango" onClick="GoBack();"></div>
+        <h1 class="sky14">Sign In</h1>
     </div>
 
     <div class="sellerLoginLogo" style="text-align: center">
         <img id="logo1" src="../../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="middle"> <!--Logo-->
     </div>
 
+    <table align="center">
+        <tr>
+            <td >
+                <img id="usernameIcon" src="../../ImageAssets/icons8-user-100.png" alt="usernameIcon" style="height: 80px; width: 80px;">
+            </td>
+            <td width="100px">
+
+            </td>
+            <td>
+                <input type="text" name="sellerUserName" id="sellerSignInUserNameInput" placeholder="User Name" value="">
+            </td>
+            <td height="150px">
+
+            </td>
+        </tr>
+        <tr >
+            <td>
+                <img id="passwordIcon" src="../../ImageAssets/icons8-password-1-100.png" alt="passwordIcon" style="height: 70px; width: 70px;">  <!-- password icon -->
+
+            </td>
+            <td width="100px">
+
+            </td>
+            <td>
+                <input type="password" name="sellerPassword" id="sellerSignInPasswordInput" placeholder="Password" value="" style="margin-right: 100px">
+            </td>
+        </tr>
+    </table>
+
     <div class="sellerLoginCredentials" style="text-align: center !important;display: flex; flex-direction: row">
-        <img id="usernameIcon" src="../../ImageAssets/icons8-user-100.png" alt="usernameIcon"> <!-- username icon -->
-        <label for="sellerSignInUserNameInput" class="ui-hidden-accessible">User Name</label>          <!-- username textbox-->
-        <input type="text" name="sellerUserName" id="sellerSignInUserNameInput" placeholder="User Name" value="">
+<!--        <img id="usernameIcon" src="../../ImageAssets/icons8-user-100.png" alt="usernameIcon" style="height: 80px; width: 80px;"> &lt;!&ndash; username icon &ndash;&gt;-->
+<!--        <label for="sellerSignInUserNameInput" class="ui-hidden-accessible">User Name</label>          &lt;!&ndash; username textbox&ndash;&gt;-->
+<!--        <input type="text" name="sellerUserName" id="sellerSignInUserNameInput" placeholder="User Name" value="">-->
     </div>
-    <br>
-    <div class="sellerLoginPassword" style="text-align: center !important;display: flex; flex-direction: row">
-        <img id="passwordIcon" src="../../ImageAssets/icons8-password-1-100.png" alt="passwordIcon">  <!-- password icon -->
-        <label for="sellerSignInPasswordInput" class="ui-hidden-accessible">Password</label>                  <!-- password textbox -->
-        <input type="password" name="sellerPassword" id="sellerSignInPasswordInput" placeholder="Password" value="">
+    <br/>
+
+    <div class="sellerLoginPassword" style="text-align: center !important;display: flex; flex-direction: row" >
+<!--        <img id="passwordIcon" src="../../ImageAssets/icons8-password-1-100.png" alt="passwordIcon" style="height: 80px; width: 80px;">  &lt;!&ndash; password icon &ndash;&gt;-->
+<!--        <label for="sellerSignInPasswordInput" class="ui-hidden-accessible">Password</label>                  &lt;!&ndash; password textbox &ndash;&gt;-->
+<!--        <input type="password" name="sellerPassword" id="sellerSignInPasswordInput" placeholder="Password" value="" style="margin-right: 100px">-->
     </div>
 
-    <div id="sellerSignInButtonArea">
+    <div id="sellerSignInButtonArea" style="text-align: center">
         <a href="SellerRequestForm.html" data-role="button" class="ui-btn ui-corner-all" id="sellerSignInButton" data-transition="slidefade" data-ajax="false" onclick="signInAuthentication()">Sign In</a> <!--sign in button-->
     </div>
 
