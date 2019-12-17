@@ -4,9 +4,8 @@
 <head>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
-    <link rel="stylesheet" href="../../../../CSS/Common.css">
     <link rel="stylesheet" href="../../../../CSS/Food.css">
-
+    
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.0/qs.min.js"></script>
@@ -30,7 +29,6 @@
                 <script>
                     $(document).ready(function () {
                         $("#backBtn").click(function (e) {
-                            // document.location.href = "../../../BuyerSection/FoodList/FoodListDonuts.html";
                             e.preventDefault();
                             window.history.back();
                         }); {
@@ -56,14 +54,16 @@
                             <img src="../../../../ImageAssets/qr-code.png" onclick="openModal()" id="gn-btn">
                         </div>
                         <div class="ui-block-b">
-                            <img src="../../../../ImageAssets/gmail.png" id="bt">
+                            <a href="mailto:dimalsha.manawadu@gmail.com?subject=Testing out mailto!&body=This is only a test!">
+                                <img  src="../../../../ImageAssets/gmail.png" id="email">
+                             </a>
                         </div>
                         <div class="ui-block-c">
-                            <img src="../../../../ImageAssets/twitter.png" id="md-btn">
+                            <a href="http://www.twitter.com/share?url=http://www.google.com/">
+                                <img  src="../../../../ImageAssets/twitter.png" id="twitter">
+                             </a>
                         </div>
                     </div>
-
-                    <a href="http://www.twitter.com/share?url=http://www.google.com/">Tweet</a>
                 </div>
             </div>
 
@@ -96,9 +96,9 @@
                 id="addToCart" data-transition="slidefade">Add to Cart</a>
         </div>
 
-        <div data-role="footer" data-position="fixed" class="footer">
-            <h6>Copyrights &copy; 2019 KAMU All Rights Reserved </h6>
-        </div>
+    <div id="footer" class="footer" data-role="footer" data-position="fixed">
+        <h6 style="color: black">Copyrights &copy; 2019 KAMU All Rights Reserved </h6>
+    </div>
 
     </div>
 </body>
