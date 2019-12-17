@@ -49,8 +49,6 @@
 }
 
 .abcdef .Fresh.MangoD {
-    /*background-image: url(https://image.flaticon.com/icons/svg/8/8764.svg);*/
-
     margin-left: 20px;
     cursor: pointer;
     width: 80px;
@@ -65,34 +63,38 @@
 }
 
 #sellerSignInButtonArea{
-    /*background-position: bottom;*/
-    /*vertical-align: bottom;*/
     height: 40%;
     padding-top: 20%;
     width: 40%;
     margin-left: 30%;
     margin-right: 40%
-    /*alignment: center;*/
-    /*margin-left: 30%;*/
+
 }
 
 #sellerSignInButton{
-    font-size: 40px;
-    text-align: center;
     background: #ee9933;
+    font-size: 300%;
     color: white;
-    padding-bottom: 10%;
-    padding-top: 10%;
-    width: 100%;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    width: 80%;
 }
 
 #sellerSignUpText{
     border: 0;
     padding: 0;
-    font-size: 25px;
+    font-size: 28px;
     background-color: white;
     text-align: center;
+}
 
+#signUpButton{
+    background: #ee9933;
+    font-size: 300%;
+    color: white;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    width: 80%;
 }
 
 #dataArea{
@@ -105,21 +107,13 @@
     padding-right: 30px;
 }
 
-#signUpButton{
-    background: #ee9933;
-    font-size: 300%;
-    color: white;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    width: 80%;
-}
-
 #sellerSignInFooter{
     position: absolute !important;
     bottom: 0;
     width: 100%;
     background: white;
-    padding-left: 38%;
+    text-align: center;
+    /*padding-left: 38%;*/
 }
 
 #usernameIcon{
@@ -303,13 +297,11 @@ select {
 #sellerPrices{
     font-size: 30px;
     alignment: center;
-
 }
 
 th,td {
     text-align: center;
 }
-
 
 #leaderBtn{
     width: 150px;
@@ -364,7 +356,6 @@ th,td {
     font-size: 40px;
 }
 
-
 #sellerSignInUserNameInput{
     font-size:35px;
     height: 100px;
@@ -375,4 +366,19 @@ th,td {
     font-size:35px;
     height: 100px;
     width : 400px;
+}
+
+.sellerdetails{
+    font-size:35px;
+    height: 100px;
+    width : 400px;
+}
+
+#sellerRetypePassword{
+    margin-bottom: 20px;
+}
+
+#kamuLogoSeller{
+    height: 322px;
+    margin-bottom: 50px;
 }
