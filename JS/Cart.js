@@ -8,16 +8,18 @@ var itemArrayList = [];
 
 var totalPrice = 0;
 
-itemNameArray = ["Cheese Pizza", "Chocolate Donut", "Chicken Submarine", "Cream Pasta"];
-itemPriceArray = [1000, 100, 500, 300];
-itemQuantityArray = [1, 3, 2, 1];
+// itemNameArray = ["Cheese Pizza", "Chocolate Donut", "Chicken Submarine", "Cream Pasta"];
+// itemPriceArray = [1000, 100, 500, 300];
+// itemQuantityArray = [1, 3, 2, 1];
 
 // var cartArray = ["101,1", "103,2", "102,4"];
 
-var retrievedCarttItems = localStorage.getItem("cartItems");
-var cartArray = JSON.parse(retrievedCarttItems);
+var retrievedCartItems = localStorage.getItem("cartItems");
+var cartArray = JSON.parse(retrievedCartItems);
+console.log("cartArray- " + cartArray);
+console.log("cartArray[1]- " + cartArray[0]);
 
-readTextFile("../FileAssets/testFile.txt");
+readTextFile("../../FileAssets/testFile.txt");
 
 function readTextFile(file) {
     var rawFile = new XMLHttpRequest();
@@ -73,7 +75,8 @@ function foodItemsList(typeCount) {
 
     for(numOfLines = 0; numOfLines<typeCount; numOfLines++){
 
-        var item = cartArray[numOfLines].split(",");
+        console.log("cartArray[numOfLines] - " + cartArray[numOfLines]);
+        var item = (cartArray[numOfLines]).toString().split(",");
 
         var itemNumber = item[0];
         console.log("itemNumber - " + itemNumber);
@@ -104,7 +107,7 @@ function foodItemsList(typeCount) {
 function calculateTotal() {
 
     for(numOfLines = 0; numOfLines<numberOfItemsTypes; numOfLines++){
-        var item = cartArray[numOfLines].split(",");
+        var item = cartArray[numOfLines].toString().split(",");
         var itemNumber = item[0];
         var itemQuantity = item[1];
 

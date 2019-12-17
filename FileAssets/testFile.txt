@@ -3,3 +3,4 @@
 103, Chicken Submarine, 500
 104, Cream Pasta, 300
 105, Vanilla Donut, 80
+106, Cake, 1200
