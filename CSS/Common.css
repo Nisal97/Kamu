@@ -33,6 +33,13 @@
     background: white;
 }
 
+#addLocationByTextFooter{
+    position: absolute !important;
+    bottom: 0;
+    width: 100%;
+    background: white;
+}
+
 #buyerLogin{
     background: #df1f4e;
     color: white;
@@ -189,6 +196,7 @@ div.ex1 {
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-size: 300%;
 }
 .addLocationHeader {
     padding-top: 3%;
@@ -199,4 +207,16 @@ div.ex1 {
 
 .mapArea {
     height: 80%;
+}
+
+.confirmLocation{
+    color: #df1f4e;
+    padding-bottom: 10%;
+    width: 80%;
+    padding-top: 80%;
+    padding-left: 10%;
+}
+#confirmLocationButton{
+    background: #df1f4e;
+    color: white;
 }
