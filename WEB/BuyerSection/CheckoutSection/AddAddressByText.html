@@ -50,10 +50,17 @@
     <script>
         var skillsSelect = document.getElementById("selectArea");
         var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
+        var addressText = document.getElementById("enteredAddressText").value;
+        
+        function confirmLocation() {
+            console.log(skillsSelect);
+            console.log(selectedText);
+            console.log(addressText);
+        }
     </script>
 
     <div class="confirmLocation">
-        <a href="" data-role="button" class="ui-btn ui-corner-all" id="confirmLocationButton" data-transition="slidefade" data-ajax="false" onclick="">Confirm Location</a>
+        <a href="" data-role="button" class="ui-btn ui-corner-all" id="confirmLocationButton" data-transition="slidefade" data-ajax="false" onclick="confirmLocation()">Confirm Location</a>
     </div>
 
 
