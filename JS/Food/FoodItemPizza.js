@@ -3,36 +3,36 @@ var foodList = {
         "id": "pizza1",
         "name": "Chicken Bacon",
         "imageUrl": "../../../../ImageAssets/Foods/Pizza/chickenbaconPizza.jpg",
-        "description": "These chocolate frosted donuts are baked, not fried and full of chocalates. Covered in a thick chocolate glaze, these are perfect for any chocoholic who wants a chocolate version of this classic treat."
+        "description": "Topped with succulent prawns with pieces of chicken bacon, accompanied by spring onions, sun-ripened tomatoes infused with exotic herbs, green chillies and jalapenos, blanketed by mozzarella cheese."
     },
     "pizza2": {
         "id": "pizza2",
         "name": "Devilled Beef",
         "imageUrl": "../../../../ImageAssets/Foods/Pizza/devilledbeefPizza.jpg",
-        "description": "This is Black Forest"
+        "description": "A delightfully crust pizza, expertly hand-stretched and oven-baked to golden perfection with hot and spicy devilled beef complemented by fresh capsicums, and crunchy onions blanketed by mozzarella cheese."
     },
     "pizza3": {
         "id": "pizza3",
         "name": "Devilled Chicken",
         "imageUrl": "../../../../ImageAssets/Foods/Pizza/devilledchickenPizza.jpg",
-        "description": "This is Butter Scotch Cookies"
+        "description": "A combination of spicy chicken and kotchchi sausage meat with crunchy onions and jalapenos placed on a layer of cream cheese and a layer of mozzarella."
     },
     "pizza4": {
         "id": "pizza4",
         "name": "Hot Buffer Cuttle Fish",
         "imageUrl": "../../../../ImageAssets/Foods/Pizza/hotbuttercuttlefishPizza.jpg",
-        "description": "This is Glazed"
+        "description": "Hot butter cuttlefish with chili flakes and butter accompanied by spring onion and capsicum with a double layer of mozzarella cheese."
     },
     "pizza5": {
         "id": "pizza5",
         "name": "Hot and Spicy Chicken",
         "imageUrl": "../../../../ImageAssets/Foods/Pizza/hotspicychickenPizza.jpg",
-        "description": "This is Chocolate Surprise"
+        "description": "Topped with tender Spicy chunks of BBQ chicken accompanied by spicy jalapenos, crunchy onions, kotchchi chicken sausage meat and chicken bacon and mozzarella cheese."
     },
     "pizza6": {
         "id": "pizza6",
         "name": "Sausage Delight",
         "imageUrl": "../../../../ImageAssets/Foods/Pizza/sausagedelightPizza.jpg",
-        "description": "This is Sugar Rush"
+        "description": "A flavourful fusion combining chicken sausages, chicken bacon and meatball mix garnished with crunchy onions and grilled red peppers, accompanied by delicious cranberry sauce, layered with mozzarella cheese."
     }
 }

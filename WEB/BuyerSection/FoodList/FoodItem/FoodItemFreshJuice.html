@@ -4,98 +4,79 @@
 <head>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
-    <link rel="stylesheet" href="../../../../CSS/Common.css">
     <link rel="stylesheet" href="../../../../CSS/Food.css">
-
+    
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.0/qs.min.js"></script>
-    <script src="../../../../JS/instascan.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
     <script src="../../../../JS/Food/FoodItemFreshJuice.js"></script>
     <script src="../../../../JS/Food.js"></script>
+
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
     <meta charset="UTF-8">
     <title>Kamu - Fresh Juice Items</title>
 </head>
 
 <body onload="viewFoodItem()">
-    <div id="foodItemFreshJuiceage" data-role="page" align="center" class="home">
+    <div id="foodItemFreshJuicePage" data-role="page" align="center" class="home">
         <div id="header-food-item" data-role="header" data-position="fixed">
             <div style="float: left;">
                 <i id="backBtn" class="fas fa-chevron-left fa-5x foodItemBtn"></i>
                 <script>
                     $(document).ready(function () {
-                        $("#backBtn").click(function () {
-                            document.location.href = "../../../BuyerSection/FoodList/FoodListFreshJuice.html";
+                        $("#backBtn").click(function (e) {
+                            e.preventDefault();
+                            window.history.back();
                         }); {
                         }
                     })
                 </script>
             </div>
 
-            <div style="float: right;">
-               <i id="shareBtn" class="fas fa-share-alt fa-5x foodItemBtn" onclick="populateModel()"></i>
+            <div style="float: right;" onclick="openShareModal()">
+                <i id="shareBtn" class="fas fa-share-alt fa-5x foodItemBtn"></i>
             </div>
-            
-<!-- Start model -->
-            <div id="myModal" class="modal">
 
+            <div id="shareModal" class="modal">
+
+                <div class="modal-header">
+                    <i class="far fa-clone"></i>
+                    <div id="item-url" class="copy-url"></div>
+                </div>
                 <!-- Modal content -->
                 <div class="modal-content">
-                  <span class="close">&times;</span>
-                  <div style="float: left;">
-                    <i id="copyBtn" class="far fa-copy fa-5x foodItemBtn"></i>
-                    <input type="text" value="Dimalshax" id="copyURL"/>
-                    <p onload="getURL()"> </p>
-                </div>
-                <hr>
-
-
-
-                <div class="ui-grid-b">
-                    <div class="ui-block-a">
-                        <img src="../../../../ImageAssets/qr-code.png" id="gn-btn">
-                            <div id="qr-example"></div>
-                            <input type="text" value=getURL() id="gn-val"/>
+                    <div class="ui-grid-b">
+                        <div class="ui-block-a">
+                            <img src="../../../../ImageAssets/qr-code.png" onclick="openModal()" id="gn-btn">
                         </div>
-                    <div class="ui-block-b">
-                        <img src="../../../../ImageAssets/gmail.png" id="bt">
-                    </div>    
-                    <div class="ui-block-c">
-                        <img src="../../../../ImageAssets/twitter.png" id="md-btn">
+                        <div class="ui-block-b">
+                            <a href="mailto:dimalsha.manawadu@gmail.com?subject=Testing out mailto!&body=This is only a test!">
+                                <img  src="../../../../ImageAssets/gmail.png" id="email">
+                             </a>
                         </div>
+                        <div class="ui-block-c">
+                            <a href="http://www.twitter.com/share?url=http://www.google.com/">
+                                <img  src="../../../../ImageAssets/twitter.png" id="twitter">
+                             </a>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
-    
-    
-    <input type="image" src="../../../../ImageAssets/emailBtn.jpg" alt="Submit" width="48" height="48">
-    <a href="
-    
-        mailto:johndoe@gmail.com
-    
-        ?subject=Kamu URL
-    
-        &body=This+is+an+awesome+email"> Click here to send email! </a>
-    
-    
-        <br/>
-    
-        
-                
-        <a href="http://www.twitter.com/share?url=http://www.google.com/">Tweet</a>
-    
-    </div>
-              
-              </div>
-    
-
-<!-- End Model -->
+            <div id="qr-modal" class="modal">
+                <div id="qrcode"></div>
+            </div>
 
         </div>
 
         <div id="foodItem"></div>
+
         <div class="quantity">
-            <div class="ui-grid-b">
+            <div class="ui-grid-b" style="width: 50%;">
                 <div class="ui-block-a">
                     <button type="button" name="button" onclick="decreaseItemCount()">
                         <i class="fas fa-minus"></i>
@@ -115,9 +96,9 @@
                 id="addToCart" data-transition="slidefade">Add to Cart</a>
         </div>
 
-        <div data-role="footer" data-position="fixed" class="footer">
-            <h6>Copyrights &copy; 2019 KAMU All Rights Reserved </h6>
-        </div>
+    <div id="footer" class="footer" data-role="footer" data-position="fixed">
+        <h6 style="color: black">Copyrights &copy; 2019 KAMU All Rights Reserved </h6>
+    </div>
 
     </div>
 </body>
