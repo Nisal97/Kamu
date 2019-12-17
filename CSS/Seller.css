@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
 .sky14 {
@@ -30,11 +31,11 @@
     height: 50px;
     margin-left: 30px;
 }
-/**/
+
 .abcdef {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    /*align-items: center;*/
+    justify-content: space-evenly;
 }
 
 .sky15 {
@@ -97,7 +98,6 @@
 #dataArea{
     padding-left: 30px;
     padding-right: 30px;
-    height: 40px;
 }
 
 #dataForm{
