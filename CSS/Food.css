@@ -1,3 +1,21 @@
+@font-face {
+  font-family: Capriola;
+  src: url('Fonts/Capriola.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: BalooBhai;
+  src: url('Fonts/BalooBhai.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url('Fonts/Montserrat.ttf');
+  font-style: normal;
+}
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
