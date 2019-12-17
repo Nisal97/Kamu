@@ -111,10 +111,10 @@ function addToCart(itemCode) {
         console.log("retrievedCartArray index 1 - " + retrievedCartArray[0]);
         console.log("retrievedCartArray length - " + retrievedCartArray.length);
 
-        // if(retrievedCartArray.length != null) {
             for (var itemCheck = 0; itemCheck < retrievedCartArray.length; itemCheck++) {
-                    console.log("came to not null");
-                    var eachItem = retrievedCartArray[itemCheck].split(",");
+                console.log("came to not null");
+                console.log("retrievedCartArray[itemCheck] - " + retrievedCartArray[itemCheck]);
+                var eachItem = retrievedCartArray[itemCheck].toString().split(",");
                     console.log("eachItem[0] - " + eachItem[0]);
                     if (eachItem[0] == itemCode) {
                         eachItem[1] = parseInt(eachItem[1]) + itemQuantity;
@@ -122,32 +122,14 @@ function addToCart(itemCode) {
                         retrievedCartArray[itemCheck] = [eachItem[0] +","+ eachItem[1]];
                         console.log("retrievedCartArray - " + retrievedCartArray);
                         isExistingItem = true;
+                        itemCheck++;
                         }
-                    // } else {
-                    //     newCartArray = [itemCode + "," + itemQuantity];
-                    // }
             }
-
-                // if (retrievedCartArray.length == 0) {
-                //     console.log("came to null");
 
         if(isExistingItem == false){
             newCartArray = [itemCode + "," + itemQuantity];
             console.log("newCartArray - " + newCartArray);
         }
-                    // newCartArray = [itemCode + "," + itemQuantity];
-                    // console.log("newCartArray - " + newCartArray);
-                // }
-
-
-        // }
-
-        // var newCartArray = [itemCode + "," + itemQuantity];
-
-        // newCartArray = [itemCode + "," + itemQuantity];
-        // console.log("cartItems - " + newCartArray);
-
-        // console.log("final eachItem[1] - " + eachItem[1]);
 
         console.log("retrievedCartArray - " + retrievedCartArray);
         console.log("newCartArray - " + newCartArray);
