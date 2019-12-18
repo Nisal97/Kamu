@@ -18,13 +18,20 @@
 }
 
 #buyerSignInButtonArea{
-    background-position: bottom;
-    vertical-align: bottom;
-    width: 40%;
+    /*buyerSignInButtonAreabackground-position: bottom;*/
+    /*vertical-align: bottom;*/
+    /*width: 40%;*/
+    /*height: 40%;*/
+    /*padding-top: 20%;*/
+    /*alignment: center;*/
+    /*margin-left: 30%;*/
+
     height: 40%;
     padding-top: 20%;
-    alignment: center;
+    width: 40%;
     margin-left: 30%;
+    margin-right: 40%
+
 }
 
 #signUpButton{
@@ -34,11 +41,18 @@
 }
 
 #buyerSignInButton{
+    /*background: #df1f4e;*/
+    /*color: white;*/
+    /*padding-bottom: 10%;*/
+    /*padding-top: 10%;*/
+    /*width: 100%;*/
+
     background: #df1f4e;
+    font-size: 300%;
     color: white;
-    padding-bottom: 10%;
-    padding-top: 10%;
-    width: 100%;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    width: 80%;
 }
 
 #buyerSignInFooter{
@@ -46,7 +60,7 @@
     bottom: 0;
     width: 100%;
     background: white;
-    padding-left: 38%;
+    text-align: center;
 }
 
 #usernameIcon{
@@ -73,4 +87,11 @@
 }
 #passwordTextBox{
     width: 50%;
+}
+#buyerSignUpText{
+    border: 0;
+    padding: 0;
+    font-size: 28px;
+    background-color: white;
+    text-align: center;
 }
