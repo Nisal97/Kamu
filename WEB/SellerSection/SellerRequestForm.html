@@ -8,7 +8,7 @@
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="../../CSS/Seller.css">
     <script src="../../JS/SellerUserAuthentication.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -27,15 +27,12 @@
 
     function logOutForm() {
         signOutFromSeller();
-        // window.location.href = "Home.html";
         document.getElementById("myForm").style.display = "none";
     }
 
     function closeForm() {
-        // if(sessionStorage.getItem("FoodCategory") == "Donuts"){
-        //     console.log("Hello");
-        // }
-        document.getElementById("myForm").style.display = "none";
+        $('.overlay2').hide();
+
     }
 
     function openSubmitForm() {
@@ -43,7 +40,12 @@
     }
 
     function cancelForm() {
-        document.getElementById("mySubmitForm").style.display = "none";
+        var myemail="xyz@gmail.com";
+        localStorage.setItem("email", $('#selectNumber4 :selected').text());
+
+        var x=localStorage.getItem("email");
+        alert(x)
+        $('.overlay1').hide();
     }
 
 </script>
@@ -66,13 +68,16 @@
     </div>
 
     <div id="dataForm">
-        <p align="center" class="details" id="FoodCat"><b>Food Category</b></p>
+        <p align="center" class="foodlst" id="FoodCat"><b>Food Category</b></p>
 
         <select id="cat">
             <option>Choose a Food Category</option>
         </select>
 
-        <p align="center" class="details" id="FoodItem"><b>Food Item</b></p>
+<!--        <div id="cat-button" class="ui-btn ui-icon-carat-d ui-btn-icon-right ui-corner-all ui-shadow" style="font-size: 50px;">-->
+<!--        </div>-->
+
+        <p align="center" class="foodlst" id="FoodItem"><b>Food Item</b></p>
 
         <select id="item" onchange="changePrice">
             <option>Choose a Food Item</option>
@@ -83,11 +88,11 @@
                 // cats is an object but you can think of it as a lookup table
                 var cats = {
                         'Choose a Food Category': ['Choose a Food Category first'],
-                        'Donuts': ['Chocolate Donut', 'Caramel Donut', 'Sprinkle Donut', 'Nutella Donut', 'Bluberry Donut'],
-                        'Burgers': ['Chicken Burger', 'Fish Burger', 'Cheese Burger', 'Vegi Burger', 'Chicken and Cheese Burger'],
-                        'Pasta': ['Chicken Pasta', 'Fish Pasta', 'Cheese Pasta', 'Vegi Pasta', 'Chicken and Cheese Pasta'],
-                        'Noodles': ['Chicken Noodles', 'Fish Noodles', 'Cheese Noodles', 'Noodles Kottu', 'Chicken and Cheese Noodles'],
-                        'Rice': ['Chicken Rice and Curry', 'Fish Rice and Curry', 'Egg Rice and Curry', 'Biriyani', 'Nasi Gourang'],
+                        'Donuts': ['Chocolate Donut  - LKR25.00', 'Caramel Donut  - LKR25.00', 'Sprinkle Donut  - LKR25.00', 'Nutella Donut  - LKR25.00', 'Bluberry Donut  - LKR25.00'],
+                        'Burgers': ['Chicken Burger  - LKR350.00', 'Fish Burger  - LKR250.00', 'Cheese Burger  - LKR300.00', 'Vegi Burger  - LKR200.00', 'Egg Burger  - LKR250.00'],
+                        'Pasta': ['Chicken Pasta  - LKR400.00', 'Fish Pasta  - LKR350.00', 'Cheese Pasta  - LKR300.00', 'Vegi Pasta  - LKR350.00', 'Egg Pasta  - LKR250.00'],
+                        'Noodles': ['Chicken Noodles  - LKR250.00', 'Fish Noodles  - LKR220.00', 'Cheese Noodles  - LKR200.00', 'Noodles Kottu  - LKR300.00', 'Egg Noodles  - LKR200.00'],
+                        'Rice': ['Chicken Rice and Curry  - LKR180.00', 'Fish Rice and Curry  - LKR150.00', 'Egg Rice and Curry  - LKR120.00', 'Biriyani  - LKR250.00', 'Nasi Gourang  - LKR300.00'],
                     },
                     // just grab references to the two drop-downs
                     cat_select = document.querySelector('#cat'),
@@ -116,9 +121,9 @@
 
         </script>
 
-        <p align="center" class="details"><b>Quantity</b></p>
-        <select id="selectNumber4">
-            <option>Choose a number</option>
+        <p align="center" class="foodlst"><b>Quantity</b></p>
+        <select id="selectNumber4" onchange="myFunction()">
+            <option style="font-size: 100px">Choose a number</option>
             <script>
                 var select = document.getElementById("selectNumber4");
                 var options = ["50", "100", "200", "300", "400", "500", "1000"];
@@ -129,63 +134,90 @@
                     el.value = opt;
                     select.appendChild(el);
                 }
+
             </script>
         </select>
     </div>
 
-    <div class="form-popup" id="myForm">
-        <form action="/action_page.php" class="form-container">
+    <script>
+        function myFunction() {
+            var x = document.getElementById("mySelect").value;
+            document.getElementById("demo").innerHTML = "You selected: " + x;
+        }
+    </script>
+
+<!--    <div class="form-popup" id="submitFormPopup">-->
+<!--        <form action="/action_page.php" class="form-container">-->
+<!--            <h2>Request Form</h2>-->
+<!--                <button type="button" id="okButton" class="btnCancel" onclick="yesForm()">Ok</button>-->
+<!--        </form>-->
+<!--    </div>-->
+
+<!--    <div>-->
+<!--        <div id="sellerPrices">-->
+
+<!--            <table id="table"  width="100%">-->
+<!--                <tr >-->
+<!--                    <th >Unit Price</th>-->
+<!--                    <th >Total Amount</th>-->
+<!--                </tr>-->
+<!--                <br/> <br/>-->
+<!--                <tr>-->
+<!--                    <td id = "unitPrice" >Rs.50</td>-->
+<!--                    <td id = "totalAmount">Rs.500</td>-->
+<!--                </tr>-->
+
+<!--            </table>-->
+<!--            <br/> <br/>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <div id="buttonSets" align="center">
+        <a href="#" id="submitButton" class="ui-shadow ui-btn ui-corner-all" onclick="$('.overlay1').show(); ">Submit</a>
+        <a href="../Common/ContactUs.html" id="contactUSButton" class="ui-shadow ui-btn ui-corner-all" data-ajax ="false" >Contact Us</a>
+        <a href="#" id="logoutButton" class="ui-shadow ui-btn ui-corner-all" onclick="$('.overlay2').show(); " >Logout</a>
+    </div>
+
+    <div class="overlay1">
+        <div class="modal" style="overflow:scroll">
+            <h1 class="title" >Request</h1>
+            <h2 class="details">Do you want to proceed with the order?</h2>
+            <div data-role="header" id="buttonSubmit" style=" margin-right:10px; display: flex; flex-direction: row ">
+                <button type="button" id="cancelBtn" class="btnCancel" onclick="cancelForm()">Cancel</button>
+                <button type="button" id="okBtn" class="btnCancel" onClick="window.location.reload();">Ok</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay2">
+        <div class="modal" style="overflow:scroll">
             <h1 class="title">Logout</h1>
             <h2 class="details">Are You sure you want to logout?</h2>
             <div data-role="header" id="buttonLogout" style=" margin-right:10px; display: flex; flex-direction: row ">
                 <button type="button" id="noBtn" class="btnCancel" onclick="closeForm()">No</button>
                 <button type="button" id="yesBtn" class="btnCancel" onclick="logOutForm()">Yes</button>
             </div>
-        </form>
-    </div>
-
-    <div class="form-popup" id="mySubmitForm">
-        <form action="/action_page.php" class="form-container">
-            <h1 class="title">Request</h1>
-            <h2 class="details">Do you want to proceed with the order?</h2>
-            <div data-role="header" id="buttonSubmit" style=" margin-right:10px; display: flex; flex-direction: row ">
-                <button type="button" id="cancelBtn" class="btnCancel" onclick="cancelForm()">Cancel</button>
-                <button type="button" id="okBtn" class="btnCancel" onClick="window.location.reload();">Ok</button>
-            </div>
-        </form>
-    </div>
-
-    <div class="form-popup" id="submitFormPopup">
-        <form action="/action_page.php" class="form-container">
-            <h2>Request Form</h2>
-                <button type="button" id="okButton" class="btnCancel" onclick="yesForm()">Ok</button>
-        </form>
-    </div>
-
-    <div>
-        <div id="sellerPrices">
-
-            <table id="table"  width="100%">
-                <tr >
-                    <th >Unit Price</th>
-                    <th >Total Amount</th>
-                </tr>
-                <br/> <br/>
-                <tr>
-                    <td id = "unitPrice" >Rs.50</td>
-                    <td id = "totalAmount">Rs.500</td>
-                </tr>
-
-            </table>
-            <br/> <br/>
         </div>
     </div>
 
-    <div id="buttons" align="center">
-        <a href="#" id="submitButton" class="ui-shadow ui-btn ui-corner-all" onclick="openSubmitForm()">Submit</a>
-        <a href="../Common/ContactUs.html" id="contactUSButton" class="ui-shadow ui-btn ui-corner-all" data-ajax ="false" >Contact Us</a>
-        <a href="#" id="logoutButton" class="ui-shadow ui-btn ui-corner-all" onclick="openForm()" >Logout</a>
-    </div>
+    <script>
+
+        $('.overlay1').on('click', function(e) {
+            if (e.target !== this) {
+                return;
+            }
+            $('.overlay1').hide();
+
+        });
+
+        $('.overlay2').on('click', function(e) {
+            if (e.target !== this) {
+                return;
+            }
+            $('.overlay2').hide();
+        });
+
+    </script>
 
     <div data-role="footer" class="footer">
         <p>Copyrights &copy; 2019 KAMU All Rights Reserved</p>
