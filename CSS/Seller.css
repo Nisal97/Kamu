@@ -7,40 +7,85 @@
     line-height: 100%;
 }
 
+.abcde {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.sky14 {
+    font-size: 80px;
+    display: block;
+    flex-grow: 1;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.abcde .Fresh.Mango {
+    background-image: url(https://image.flaticon.com/icons/svg/8/8764.svg);
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+}
+
+.abcdef {
+    display: flex;
+    /*align-items: center;*/
+    justify-content: space-evenly;
+}
+
+.sky15 {
+    font-size: 50px;
+    display: block;
+    flex-grow: 1;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.abcdef .Fresh.MangoD {
+    margin-left: 20px;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+}
+
 #logo1{
-    width: 30%;
+    width: 35%;
     vertical-align: top;
     align-content: center;
     padding-bottom: 25%;
 }
 
 #sellerSignInButtonArea{
-    background-position: bottom;
-    vertical-align: bottom;
-    width: 40%;
     height: 40%;
     padding-top: 20%;
-    alignment: center;
+    width: 40%;
     margin-left: 30%;
+    margin-right: 40%
+
 }
 
 #sellerSignInButton{
     background: #ee9933;
+    font-size: 300%;
     color: white;
-    padding-bottom: 10%;
-    padding-top: 10%;
-    width: 100%;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    width: 80%;
 }
 
-#dataArea{
-    padding-left: 30px;
-    padding-right: 30px;
-    height: 40px;
-}
-
-#dataForm{
-    padding-left: 30px;
-    padding-right: 30px;
+#sellerSignUpText{
+    border: 0;
+    padding: 0;
+    font-size: 28px;
+    background-color: white;
+    text-align: center;
 }
 
 #signUpButton{
@@ -52,12 +97,23 @@
     width: 80%;
 }
 
+#dataArea{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#dataForm{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 #sellerSignInFooter{
     position: absolute !important;
     bottom: 0;
     width: 100%;
     background: white;
-    padding-left: 38%;
+    text-align: center;
+    /*padding-left: 38%;*/
 }
 
 #usernameIcon{
@@ -157,45 +213,60 @@
     outline: none;
 }
 
+#buttonSets{
+    margin-top: 150px;
+}
+
 /* Add some hover effects to buttons */
 .form-container .btn:hover {
     opacity: 1;
 }
+
 div.ex1 {
     width: 100%;
     height: 80%;
     overflow: scroll;
 }
+
 #noBtn{
     background-color: #ee9933;
     color: white;
     width: 45%;
     font-size: 40px;
 }
+
 #yesBtn{
     background-color: #ee9933;
     color: white;
     width: 45%;
     font-size: 40px;
 }
+
 #cancelBtn{
     background-color: #ee9933;
     color: white;
     width: 45%;
     font-size: 40px;
 }
+
 #okBtn{
     background-color: #ee9933;
     color: white;
     width: 45%;
     font-size: 40px;
 }
+
 .title{
     font-size: 50px;
+    text-align: center;
 }
+
 .details{
     font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
 }
+
 .ui-block-a{
     font-size: 30px;
 }
@@ -226,8 +297,88 @@ select {
 #sellerPrices{
     font-size: 30px;
     alignment: center;
-
 }
+
 th,td {
     text-align: center;
+}
+
+#leaderBtn{
+    width: 150px;
+    height: 150px;
+    border: none;
+}
+
+#restartBtn{
+    width: 150px;
+    height: 150px;
+    border: none;
+}
+
+.overlay1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(128,128,128,0.5);
+    display: none;
+}
+
+.overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(128,128,128,0.5);
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+    height: 400px;
+    width: 750px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#leadermodal{
+    text-align: center;
+    font-size: 60px;
+}
+
+.foodlst{
+    font-size: 40px;
+}
+
+#sellerSignInUserNameInput{
+    font-size:35px;
+    height: 100px;
+    width : 400px;
+}
+
+#sellerSignInPasswordInput{
+    font-size:35px;
+    height: 100px;
+    width : 400px;
+}
+
+.sellerdetails{
+    font-size:35px;
+    height: 100px;
+    width : 400px;
+}
+
+#sellerRetypePassword{
+    margin-bottom: 20px;
+}
+
+#kamuLogoSeller{
+    height: 322px;
+    margin-bottom: 50px;
 }
