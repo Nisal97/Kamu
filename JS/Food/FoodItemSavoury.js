@@ -3,36 +3,36 @@ var foodList = {
         "id": "savoury1",
         "name": "Cutlet",
         "imageUrl": "../../../../ImageAssets/Foods/Savoury/cutletSavoury.jpg",
-        "description": "This is Cutlet"
+        "description": "Made with chicken, all-purpose flour, egg, potato, carrot and a melange of spices. This quick snack can be served with green chutney or chilli sauce."
     },
     "savoury2": {
         "id": "savoury2",
         "name": "Pastry",
         "imageUrl": "../../../../ImageAssets/Foods/Savoury/pastrySavoury.jpg",
-        "description": "This is Pastry"
+        "description": "Made with fried leek and chicken sausages, this delicious snack can be used with dip or sauce of your choice."
     },
     "savoury3": {
         "id": "savoury3",
         "name": "Roll",
         "imageUrl": "../../../../ImageAssets/Foods/Savoury/rollSavoury.jpg",
-        "description": "This is Roll"
+        "description": "These yummy delicious Rolls are so tempting that you would eat them in no time. This will be a flawless way to enjoy the rainy season."
     },
     "savoury4": {
         "id": "savoury4",
         "name": "Samosa",
         "imageUrl": "../../../../ImageAssets/Foods/Savoury/samosaSavoury.jpg",
-        "description": "This is Samosa"
+        "description": "These Samosa is made with the tooth-some combination of cottage cheese, potato, lemon rind and eggs."
     },
     "savoury5": {
         "id": "savoury5",
         "name": "Patty",
         "imageUrl": "../../../../ImageAssets/Foods/Savoury/pattySavoury.jpg",
-        "description": "This is Patty"
+        "description": "Craving for lip-smacking patty that will leave your taste buds satisfied for long a time? If that's the case then, this is the perfect dish for you."
     },
     "savoury6": {
         "id": "savoury6",
         "name": "Vegetable Roti",
         "imageUrl": "../../../../ImageAssets/Foods/Savoury/vegetablerotiSavoury.jpg",
-        "description": "This is Vegetable Roti"
+        "description": "Made using mixed vegetables and all purpose flour, this is a delectable food that would be loved by you!"
     }
 }

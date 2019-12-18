@@ -254,6 +254,8 @@ input:focus {
 
 .modal {
   padding: 0 !important;
+  max-width: 900px !important;
+  text-align: center !important;
 }
 .modal-header {
   display: -ms-flexbox;
@@ -261,7 +263,7 @@ input:focus {
   -ms-flex-align: start;
   align-items: flex-start;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   padding: 1rem;
   border-bottom: 1px solid #e9ecef;
   border-top-left-radius: .3rem;
@@ -270,7 +272,7 @@ input:focus {
 
 .copy-url {
   white-space: nowrap;
-  font-size: x-small;
+  font-size: medium;
 }
 
 .modal-content {
@@ -280,7 +282,7 @@ input:focus {
 #shareModal {
   position: fixed;
   bottom: 10%;
-  left: 25%;
+  left: 5%;
 }
 
 #qr-modal {
