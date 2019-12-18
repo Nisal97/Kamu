@@ -4,13 +4,10 @@ var itemArrayList = [];
 
 var totalPrice = 0;
 
-var retrievedCartItems = localStorage.getItem("cartItems");
+var retrievedCartItems = localStorage.getItem("checkoutItems");
 var cartArray = JSON.parse(retrievedCartItems);
 console.log("cartArray- " + cartArray);
 console.log("cartArray[1]- " + cartArray[0]);
-
-var newCartArray = cartArray.slice(0);
-localStorage.setItem("checkoutItems", JSON.stringify(newCartArray));
 
 readTextFile("../../FileAssets/testFile.txt");
 
@@ -80,18 +77,12 @@ function foodItemsList(typeCount) {
         console.log("itemTotalPrice - " + itemTotalPrice);
 
 
-            var y = document.createElement("INPUT");
-            y.setAttribute("type", "checkbox");
-            y.setAttribute("name", "foodItem");
-            y.setAttribute("id", "box" + itemNumber);
-            y.setAttribute("value", "item" + itemNumber);
-            y.setAttribute("checked", "checked");
-            y.setAttribute("onclick", "checkboxTest("+ itemNumber +","+ itemQuantity +")");
+        var y = document.createElement("TEXT");
 
-            document.getElementById("appendCheckList").appendChild(y);
+        document.getElementById("appendCheckList").appendChild(y);
         document.getElementById("appendCheckList").appendChild(document.createTextNode(" "+
             itemQuantity + " " + itemName));
-            document.getElementById("appendCheckList").appendChild(document.createElement("br"));
+        document.getElementById("appendCheckList").appendChild(document.createElement("br"));
     }
     calculateTotal();
     document.getElementById("totalAmountLabel").innerHTML = "Total : " + totalPrice;
@@ -104,56 +95,9 @@ function calculateTotal() {
         var itemNumber = item[0];
         var itemQuantity = item[1];
 
-        if (document.getElementById("box" + itemNumber).checked) {
             var itemTotalPrice = getItemTotal(itemNumber, itemQuantity);
             totalPrice += itemTotalPrice;
-        }
     }
-
-}
-
-function checkboxTest(itemNumber, itemQuantity) {
-    console.log("itemNumber - " + itemNumber);
-
-    console.log("newCartArray - " + newCartArray);
-    console.log("numOfLines - " + itemNumber);
-    console.log("cartArray - " + cartArray);
-
-        if (document.getElementById("box" + itemNumber).checked) {
-            totalPrice += getItemTotal(itemNumber, itemQuantity);
-            document.getElementById("totalAmountLabel").innerHTML = "Total : " + totalPrice;
-
-            console.log("cartArray.length - " + cartArray.length);
-            for (var itemCheck = 0; itemCheck < cartArray.length; itemCheck++) {
-                var eachItem = cartArray[itemCheck].toString().split(",");
-                console.log("itemNumber - " + itemNumber);
-                console.log("eachItem[0] - " + eachItem[0]);
-                if(itemNumber == eachItem[0]){
-                    newCartArray.push(itemNumber + "," + itemQuantity);
-                    console.log("newCartArray - " + newCartArray);
-                    console.log("cartArray - " + cartArray);
-                }
-            }
-            localStorage.setItem("checkoutItems", JSON.stringify(newCartArray));
-
-        } else {
-            totalPrice -= getItemTotal(itemNumber, itemQuantity);
-            document.getElementById("totalAmountLabel").innerHTML = "Total : " + totalPrice;
-
-            console.log("cartArray.length - " + cartArray.length);
-            for (var itemCheck = 0; itemCheck < cartArray.length; itemCheck++) {
-                var eachItem = cartArray[itemCheck].toString().split(",");
-                console.log("itemNumber - " + itemNumber);
-                console.log("eachItem[0] - " + eachItem[0]);
-                if(itemNumber == eachItem[0]){
-                    newCartArray.splice(itemCheck, 1);
-                    console.log("newCartArray - " + newCartArray);
-                    console.log("cartArray - " + cartArray);
-                }
-            }
-            localStorage.setItem("checkoutItems", JSON.stringify(newCartArray));
-
-        }
 
 }
 
