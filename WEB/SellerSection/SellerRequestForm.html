@@ -26,8 +26,9 @@
     }
 
     function logOutForm() {
-        signOutFromSeller();
-        document.getElementById("myForm").style.display = "none";
+
+        // signOutFromSeller();
+        // document.getElementById("myForm").style.display = "none";
     }
 
     function closeForm() {
@@ -67,15 +68,12 @@
         <p align="center" id="sellerRequestTopic"><b>Request Form</b></p>
     </div>
 
-    <div id="dataForm">
+    <div data-role="none" id="dataForm">
         <p align="center" class="foodlst" id="FoodCat"><b>Food Category</b></p>
 
         <select id="cat">
             <option>Choose a Food Category</option>
         </select>
-
-<!--        <div id="cat-button" class="ui-btn ui-icon-carat-d ui-btn-icon-right ui-corner-all ui-shadow" style="font-size: 50px;">-->
-<!--        </div>-->
 
         <p align="center" class="foodlst" id="FoodItem"><b>Food Item</b></p>
 
@@ -146,31 +144,6 @@
         }
     </script>
 
-<!--    <div class="form-popup" id="submitFormPopup">-->
-<!--        <form action="/action_page.php" class="form-container">-->
-<!--            <h2>Request Form</h2>-->
-<!--                <button type="button" id="okButton" class="btnCancel" onclick="yesForm()">Ok</button>-->
-<!--        </form>-->
-<!--    </div>-->
-
-<!--    <div>-->
-<!--        <div id="sellerPrices">-->
-
-<!--            <table id="table"  width="100%">-->
-<!--                <tr >-->
-<!--                    <th >Unit Price</th>-->
-<!--                    <th >Total Amount</th>-->
-<!--                </tr>-->
-<!--                <br/> <br/>-->
-<!--                <tr>-->
-<!--                    <td id = "unitPrice" >Rs.50</td>-->
-<!--                    <td id = "totalAmount">Rs.500</td>-->
-<!--                </tr>-->
-
-<!--            </table>-->
-<!--            <br/> <br/>-->
-<!--        </div>-->
-<!--    </div>-->
 
     <div id="buttonSets" align="center">
         <a href="#" id="submitButton" class="ui-shadow ui-btn ui-corner-all" onclick="$('.overlay1').show(); ">Submit</a>
@@ -195,7 +168,7 @@
             <h2 class="details">Are You sure you want to logout?</h2>
             <div data-role="header" id="buttonLogout" style=" margin-right:10px; display: flex; flex-direction: row ">
                 <button type="button" id="noBtn" class="btnCancel" onclick="closeForm()">No</button>
-                <button type="button" id="yesBtn" class="btnCancel" onclick="logOutForm()">Yes</button>
+                <button type="button" id="yesBtn" class="btnCancel" onclick="window.location.href='../Common/Home.html'">Yes</button>
             </div>
         </div>
     </div>
