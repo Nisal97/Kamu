@@ -1,34 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
     <meta charset="UTF-8">
     <title>Title</title>
-    <h1>Checkout Page</h1>
+    <h1 align="center" style="font-size: 50px">Checkout Page</h1>
     <hr>
 </head>
 
 <body>
 
-<h3>Servings</h3>
-<br>
+<h3 style="font-size: 30px">Order Items:</h3>
 
-<form action="" id="checklist" method="get" name="checklist">
+<form action="" id="checklist" method="get" name="checklist" style="font-size: 30px">
 
     <div id="appendCheckList">
     </div>
     <br>
     <br>
     <br>
-    <hr>
-    <p id="totalAmountLabel">
+    <hr style="height:5px;border:none;color:#333;background-color:#333;">
+    <p id="totalAmountLabel" style="font-size: 30px; font-weight:bold">
 
     </p>
-    <hr>
+    <hr style="height:5px;border:none;color:#333;background-color:#333;">
+
+    <form style="font-size: 30px">
+        <input type="radio" name="paymentMethod" value="cash" data-role="none"> Cash On Delivery<br>
+        <input type="radio" name="paymentMethod" value="card" data-role="none"> Card Payment<br>
+
+        <input type="submit" value="Add Payment Method" style="font-size: 30px">
+    </form>
+
     <br>
     <br>
-    <input type="button" onclick="clearCart()" value="Clear Cart">
+    <input type="button" value="Add Location" style="font-size: 30px">
     <br>
-    <input type="submit" value="Place Order">
+    <br>
+    <div id="CartButtons" class="buttons" data-inset="true">
+        <a data-role="button" data-ajax="false" class="ui-btn ui-corner-all"
+           id="placeOrder" data-transition="slidefade"  href="OrderSummary.html" style="font-size: 30px">Confirm Order</a>
+    </div>
 </form>
 
 <script src="../../JS/Checkout.js"></script>
