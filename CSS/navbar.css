@@ -166,9 +166,11 @@ body {
     -ms-flex-pack: end;
     justify-content: flex-end;
     border-top: 1px solid #e9ecef;
-    margin-right: 20px;
+    margin-right: 100px;
 }
 
 #logout-confirmation {
+    text-align: center;
     width: 60%;
+    height: 8%;
 }

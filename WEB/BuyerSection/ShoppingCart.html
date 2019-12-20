@@ -8,6 +8,7 @@
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../../CSS/Food.css">
+    <link rel="stylesheet" href="../../../CSS/Common.css">
 
     <meta charset="UTF-8">
     <title>Cart</title>
@@ -33,11 +34,12 @@
         </div>
         <img id="logo" src="../../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="center" style="margin-left: -90px;">
     </div>
+    </div>
 
 <p id="foodItemTopic" style="padding-left: 25%;">Shopping Cart</p>
 <br>
 
-    <form action="" id="checklist" method="get" name="checklist">
+    <form action="" id="checklist" method="get" name="checklist" style="font-size: 40px">
 
         <div id="appendCheckList" style="display: inline-block">
         <!--<input type="checkbox" name="foodItem" id="box1" value="itemOne" checked> 1 Chocolate Donut<br>-->
@@ -48,29 +50,33 @@
         <br>
         <br>
         <hr class="line">
-        <p id="totalAmountLabel">
+        <p id="totalAmountLabel" align="center">
 
         </p>
         <hr class="line">
         <br>
-        <input type="button" onclick="setCart()" value="Set Cart">
-        <br>
-        <input type="button" onclick="clearCart()" value="Clear Cart">
+        <div class="cartButton" style="padding-left: 10%; padding-right: 10%">
+            <a href="" data-role="button" class="ui-btn ui-corner-all" data-transition="slidefade" data-ajax="false"
+               onclick="clearCart()" style="font-size: 40px; background: #df1f4e;
+               color: white; font-family: Capriola, serif; width: 100%; padding-bottom: 20px;padding-top: 20px">Clear Cart</a>
+        </div>
         <br>
 <!--        <input type="button" value="Checkout Order">-->
         <!-- <a href="CheckoutPage.html" data-role="button" data-ajax="false" class="ui-btn ui-corner-all"
                             id="checkout" data-transition="slidefade">Checkout Order</a> -->
 
-                            <div id="CartButtons" class="buttons" data-inset="true">
-                                <a data-role="button" data-ajax="false" class="ui-btn ui-corner-all"
-                                    id="addToCart" data-transition="slidefade"  href="CheckoutPage.html">Checkout Order</a>
-                            </div>
-    
+        <div id="cartButton" data-inset="true" style="padding-left: 10%; padding-right: 10%">
+            <a data-role="button" data-ajax="false" class="ui-btn ui-corner-all"
+               id="addToCart" data-transition="slidefade"  href="CheckoutPage.html" style="font-size: 40px;
+               background: #df1f4e; color: white; font-family: Capriola, serif; width: 100%">Checkout Order</a>
+        </div>
+
+    </form>
 
 <script src="../../JS/Cart.js"></script>
 
 <div id="footer" class="footer" data-role="footer" data-position="fixed" data-tap-toggle="false">
-    <h6 style="color: black">Copyrights &copy; 2019 KAMU All Rights Reserved </h6>
+    <h6 style="color: black; font-size: 20px">Copyrights &copy; 2019 KAMU All Rights Reserved </h6>
 </div>
 </div>
 </body>

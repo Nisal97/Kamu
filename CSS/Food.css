@@ -309,13 +309,13 @@ input:focus {
   line-height: 1.5;
   border-radius: .25rem;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  width: 30%;
+  width: 50%;
 }
 
 .btn-primary {
   color: #fff;
-  background-color: #007bff !important;
-  border-color: #007bff;
+  background-color: #df1f4e !important;
+  border-color: #df1f4e;
 }
 
 .btn-light {
