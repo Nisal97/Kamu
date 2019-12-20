@@ -133,9 +133,14 @@
             </div>
 
             <div class="feedBackSubmit" style="padding-top: 10%; padding-left: 25%">
-                <button id="feedbackButton" >Submit Feedback</button>
+                <button id="feedbackButton" onclick="submitFeedback()">Submit Feedback</button>
             </div>
         </div>
-    </div>
+
+    <script>
+        function submitFeedback() {
+            window.location.href = ('../BuyerSection/FoodCategories.html');
+        }
+    </script>
 </body>
 </html>
