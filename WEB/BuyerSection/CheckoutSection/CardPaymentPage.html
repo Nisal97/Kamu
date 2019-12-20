@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Card Payment Details</title>
+    <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<!--    <script src = "https://checkout.stripe.com/checkout.js" ></script>-->
+    <link rel="stylesheet" href="../../../CSS/Common.css">
+</head>
+
+<body>
+    <div data-role="page" class="ca>rdPaymentDetailsPage">
+
+        <div class="addLocationHeader">
+            <div class="Fresh Mango" onClick="GoBack();"></div>
+            <h1 class="addAddressTopic"><b>Add Card Details</b></h1>
+        </div>
+
+        <div class="cardDetailsForm">
+            <form id="frmBooking" name="bookingForm" action="post" action="_self">
+
+                <div class="tablePartOne" style="width: 80%;padding-left: 10%">
+                    <table align="center" width="600px">
+                        <tr>
+                            <td><input id="cardTypeInput" name="cardTypeInput" type="text" placeholder="Card Type" height="500px" /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><input id="cardNumberInput" name="cardNumberInput" type="number" placeholder="Card Number" /></td>
+                        </tr>
+                        <tr>
+                            <td><input id="nameOnCard" name="nameOnCard" type="text" placeholder="Name on Card" /></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="tablePartTwo" style="width: 80%;padding-left: 10%">
+                <table align="center">
+                    <tr>
+                        <td><input id="cardExpiryDate" name="cardExpiryDate" type="text" placeholder="Expiry Date"/></td>
+                        <td><input id="cardCVV" name="cardCVV" type="number" placeholder="CVV" /></td>
+                    </tr>
+                </table>
+                </div>
+
+                <div class="tableButtonArea">
+                    <table align="center">
+                        <tr>
+                            <td><button id="cardDetailsCancelButton">Cancel</button></td>
+                            <td><button id="cardDetailsConfirmButton">Save</button></td>
+                        </tr>
+                    </table>
+
+                </div>
+            </form>
+        </div>
+
+        <div data-role="footer" class="cardPaymentFooter" data-position="fixed">
+            <b><p align="center">I have read and accept the <u>Terms of Service</u> and <u>Privacy Policy</u></p></b>
+        </div>
+
+        <script type="text/javascript">
+
+        </script>
+    </div>
+</body>
+
+</html>
