@@ -87,6 +87,8 @@ function foodItemsList(typeCount) {
             y.setAttribute("checked", "checked");
             y.setAttribute("onclick", "checkboxTest("+ itemNumber +","+ itemQuantity +")");
             y.setAttribute("data-role", "none");
+            y.setAttribute("style", "width: 40px; height: 40px");
+        // style="width: 40px; height: 40px"
 
             document.getElementById("appendCheckList").appendChild(y);
             document.getElementById("appendCheckList").appendChild(document.createTextNode(" "+
@@ -162,12 +164,6 @@ function clearCart() {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
     location.reload();
 
-}
-
-function setCart() {
-    var cartItems = ["101,1", "103,2", "102,4"];
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
-    location.reload();
 }
 
 

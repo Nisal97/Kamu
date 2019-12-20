@@ -231,6 +231,15 @@ div.ex1 {
     padding-top: 70%;
     padding-left: 10%;
 }
+
+.cartButton{
+    color: #df1f4e;
+    padding-bottom: 10%;
+    width: 80%;
+    padding-top: 70%;
+    padding-left: 10%;
+}
+
 #confirmLocationButton{
     background: #df1f4e;
     color: white;
