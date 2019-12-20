@@ -13,7 +13,7 @@ jQuery(function ($) {
         event.stopPropagation();
     });
 
-    $(window).click(openCloseMenu);
+    $(window).click(closeMenu);
 });
 
 function screenSize() {
@@ -21,7 +21,15 @@ function screenSize() {
     document.getElementById('menu').style.height = $(document).height();
 }
 
-function openCloseMenu() {
-    $('.menu').toggleClass('right');
-    $('.toggle').toggleClass('indexcity');
+function closeMenu() {
+    $('.menu').removeClass('right');
+    $('.toggle').removeClass('indexcity');
+}
+
+function logout() {
+    document.location.href = "../Common/Home.html";
+}
+
+function connfirmationCancel() {
+    $.modal.close();
 }
