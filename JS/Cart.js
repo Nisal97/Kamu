@@ -79,11 +79,6 @@ function foodItemsList(typeCount) {
         var itemTotalPrice = getItemTotal(itemNumber, itemQuantity);
         console.log("itemTotalPrice - " + itemTotalPrice);
 
-        // var x = document.createElement("div");
-        // x.setAttribute("id", "div" + itemNumber);
-        // x.setAttribute("style", "display: inline-block");
-
-
             var y = document.createElement("INPUT");
             y.setAttribute("type", "checkbox");
             y.setAttribute("name", "foodItem");
@@ -93,7 +88,6 @@ function foodItemsList(typeCount) {
             y.setAttribute("onclick", "checkboxTest("+ itemNumber +","+ itemQuantity +")");
             y.setAttribute("data-role", "none");
 
-            // document.getElementById("div" + itemNumber).appendChild(x);
             document.getElementById("appendCheckList").appendChild(y);
             document.getElementById("appendCheckList").appendChild(document.createTextNode(" "+
             itemQuantity + " " + itemName));
