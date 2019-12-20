@@ -12,5 +12,9 @@
     <orderEntry type="library" name="firebase-auth" level="application" />
     <orderEntry type="library" name="firebase-database" level="application" />
     <orderEntry type="library" name="firebase-functions" level="application" />
+    <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="jquery.modal" level="application" />
+    <orderEntry type="library" name="jquery.qrcode" level="application" />
+    <orderEntry type="library" name="qs" level="application" />
   </component>
 </module>
