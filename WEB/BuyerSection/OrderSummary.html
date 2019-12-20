@@ -7,19 +7,41 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../CSS/Food.css">
+    <link rel="stylesheet" href="../../../CSS/Common.css">
 
     <meta charset="UTF-8">
-    <title>Title</title>
-    <h1 align="center" style="font-size: 50px">Order Summary</h1>
-    <hr>
+    <title>Order Summary</title>
+<!--    <h1 align="center" style="font-size: 50px">Order Summary</h1>-->
+<!--    <hr>-->
 </head>
 
 <body>
 
-<h3 style="font-size: 30px">Servings</h3>
+<div>
+    <div data-role="header" id="KamuLogo" style="text-align: center">
+        <div style="float: left;">
+            <i id="backBtn" class="fas fa-chevron-left fa-5x foodItemBtn"></i>
+            <script>
+                $(document).ready(function () {
+                    $("#backBtn").click(function (e) {
+                        e.preventDefault();
+                        window.history.back();
+                    }); {
+                    }
+                })
+            </script>
+        </div>
+        <img id="logo" src="../../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="center" style="margin-left: -90px;">
+    </div>
+</div>
+
 <br>
 
-<form action="" id="checklist" method="get" name="checklist" style="font-size: 30px">
+<h3 style="font-size: 40px; text-align: center">Order Summary</h3>
+
+
+<form action="" id="checklist" method="get" name="checklist" style="font-size: 40px; text-align: center">
 
     <div id="appendCheckList">
     </div>
@@ -27,15 +49,24 @@
     <br>
     <br>
     <hr style="height:5px;border:none;color:#333;background-color:#333;">
-    <p id="totalAmountLabel">
+    <p id="totalAmountLabel" style="font-size: 40px; font-weight:bold">
 
     </p>
     <hr style="height:5px;border:none;color:#333;background-color:#333;">
     <br>
 
-    <div id="CartButtons" class="buttons" data-inset="true">
-        <a data-role="button" data-ajax="false" class="ui-btn ui-corner-all"
-           id="placeOrder" data-transition="slidefade"  href="OrderSummary.html" style="font-size: 30px">Continue Shopping</a>
+    <div class="cartButton" style="padding-left: 25%; padding-right: 25%">
+        <a href="" data-role="button" class="ui-btn ui-corner-all" data-transition="slidefade" data-ajax="false"
+           style="font-size: 30px; background: #df1f4e;
+               color: white; font-family: Capriola, serif; width: 100%; padding-bottom: 20px;padding-top: 20px">Play And Win</a>
+    </div>
+
+    <br>
+
+    <div class="cartButton" style="padding-left: 25%; padding-right: 25%">
+        <a href="FoodCategories.html" data-role="button" class="ui-btn ui-corner-all" data-transition="slidefade" data-ajax="false"
+           style="font-size: 30px; background: #df1f4e;
+               color: white; font-family: Capriola, serif; width: 100%; padding-bottom: 20px;padding-top: 20px">Continue Shopping</a>
     </div>
 </form>
 
