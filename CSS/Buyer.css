@@ -114,6 +114,10 @@
     /*align-items: center;*/
     justify-content: space-evenly;
 }
+#ButtonNew{
+    font-size: 70px;
+    margin-right: 40px;
+}
 
 .sky15 {
     font-size: 50px;
