@@ -9,30 +9,30 @@ var foodList = {
         "id": "donut2",
         "name": "Black Forest",
         "imageUrl": "../../../../ImageAssets/Foods/Donuts/blackforestDonut.png",
-        "description": "This is Black Forest"
+        "description": "Topped with a layer of whipped cream, and garnished with bits of cherry and chocolate shavings, the Black Forest is very delicious donut."
     },
     "donut3": {
         "id": "donut3",
         "name": "Butter Scotch Cookies",
         "imageUrl": "../../../../ImageAssets/Foods/Donuts/butterscotchcookiesDonut.png",
-        "description": "This is Butter Scotch Cookies"
+        "description": "Butterscotch donut is basically an explosion of butterscotch flavor, while the bits of crispy caramel on top added a nutty boost."
     },
     "donut4": {
         "id": "donut4",
         "name": "Glazed",
         "imageUrl": "../../../../ImageAssets/Foods/Donuts/glazedDonut.png",
-        "description": "This is Glazed"
+        "description": "Glazed donut, which is basically a donut topped off with a lapyer of icing and sprinkles is ideal for a donut lover."
     },
     "donut5": {
         "id": "donut5",
         "name": "Chocolate Surprise",
         "imageUrl": "../../../../ImageAssets/Foods/Donuts/chocolatesurpriseDonut.png",
-        "description": "This is Chocolate Surprise"
+        "description": "The chocolate surprise was well stuffed with a surprising amount of lava-like melted chocolate that burst with flavors with each bite."
     },
     "donut6": {
         "id": "donut6",
         "name": "Sugar Rush",
         "imageUrl": "../../../../ImageAssets/Foods/Donuts/sugarrushDonut.png",
-        "description": "This is Sugar Rush"
+        "description": "Sugar Rush is a yummy donut which is garnished with sugar and dusted with sprinkles and slightly crispy exterior soft, puffy middle."
     }
 }

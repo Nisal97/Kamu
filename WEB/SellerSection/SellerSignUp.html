@@ -25,47 +25,55 @@
 
 <div data-role="page" id="sellerSignUpPage" class="sellerSignUp">
 
-    <div data-role="content">
-        <p align="center" id="sellerLoginTopic"><b>Sign Up</b></p>
-        <br>
+    <script>
+        function GoBack() {
+            window.location.href = "../Common/Home.html"
+        }
+    </script>
+
+    <div class="abcde" id="abcde" align="center">
+        <div class="Fresh Mango" onClick="GoBack();"></div>
+        <h1 class="sky14">Sign Up</h1>
     </div>
+
     <div id ="dataArea">
-        <div style="text-align : center;">
-            <img id="sellerLoginLogo" src="../../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="center"> <!--Logo-->
+        <div class="sellerLoginLogo" id="kamuLogoSeller" style="text-align: center">
+            <img id="logo1" src="../../ImageAssets/KamuLogoNew.png" alt="Kamu Logo" align="middle"> <!--Logo-->
         </div>
 
         <div id="sellerUserName">
-            <input type="text" name="textinput-hide" id="sellerSignUpUsernameInput" placeholder="User Name" value="">
+            <input type="text" class="sellerdetails" name="textinput-hide" id="sellerSignUpUsernameInput" placeholder="User Name" value="">
         </div>
         <br/>
         <div id="sellerEmail">
 
-            <input type="email" name="email-hide" id="sellerSignUpEmailInput" placeholder="Email Address" value="">
+            <input type="email" class="sellerdetails"  name="email-hide" id="sellerSignUpEmailInput" placeholder="Email Address" value="">
         </div>
         <br/>
         <div id="sellerPhone">
 
-            <input type="number" name="number-hide" id="sellerSignUpNumberInput" placeholder="Mobile Number" value="" size="10">
+            <input type="number" class="sellerdetails" name="number-hide" id="sellerSignUpNumberInput" placeholder="Mobile Number" value="" size="10">
         </div>
         <br/>
         <div id="sellerPassword">
 
-            <input type="password" name="pw-hide" id="sellerSignUpPasswordInput" placeholder="Password" value="">
+            <input type="password" class="sellerdetails" name="pw-hide" id="sellerSignUpPasswordInput" placeholder="Password" value="">
         </div>
         <br/>
         <div id="sellerRetypePassword">
 
-            <input type="password" name="pw-hide" id="sellerRetypePasswordInput" placeholder="Confirm Password" value="">
+            <input type="password" class="sellerdetails" name="pw-hide" id="sellerRetypePasswordInput" placeholder="Confirm Password" value="">
         </div>
         <br/>
+
         <div id="buttonSignUp" align="center">
             <a href="#" id="signUpButton" class="ui-shadow ui-btn ui-corner-all" onclick="signUpAuthentication();submitSellerSignUpData();" data-ajax="false">Sign Up</a>
-
         </div>
 
         <div data-role="footer" id="sellerSignInFooter">
-            <p><h1 style="color: black">Already have an account? </h1><a href="" data-role="text" id="sellerSignUpText" data-transition="slidefade">Sign In</a></p>
+            <h1 style="color: black; font-size: 28px; display: inline !important; text-align: center">Already have an account?  </h1><a href="SellerLogin.html" data-role="text" id="sellerSignUpText" data-transition="slidefade">Sign In</a>
         </div>
+
     </div>
 
 </div>

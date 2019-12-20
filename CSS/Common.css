@@ -16,37 +16,35 @@
     padding-top: 15%;
     width: 70%;
     vertical-align: top;
-    /*width: 284px;*/
-    /*height: 284px;*/
+    margin-bottom: 200px;
 }
 
 .home{
     position: relative;
 }
 
-
-
 #footer{
     position: absolute !important;
     bottom: 0;
     width: 100%;
     background: white;
+    font-size: 28px;
 }
 
 #buyerLogin{
     background: #df1f4e;
     color: white;
-    padding-bottom: 10%;
-    padding-top: 10%;
-    width: 100%;
+    font-size: 300%;
+    width: 60%;
+    height: 50px;
 }
 
 #sellerLogin{
     background: #ee9933;
     color: white;
-    padding-bottom: 10%;
-    padding-top: 10%;
-    width: 100%;
+    font-size: 300%;
+    width: 60%;
+    height: 50px;
 }
 
 @font-face {
