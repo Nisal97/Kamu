@@ -14,8 +14,8 @@ firebase.analytics();
 
 function buyerSignUpAuthentication() {
     var email= document.getElementById("buyerSignUpEmailInput").value;
-    var password= document.getElementById("BuyerSignUpPasswordInput").value;
-    var retypePassword = document.getElementById("BuyerSignUpRetypePassword").value;
+    var password= document.getElementById("buyerSignUpPasswordInput").value;
+    var retypePassword = document.getElementById("buyerRetypePasswordInput").value;
 
     if (retypePassword === password){
         firebase.auth().createUserWithEmailAndPassword(email, password).then(function(error){
@@ -31,11 +31,10 @@ function buyerSignUpAuthentication() {
     }
 }
 
-
 function buyerSignInAuthentication(){
 
-    var email= document.getElementById("buyerSignInUserName").value;
-    var password= document.getElementById("buyerSignInPassword").value;
+    var email= document.getElementById("buyerSignInUserNameInput").value;
+    var password= document.getElementById("buyerSignInPasswordInput").value;
 
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then(function(error) {
@@ -50,16 +49,16 @@ function buyerSignInAuthentication(){
 }
 
 function submitBuyerData() {
-    var buyerUserName = document.getElementById("buyerSignUpUserNameInput").value;
+    var buyerUserName = document.getElementById("buyerSignUpUsernameInput").value;
     var buyerUserRef = firebase.database().ref(buyerUserName);
     console.log(buyerUserName);
     console.log(buyerUserRef);
 
     buyerUserRef.set({
         details:{
-            username: document.getElementById("buyerSignUpUserNameInput").value,
+            username: document.getElementById("buyerSignUpUsernameInput").value,
             buyerEmail: document.getElementById("buyerSignUpEmailInput").value,
-            buyerNumber: document.getElementById("BuyerSignUpNumberInput").value
+            buyerNumber: document.getElementById("buyerSignUpNumberInput").value
             // cartItems: "0",
             // cartItemQuantities: "0"
         }

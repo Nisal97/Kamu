@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Seller - Sign In</title>
+    <title>Buyer - Sign In</title>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="../../CSS/Buyer.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../../CSS/Food.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+
 
 </head>
 <body>
@@ -26,16 +29,20 @@
 
 <div data-role="page" id="buyerLoginPage" class="buyerSignIn" style="background: white">
 
-    <script>
-        function GoBack() {
-            window.location.href = "../Common/Home.html"
-        }
-    </script>
+    <div  id="KamuLogo" style="text-align: center">
+        <div style="float: left; margin-left: 20px">
+            <i id="backBtn" class="fas fa-chevron-left fa-5x foodItemBtn"></i>
+            <script>
+                $(document).ready(function () {
+                    $("#backBtn").click(function () {
+                        document.location.href = "../Common/Home.html";
+                    }); {
+                    }
+                })
+            </script>
+        </div>
+        <h1 id="ButtonNew">Sign In</h1>    </div>
 
-    <div class="abcde" id="abcde">
-        <div class="Fresh Mango" onClick="GoBack();"></div>
-        <h1 class="sky14">Sign In</h1>
-    </div>
 
     <div class="sellerLoginLogo" style="text-align: center">
         <img id="logo1" src="../../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="middle"> <!--Logo-->

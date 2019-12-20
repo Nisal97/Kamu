@@ -21,19 +21,25 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
 <script src="../../JS/BuyerUserAuthentication.js"></script>
+<link rel="stylesheet" href="../../../CSS/Food.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+
 
 <div data-role="page" id="buyerSignUpPage" class="buyerSignUp">
 
-    <script>
-        function GoBack() {
-            window.location.href = "../Common/Home.html"
-        }
-    </script>
+    <div  id="KamuLogo" style="text-align: center">
+        <div style="float: left; margin-left: 20px">
+            <i onClick="GoBack();" class="fas fa-chevron-left fa-5x foodItemBtn"></i>
 
-    <div class="abcde" id="abcde" align="center">
-        <div class="Fresh Mango" onClick="GoBack();"></div>
-        <h1 class="sky14">Sign Up</h1>
-    </div>
+            <script>
+                function GoBack() {
+                    window.location.href = "../Common/Home.html"
+                }
+
+            </script>
+        </div>
+        <h1 id="ButtonNew">Sign Up</h1>    </div>
+
 
     <div id ="dataArea">
         <div class="buyerLoginLogo" id="kamuLogobuyer" style="text-align: center">
@@ -66,7 +72,7 @@
         <br/>
 
         <div id="buttonSignUp" align="center">
-            <a href="#" id="signUpButton" class="ui-shadow ui-btn ui-corner-all" onclick="signUpAuthentication();submitbuyerSignUpData();" data-ajax="false">Sign Up</a>
+            <a href="#" id="signUpButton" class="ui-shadow ui-btn ui-corner-all" onclick="buyerSignUpAuthentication();submitBuyerData();" data-ajax="false">Sign Up</a>
         </div>
 
         <div data-role="footer" id="buyerSignInFooter">
