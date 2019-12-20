@@ -55,22 +55,28 @@
     </div>
 
     <div class="enterAddressArea" style="text-align: center !important; padding-top: 10%">
-            <label for="enteredAddressText" class="enterAdd" style="font-size: 200%"><b>Enter your address here</b></label><!-- password textbox -->
+            <label for="enteredAddressTextBox" class="enterAdd" style="font-size: 200%"><b>Enter your address here</b></label><!-- password textbox -->
             <br/>
         <div style="width: 90%; padding-left: 10%">
-            <input type="text" name="enteredAddressText" id="enteredAddressText" placeholder="No. 50, 6th Lane" value="" style="font-size: 200%">
+            <input type="text" name="enteredAddressText" id="enteredAddressTextBox" placeholder="No. 50, 6th Lane" value="" style="font-size: 200%">
         </div>
     </div>
 
     <script>
-        var skillsSelect = document.getElementById("selectArea");
-        var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
-        var addressText = document.getElementById("enteredAddressText").value;
-        
         function confirmLocation() {
+
+            var skillsSelect = document.getElementById("selectArea");
+            var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
+            var addressText = document.getElementById("enteredAddressTextBox").value;
+
             console.log(skillsSelect);
             console.log(selectedText);
             console.log(addressText);
+
+            var locationByText = addressText + ", " + selectedText
+            console.log(locationByText);
+            if()
+            window.location.href('WEB/BuyerSection/CheckoutPage.html');
         }
     </script>
 
