@@ -97,6 +97,20 @@ function openShareModal() {
     $('#shareModal').modal();
 }
 
+function getItemNo() {
+    bindModalEvents();
+    var itemId = getItem();
+    if(typeof foodList == 'undefined') {
+        document.getElementById(itemId).hidden = false;
+    }
+    else {
+        var itemCode1 = foodList[itemId];
+        var itemCode = foodList[itemId].no;
+        // console.log('item = ', item);
+        addToCart(itemCode);
+    }
+}
+
 function addToCart(itemCode) {
 
     if (itemQuantity > 0) {
