@@ -217,15 +217,26 @@ div.ex1 {
     color: #df1f4e;
     padding-bottom: 10%;
     width: 80%;
-    padding-top: 80%;
+    padding-top: 70%;
     padding-left: 10%;
 }
 #confirmLocationButton{
     background: #df1f4e;
     color: white;
+    font-family: Capriola, serif;
 }
 
-.quantity {
-    width: 50%;
+.goToMap{
+    width: 80%;
+    padding-left: 10%;
+}
+#goToMapButton{
+    background: #df1f4e;
+    color: white;
+    font-family: Capriola, serif;
 }
 
+.chooseLocationUsingMapText{
+    padding-left: 10%;
+    font-size: 150%;
+}
