@@ -13,7 +13,8 @@
 </head>
 <body>
 
-<div  id="KamuLogo" style="text-align: center">
+<div data-role="page" style="background-color: #EBF9F9">
+<div  id="KamuLogo" style="text-align: center; background-color: #EBF9F9">
     <div style="float: left; margin-left: 20px " data-transition="slidefade">
         <i onClick="GoBack();" class="fas fa-chevron-left fa-5x foodItemBtn"></i>
 
@@ -27,7 +28,7 @@
     <h1 id="ButtonNew">Add Address</h1>    </div>
 
     <div id="selectAreaText">
-        <b>Select your area here</b>
+        <p><b>Select your area here</b></p>
     </div>
 
     <div class="mapArea"></div>
@@ -45,9 +46,21 @@
 
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6kurwo4XaVtFuO3zHsNlv8_rsy6s4KdU&callback=initMap" type="text/javascript"></script>
     </div>
+
+
+    <div class="confirmLocation">
+        <a href="" data-role="button" class="ui-btn ui-corner-all" id="confirmLocationButton" data-transition="slidefade" data-ajax="false" onclick="confirmLocationUsingMap()">Confirm Location</a>
     </div>
 
-    <div data-role="footer" class="footer">
+    <script>
+        function confirmLocationUsingMap() {
+            var locationByMap = "Informatics Institute of Technology, Ramakrishna Road, Colombo 6";
+            console.log(locationByMap);
+            window.location.href = ('../CheckoutPage.html');
+        }
+    </script>
+
+    <div data-role="footer" class="footer" data-position="fixed">
         <p align="center">Copyrights &copy; 2019 KAMU All Rights Reserved</p>
     </div>
 

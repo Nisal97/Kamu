@@ -215,7 +215,7 @@
     </div>
 </div>
 
-<div class="overlay1">
+<div class="overlay1" id="wonMessage">
     <div class="modal" style="overflow:scroll">
         <h1 class="title" >Congratulations</h1>
         <h2 class="details">You have won a Free Sprinkle Donut. Head out to checkout to redeem your free donut</h2>
@@ -315,13 +315,11 @@
         }
         if(a==1) {
             alert('You Won !');
-
-
+            document.getElementById(wonMessage).style.display = "block"
 
         }
     }
 
-//https://www.youtube.com/watch?v=9TMesBpOm9c
     drawPuzzle();
 </script>
 

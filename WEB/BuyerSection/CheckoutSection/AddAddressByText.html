@@ -10,6 +10,7 @@
     <script src="../../../JS/Common.js"></script>
     <link rel="stylesheet" href="../../../CSS/Food.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" />
 </head>
 <body>
 <script>
@@ -35,7 +36,7 @@
 
     <div class="addressDropdowns" style="padding-top: 5%">
         <p align="center" class="details" style="font-size: 200%"><b>Select Your Area Here</b></p>
-        <div style="width: 90%; padding-left: 5%">
+        <div style="width: 90%; padding-left: 10%">
         <select id="selectArea" style="width: 80%;padding-left: 10%">
             <option>Choose the area</option>
 
@@ -55,22 +56,31 @@
     </div>
 
     <div class="enterAddressArea" style="text-align: center !important; padding-top: 10%">
-            <label for="enteredAddressText" class="enterAdd" style="font-size: 200%"><b>Enter your address here</b></label><!-- password textbox -->
+            <label for="enteredAddressTextBox" class="enterAdd" style="font-size: 200%"><b>Enter your address here</b></label><!-- password textbox -->
             <br/>
-        <div style="width: 90%; padding-left: 5%">
-            <input type="text" name="enteredAddressText" id="enteredAddressText" placeholder="No. 50, 6th Lane" value="" style="font-size: 200%">
+        <div style="width: 90%; padding-left: 10%">
+            <input type="text" name="enteredAddressText" id="enteredAddressTextBox" placeholder="No. 50, 6th Lane" value="" style="font-size: 200%">
         </div>
     </div>
 
     <script>
-        var skillsSelect = document.getElementById("selectArea");
-        var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
-        var addressText = document.getElementById("enteredAddressText").value;
-        
         function confirmLocation() {
+
+            var skillsSelect = document.getElementById("selectArea");
+            var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
+            var addressText = document.getElementById("enteredAddressTextBox").value;
+
             console.log(skillsSelect);
             console.log(selectedText);
             console.log(addressText);
+
+            var locationByText = addressText + ", " + selectedText
+            console.log(locationByText);
+            if(selectedText == null || selectedText === "" && addressText == null || addressText === ""){
+                console.log('please fill the address');
+            }else{
+                window.location.href = ('../CheckoutPage.html');
+            }
         }
     </script>
 
