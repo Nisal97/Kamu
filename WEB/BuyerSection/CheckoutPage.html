@@ -7,18 +7,36 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../CSS/Food.css">
+    <link rel="stylesheet" href="../../../CSS/Common.css">
 
     <meta charset="UTF-8">
-    <title>Title</title>
-    <h1 align="center" style="font-size: 50px">Checkout Page</h1>
-    <hr>
+    <title>Checkout Page</title>
 </head>
 
 <body>
 
-<h3 style="font-size: 30px">Order Items:</h3>
+<div>
+    <div data-role="header" id="KamuLogo" style="text-align: center">
+        <div style="float: left;">
+            <i id="backBtn" class="fas fa-chevron-left fa-5x foodItemBtn"></i>
+            <script>
+                $(document).ready(function () {
+                    $("#backBtn").click(function (e) {
+                        e.preventDefault();
+                        window.history.back();
+                    }); {
+                    }
+                })
+            </script>
+        </div>
+        <img id="logo" src="../../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="center" style="margin-left: -90px;">
+    </div>
+</div>
 
-<form action="" id="checklist" method="get" name="checklist" style="font-size: 30px">
+<h3 style="font-size: 40px; text-align: center">Order Items</h3>
+
+<form action="" id="checklist" method="get" name="checklist" style="font-size: 40px; text-align: center" >
 
     <div id="appendCheckList">
     </div>
@@ -26,26 +44,38 @@
     <br>
     <br>
     <hr style="height:5px;border:none;color:#333;background-color:#333;">
-    <p id="totalAmountLabel" style="font-size: 30px; font-weight:bold">
+    <p id="totalAmountLabel" style="font-size: 40px; font-weight:bold">
 
     </p>
     <hr style="height:5px;border:none;color:#333;background-color:#333;">
 
-    <form style="font-size: 30px">
-        <input type="radio" name="paymentMethod" value="cash" data-role="none"> Cash On Delivery<br>
-        <input type="radio" name="paymentMethod" value="card" data-role="none"> Card Payment<br>
+    <form style="font-size: 40px">
+        <input type="radio" name="paymentMethod" value="cash" data-role="none" style="width: 40px; height: 40px"> Cash On Delivery<br>
+        <input type="radio" name="paymentMethod" value="card" data-role="none" style="width: 40px; height: 40px"> Card Payment<br>
 
-        <input type="submit" value="Add Payment Method" style="font-size: 30px">
+        <div class="cartButton" style="padding-left: 25%; padding-right: 25%">
+            <a href="" data-role="button" class="ui-btn ui-corner-all" data-transition="slidefade" data-ajax="false"
+               style="font-size: 30px; background: #df1f4e;
+               color: white; font-family: Capriola, serif; width: 100%; padding-bottom: 20px;padding-top: 20px">Add Payment Method</a>
+        </div>
     </form>
 
     <br>
     <br>
-    <input type="button" value="Add Location" style="font-size: 30px">
+
+    <label style="font-size: 30px; font-family: Capriola, serif; text-align: center">Your Address Here</label>
+
+    <div class="cartButton" style="padding-left: 25%; padding-right: 25%">
+        <a href="" data-role="button" class="ui-btn ui-corner-all" data-transition="slidefade" data-ajax="false"
+           style="font-size: 30px; background: #df1f4e;
+               color: white; font-family: Capriola, serif; width: 100%; padding-bottom: 20px;padding-top: 20px">Add Location</a>
+    </div>
     <br>
     <br>
-    <div id="CartButtons" class="buttons" data-inset="true">
-        <a data-role="button" data-ajax="false" class="ui-btn ui-corner-all"
-           id="placeOrder" data-transition="slidefade"  href="OrderSummary.html" style="font-size: 30px">Confirm Order</a>
+    <div class="cartButton" style="padding-left: 25%; padding-right: 25%">
+        <a href="OrderSummary.html" data-role="button" class="ui-btn ui-corner-all" data-transition="slidefade" data-ajax="false"
+           style="font-size: 30px; background: #df1f4e;
+               color: white; font-family: Capriola, serif; width: 100%; padding-bottom: 20px;padding-top: 20px">Confirm Order</a>
     </div>
 </form>
 
