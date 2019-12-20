@@ -8,16 +8,31 @@
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="../../JS/Common.js"></script>
     <link rel="stylesheet" href="../../CSS/Common.css">
+    <link rel="stylesheet" href="../../../CSS/Food.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
 </head>
 <body>
 
     <div data-role="page" class="feedbackPage">
 
-        <div>
-            <div class="addLocationHeader">
-                <div class="Fresh Mango" onClick="GoBack();"></div>
-                <h1 class="addAddressTopic"><b>Feedback</b></h1>
+        <div  id="KamuLogo" style="text-align: center">
+            <div style="float: left; margin-left: 20px">
+                <i onClick="GoBack();" class="fas fa-chevron-left fa-5x foodItemBtn"></i>
+
+                <script>
+                    function GoBack() {
+                        window.location.href = "../Common/Home.html"
+                    }
+
+                </script>
             </div>
+            <h1 id="ButtonNew">Feedback</h1>    </div>
+
+<!--        <div>-->
+<!--            <div class="addLocationHeader">-->
+<!--                <div class="Fresh Mango" onClick="GoBack();"></div>-->
+<!--                <h1 class="addAddressTopic"><b>Feedback</b></h1>-->
+<!--            </div>-->
 
             <div class="feedbackText">
                 <p style="font-size: 150%; padding-top: 7%; padding-left: 3%"><b>Happy with our service? Please be kind to give us a feedback!</b></p>
