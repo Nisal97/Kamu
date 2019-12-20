@@ -14,8 +14,8 @@ firebase.analytics();
 
 function buyerSignUpAuthentication() {
     var email= document.getElementById("buyerSignUpEmailInput").value;
-    var password= document.getElementById("BuyerSignUpPasswordInput").value;
-    var retypePassword = document.getElementById("BuyerSignUpRetypePassword").value;
+    var password= document.getElementById("buyerSignUpPasswordInput").value;
+    var retypePassword = document.getElementById("buyerRetypePasswordInput").value;
 
     if (retypePassword === password){
         firebase.auth().createUserWithEmailAndPassword(email, password).then(function(error){
