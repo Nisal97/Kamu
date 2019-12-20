@@ -24,46 +24,53 @@
 
 <div data-role="page" id="buyerSignUpPage" class="buyerSignUp">
 
-    <div data-role="content">
-        <p align="center" id="buyerLoginTopic"><b>Sign Up</b></p>
-        <br>
+    <script>
+        function GoBack() {
+            window.location.href = "../Common/Home.html"
+        }
+    </script>
+
+    <div class="abcde" id="abcde" align="center">
+        <div class="Fresh Mango" onClick="GoBack();"></div>
+        <h1 class="sky14">Sign Up</h1>
     </div>
+
     <div id ="dataArea">
-        <div style="text-align : center;">
-            <img id="buyerLoginLogo" src="../../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="center"> <!--Logo-->
+        <div class="sellerLoginLogo" id="kamuLogoSeller" style="text-align: center">
+            <img id="logo1" src="../../ImageAssets/KamuLogoNew.png" alt="Kamu Logo" align="middle"> <!--Logo-->
         </div>
 
-        <div id="buyerUserName">
-            <input type="text" name="textinput-hide" id="buyerSignUpUserNameInput" placeholder="User Name" value="">
+        <div id="sellerUserName">
+            <input type="text" class="buyerdetails" name="textinput-hide" id="sellerSignUpUsernameInput" placeholder="User Name" value="">
         </div>
         <br/>
-        <div id="buyerEmail">
-            <label for="buyerSignUpEmailInput" class="ui-hidden-accessible">Text Input:</label>
-            <input type="email" name="email-hide" id="buyerSignUpEmailInput" placeholder="Email Address" value="">
+        <div id="sellerEmail">
+
+            <input type="email" class="buyerdetails"  name="email-hide" id="sellerSignUpEmailInput" placeholder="Email Address" value="">
         </div>
         <br/>
-        <div id="buyerPhone">
-            <label for="BuyerSignUpNumberInput" class="ui-hidden-accessible">Text Input:</label>
-            <input type="number" name="number-hide" id="BuyerSignUpNumberInput" placeholder="Mobile Number" value="">
+        <div id="sellerPhone">
+
+            <input type="number" class="buyerdetails" name="number-hide" id="sellerSignUpNumberInput" placeholder="Mobile Number" value="" size="10">
         </div>
         <br/>
-        <div id="buyerPassword">
-            <label for="BuyerSignUpPasswordInput" class="ui-hidden-accessible">Text Input:</label>
-            <input type="password" name="pw-hide" id="BuyerSignUpPasswordInput" placeholder="Password" value="">
+        <div id="sellerPassword">
+
+            <input type="password" class="buyerdetails" name="pw-hide" id="sellerSignUpPasswordInput" placeholder="Password" value="">
         </div>
         <br/>
-        <div id="buyerRetypePassword">
-            <label for="BuyerSignUpRetypePassword" class="ui-hidden-accessible">Text Input:</label>
-            <input type="password" name="pw-hide" id="BuyerSignUpRetypePassword" placeholder="Confirm Password" value="">
+        <div id="sellerRetypePassword">
+
+            <input type="password" class="buyerdetails" name="pw-hide" id="sellerRetypePasswordInput" placeholder="Confirm Password" value="">
         </div>
         <br/>
+
         <div id="buttonSignUp" align="center">
-            <a href="#" id="signUpButton" class="ui-shadow ui-btn ui-corner-all" data-ajax="false" onclick="buyerSignUpAuthentication();submitBuyerData();">Sign Up</a>
-
+            <a href="#" id="signUpButton" class="ui-shadow ui-btn ui-corner-all" onclick="signUpAuthentication();submitSellerSignUpData();" data-ajax="false">Sign Up</a>
         </div>
 
         <div data-role="footer" id="buyerSignInFooter">
-            <p><h1 style="color: black">Already have an account? </h1><a href="" data-role="text" id="buyerSignUpText" data-transition="slidefade">Sign In</a></p>
+            <h1 style="color: black; font-size: 28px; display: inline !important; text-align: center">Already have an account?  </h1><a href="SellerLogin.html" data-role="text" id="sellerSignUpText" data-transition="slidefade">Sign In</a>
         </div>
     </div>
 
