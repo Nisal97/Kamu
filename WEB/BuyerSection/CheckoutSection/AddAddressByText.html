@@ -25,8 +25,10 @@
 
     <div class="addressDropdowns" style="padding-top: 5%">
         <p align="center" class="details" style="font-size: 200%"><b>Select Your Area Here</b></p>
+        <div style="width: 90%; padding-left: 5%">
         <select id="selectArea" style="width: 80%;padding-left: 10%">
             <option>Choose the area</option>
+
             <script>
                 var select = document.getElementById("selectArea");
                 var options = ["Colombo 1", "Colombo 2", "Colombo 3", "Colombo 4", "Colombo 5", "Colombo 6", "Colombo 7","Colombo 8","Colombo 9","Colombo 10","Colombo 11","Colombo 12","Colombo 13","Colombo 14","Colombo 15"];
@@ -39,12 +41,15 @@
                 }
             </script>
         </select>
+        </div>
     </div>
 
     <div class="enterAddressArea" style="text-align: center !important; padding-top: 10%">
-            <label for="enteredAddressText" class="enterAdd" style="font-size: 200%">Enter your address here</label><!-- password textbox -->
+            <label for="enteredAddressText" class="enterAdd" style="font-size: 200%"><b>Enter your address here</b></label><!-- password textbox -->
             <br/>
+        <div style="width: 90%; padding-left: 5%">
             <input type="text" name="enteredAddressText" id="enteredAddressText" placeholder="No. 50, 6th Lane" value="" style="font-size: 200%">
+        </div>
     </div>
 
     <script>
@@ -63,9 +68,17 @@
         <a href="" data-role="button" class="ui-btn ui-corner-all" id="confirmLocationButton" data-transition="slidefade" data-ajax="false" onclick="confirmLocation()">Confirm Location</a>
     </div>
 
+    <div class="chooseLocationUsingMapText">
+        <p><b>Or choose location using map</b></p>
+    </div>
+
+    <div class="goToMap">
+        <a href="AddAddress.html" data-role="button" class="ui-btn ui-corner-all" id="goToMapButton" data-transition="slidefade" data-ajax="false">Go to Map</a>
+    </div>
+
 
     <div data-role="footer" id="addLocationByTextFooter">
-        <p>Copyrights &copy; 2019 KAMU All Rights Reserved</p>
+        <p align="center">Copyrights &copy; 2019 KAMU All Rights Reserved</p>
     </div>
 
 </div>
