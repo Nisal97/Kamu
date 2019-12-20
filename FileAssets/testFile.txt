@@ -1,5 +1,41 @@
-101, Cheese Pizza, 1000
-102, Chocolate Donut, 100
-103, Chicken Submarine, 500
-104, Cream Pasta, 300
-105, Vanilla Donut, 80
+101, Choconut, 1000
+102, Black Forest, 100
+103, Butter Scotch Cookies, 500
+104, Glazed, 300
+105, Chocolate Surprise, 80
+106, Sugar Rush, 1200
+
+107, Chocolate Cake, 1000
+108, Ribbon Cake, 100
+109, Vanilla Fudge Cake, 500
+110, Chocalate Coffee Cake, 300
+111, Chocalate Chip Cake, 80
+112, Marble Cake, 1200
+
+113, Carrot Juice, 1000
+114, Lime Juice, 100
+115, Orange Juice, 500
+116, Papaya Juice, 300
+117, Pineapple Juice, 80
+118, Watermelon Juice, 1200
+
+119, Chicken Bacon, 1000
+120, Devilled Beef, 100
+121, Devilled Chicken, 500
+122, Hot Buffer Cuttle Fish, 300
+123, Hot and Spicy Chicken, 80
+124, Sausage Delight, 1200
+
+125, Cutlet, 1000
+126, Pastry, 100
+127, Roll, 500
+128, Samosa, 300
+129, Patty, 80
+130, Vegetable Roti, 1200
+
+131, Crab Soup, 1000
+132, Diced Chicken Soup, 100
+133, Prawn Soup, 500
+134, Sea Food Soup, 300
+135, Sweet Corn Soup, 80
+136, Vegetable Sour Soup, 1200
