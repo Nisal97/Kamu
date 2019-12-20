@@ -3,26 +3,32 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <title>Kamu - Games</title>
 </head>
 <body onkeydown="keyPressed(event)" style="background-image: url('../../ImageAssets/Game/BackgroundGame.png');">
 <!--overlay enable script -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<script>
-
-    function GoBack() {
-        alert("do something here");
-    }
-</script>
+<link rel="stylesheet" href="../../../CSS/Food.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
 
 
-<div class="abcde" id="abcde">
-    <div class="Fresh Mango" onClick="GoBack();"></div>
-    <h1 class="sky14">Kamu Games</h1>
-</div>
-<p> Solve the Puzzle within 5 minutes and win a free Sprinkle Donut. </p>
+<div  id="KamuLogo" style="text-align: center">
+    <div style="float: left; margin-left: 20px">
+        <i id="backBtn" class="fas fa-chevron-left fa-5x foodItemBtn"></i>
+        <script>
+            $(document).ready(function () {
+                $("#backBtn").click(function () {
+                    document.location.href = "../Common/Home.html";
+                }); {
+                }
+            })
+        </script>
+    </div>
+    <h1 id="ButtonNew">Kamu Games</h1>    </div>
 
-    <script src="clock.js"></script>
+<p style="margin-top: 8%"> Solve the Puzzle within 5 minutes and win a free Sprinkle Donut. </p>
+
+    <script src="game.js"></script>
 </head>
 
 <!--setting the time for the clock-->
@@ -209,6 +215,8 @@
     </div>
 </div>
 
+
+
 <script>
 
     $('.overlay').on('click', function(e) {
@@ -298,6 +306,8 @@
         }
         if(a==1) {
             alert('You Won !');
+
+
 
         }
     }

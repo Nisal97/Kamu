@@ -79,6 +79,17 @@ p{
   color: #ddd;
 }
 
+#ButtonNew{
+    font-size: 70px;
+    margin-right: 40px;
+    color: white;
+}
+
+#backBtn{
+    color: white;
+}
+
+
 body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
