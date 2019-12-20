@@ -187,9 +187,9 @@ div.ex1 {
 
 #selectAreaText{
     alignment: center;
-    padding-top: 15%;
+    padding-top: 10%;
     padding-left: 5%;
-    font-size: 45%;
+    font-size: 250%;
 }
 
 .addLocationHeader .Fresh.Mango {
@@ -225,26 +225,30 @@ div.ex1 {
     color: #df1f4e;
     padding-bottom: 10%;
     width: 80%;
-    padding-top: 70%;
-    padding-left: 10%;
+    padding-top: 55%;
+    padding-left: 20%;
 }
 #confirmLocationButton{
     background: #df1f4e;
     color: white;
     font-family: Capriola, serif;
+    font-size: 200%;
+    height: 80px;
 }
 
 .goToMap{
     width: 80%;
-    padding-left: 10%;
+    padding-left: 20%;
 }
 #goToMapButton{
     background: #df1f4e;
     color: white;
     font-family: Capriola, serif;
+    font-size: 200%;
+    height: 80px;
 }
 
 .chooseLocationUsingMapText{
-    padding-left: 10%;
-    font-size: 150%;
+    padding-left: 20%;
+    font-size: 200%;
 }
