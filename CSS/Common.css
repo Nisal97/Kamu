@@ -46,6 +46,14 @@
     height: 50px;
 }
 
+#feedbackButton{
+    background: #df1f4e;
+    color: white;
+    font-size: 250%;
+    width: 60%;
+    height: 100px;
+}
+
 #sellerLogin{
     background: #ee9933;
     color: white;
