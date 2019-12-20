@@ -11,15 +11,43 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="../../CSS/Common.css">
+    <link rel="stylesheet" href="../../../CSS/Food.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
 </head>
 <body>
 
 <div data-role="page" id="buyerSignUpPage" class="buyerSignUp">
 
-    <div data-role="content">
-        <p align="center" id="contactUSTopic"><b>Contact Us</b></p>
-        <br>
-    </div>
+    <div  id="KamuLogo" style="text-align: center">
+        <div style="float: left; margin-left: 20px">
+            <i id="backBtn" class="fas fa-chevron-left fa-5x foodItemBtn"></i>
+
+            <script>
+                $(document).ready(function () {
+                    $("#backBtn").click(function (e) {
+                        e.preventDefault();
+                        window.history.back();
+                    }); {
+                    }
+                })
+            </script>
+
+<!--            <script>-->
+<!--                $(document).ready(function () {-->
+<!--                    $("#backBtn").click(function () {-->
+<!--                        // document.location.href = "../Common/Home.html";-->
+<!--                        window.history.back();-->
+<!--                    }); {-->
+<!--                    }-->
+<!--                })-->
+<!--            </script>-->
+        </div>
+        <h1 id="ButtonNew">Contact Us</h1>    </div>
+
+<!--    <div data-role="content">-->
+<!--        <p align="center" id="contactUSTopic"><b>Contact Us</b></p>-->
+<!--        <br>-->
+<!--    </div>-->
 
     <div style="text-align : center;">
         <img id="buyerLoginLogo" src="../../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="center"> <!--Logo-->
