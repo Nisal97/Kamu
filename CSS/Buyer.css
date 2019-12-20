@@ -11,20 +11,13 @@
     align-content: center;
     padding-bottom: 25%;
 }
+
 #dataArea {
     padding-left: 30px;
     padding-right: 30px;
-    height: 40px;
 }
 
 #buyerSignInButtonArea{
-    /*buyerSignInButtonAreabackground-position: bottom;*/
-    /*vertical-align: bottom;*/
-    /*width: 40%;*/
-    /*height: 40%;*/
-    /*padding-top: 20%;*/
-    /*alignment: center;*/
-    /*margin-left: 30%;*/
 
     height: 40%;
     padding-top: 20%;
@@ -41,11 +34,6 @@
 }
 
 #buyerSignInButton{
-    /*background: #df1f4e;*/
-    /*color: white;*/
-    /*padding-bottom: 10%;*/
-    /*padding-top: 10%;*/
-    /*width: 100%;*/
 
     background: #df1f4e;
     font-size: 300%;
