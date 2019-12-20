@@ -8,6 +8,8 @@
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="../../../CSS/Common.css">
     <script src="../../../JS/Common.js"></script>
+    <link rel="stylesheet" href="../../../CSS/Food.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
 </head>
 <body>
 <script>
@@ -18,10 +20,18 @@
 
 <div data-role="page">
 
-    <div class="addLocationHeader">
-        <div class="Fresh Mango" onClick="GoBack();"></div>
-        <h1 class="addAddressTopic"><b>Add Address</b></h1>
-    </div>
+    <div  id="KamuLogo" style="text-align: center">
+        <div style="float: left; margin-left: 20px" data-transition="slidefade">
+            <i onClick="GoBack();" class="fas fa-chevron-left fa-5x foodItemBtn"></i>
+
+            <script>
+                function GoBack() {
+                    window.location.href = "../BuyerSection/CheckoutPage.html"
+                }
+
+            </script>
+        </div>
+        <h1 id="ButtonNew">Add Address</h1>    </div>
 
     <div class="addressDropdowns" style="padding-top: 5%">
         <p align="center" class="details" style="font-size: 200%"><b>Select Your Area Here</b></p>
@@ -69,7 +79,7 @@
     </div>
 
     <div class="chooseLocationUsingMapText">
-        <p><b>Or choose location using map</b></p>
+        <p><b>Or choose your location using map</b></p>
     </div>
 
     <div class="goToMap">
