@@ -7,6 +7,7 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../CSS/Food.css">
 
     <meta charset="UTF-8">
     <title>Cart</title>
@@ -16,11 +17,24 @@
 
 <body>
 
-<div data-role="header" id="KamuLogo" data-position="fixed" align="center">
-    <img id="logo" src="../../ImageAssets/KamuLogo.png" alt="Kamu Logo" style="margin-left: -90px;" align="center">
-</div>
+    <div>
+    <div data-role="header" id="KamuLogo" style="text-align: center">
+        <div style="float: left;">
+            <i id="backBtn" class="fas fa-chevron-left fa-5x foodItemBtn"></i>
+            <script>
+                $(document).ready(function () {
+                    $("#backBtn").click(function (e) {
+                        e.preventDefault();
+                        window.history.back();
+                    }); {
+                    }
+                })
+            </script>
+        </div>
+        <img id="logo" src="../../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="center" style="margin-left: -90px;">
+    </div>
 
-<h3>Shopping Cart</h3>
+<p id="foodItemTopic" style="padding-left: 25%;">Shopping Cart</p>
 <br>
 
     <form action="" id="checklist" method="get" name="checklist">
@@ -33,22 +47,31 @@
         <br>
         <br>
         <br>
-        <hr>
+        <hr class="line">
         <p id="totalAmountLabel">
 
         </p>
-        <hr>
+        <hr class="line">
         <br>
         <input type="button" onclick="setCart()" value="Set Cart">
         <br>
         <input type="button" onclick="clearCart()" value="Clear Cart">
         <br>
 <!--        <input type="button" value="Checkout Order">-->
-        <a href="CheckoutPage.html" data-role="button" data-ajax="false" class="ui-btn ui-corner-all"
-                            id="checkout" data-transition="slidefade">Checkout Order</a>
-    </form>
+        <!-- <a href="CheckoutPage.html" data-role="button" data-ajax="false" class="ui-btn ui-corner-all"
+                            id="checkout" data-transition="slidefade">Checkout Order</a> -->
+
+                            <div id="CartButtons" class="buttons" data-inset="true">
+                                <a data-role="button" data-ajax="false" class="ui-btn ui-corner-all"
+                                    id="addToCart" data-transition="slidefade"  href="CheckoutPage.html">Checkout Order</a>
+                            </div>
+    
 
 <script src="../../JS/Cart.js"></script>
 
+<div id="footer" class="footer" data-role="footer" data-position="fixed" data-tap-toggle="false">
+    <h6 style="color: black">Copyrights &copy; 2019 KAMU All Rights Reserved </h6>
+</div>
+</div>
 </body>
 </html>

@@ -21,49 +21,62 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
 <script src="../../JS/BuyerUserAuthentication.js"></script>
+<link rel="stylesheet" href="../../../CSS/Food.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+
 
 <div data-role="page" id="buyerSignUpPage" class="buyerSignUp">
 
-    <div data-role="content">
-        <p align="center" id="buyerLoginTopic"><b>Sign Up</b></p>
-        <br>
-    </div>
+    <div  id="KamuLogo" style="text-align: center">
+        <div style="float: left; margin-left: 20px">
+            <i onClick="GoBack();" class="fas fa-chevron-left fa-5x foodItemBtn"></i>
+
+            <script>
+                function GoBack() {
+                    window.location.href = "../Common/Home.html"
+                }
+
+            </script>
+        </div>
+        <h1 id="ButtonNew">Sign Up</h1>    </div>
+
+
     <div id ="dataArea">
-        <div style="text-align : center;">
-            <img id="buyerLoginLogo" src="../../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="center"> <!--Logo-->
+        <div class="buyerLoginLogo" id="kamuLogobuyer" style="text-align: center">
+            <img id="logo1" src="../../ImageAssets/KamuLogoNew.png" alt="Kamu Logo" align="middle"> <!--Logo-->
         </div>
 
         <div id="buyerUserName">
-            <input type="text" name="textinput-hide" id="buyerSignUpUserNameInput" placeholder="User Name" value="">
+            <input type="text" class="buyerdetails" name="textinput-hide" id="buyerSignUpUsernameInput" placeholder="User Name" value="">
         </div>
         <br/>
         <div id="buyerEmail">
-            <label for="buyerSignUpEmailInput" class="ui-hidden-accessible">Text Input:</label>
-            <input type="email" name="email-hide" id="buyerSignUpEmailInput" placeholder="Email Address" value="">
+
+            <input type="email" class="buyerdetails"  name="email-hide" id="buyerSignUpEmailInput" placeholder="Email Address" value="">
         </div>
         <br/>
         <div id="buyerPhone">
-            <label for="BuyerSignUpNumberInput" class="ui-hidden-accessible">Text Input:</label>
-            <input type="number" name="number-hide" id="BuyerSignUpNumberInput" placeholder="Mobile Number" value="">
+
+            <input type="number" class="buyerdetails" name="number-hide" id="buyerSignUpNumberInput" placeholder="Mobile Number" value="" size="10">
         </div>
         <br/>
         <div id="buyerPassword">
-            <label for="BuyerSignUpPasswordInput" class="ui-hidden-accessible">Text Input:</label>
-            <input type="password" name="pw-hide" id="BuyerSignUpPasswordInput" placeholder="Password" value="">
+
+            <input type="password" class="buyerdetails" name="pw-hide" id="buyerSignUpPasswordInput" placeholder="Password" value="">
         </div>
         <br/>
         <div id="buyerRetypePassword">
-            <label for="BuyerSignUpRetypePassword" class="ui-hidden-accessible">Text Input:</label>
-            <input type="password" name="pw-hide" id="BuyerSignUpRetypePassword" placeholder="Confirm Password" value="">
+
+            <input type="password" class="buyerdetails" name="pw-hide" id="buyerRetypePasswordInput" placeholder="Confirm Password" value="">
         </div>
         <br/>
-        <div id="buttonSignUp" align="center">
-            <a href="#" id="signUpButton" class="ui-shadow ui-btn ui-corner-all" data-ajax="false" onclick="buyerSignUpAuthentication();submitBuyerData();">Sign Up</a>
 
+        <div id="buttonSignUp" align="center">
+            <a href="#" id="signUpButton" class="ui-shadow ui-btn ui-corner-all" onclick="buyerSignUpAuthentication();submitBuyerData();" data-ajax="false">Sign Up</a>
         </div>
 
         <div data-role="footer" id="buyerSignInFooter">
-            <p><h1 style="color: black">Already have an account? </h1><a href="" data-role="text" id="buyerSignUpText" data-transition="slidefade">Sign In</a></p>
+            <h1 style="color: black; font-size: 28px; display: inline !important; text-align: center">Already have an account?  </h1><a href="BuyerLogin.html" data-role="text" id="buyerSignUpText" data-transition="slidefade">Sign In</a>
         </div>
     </div>
 

@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="../../CSS/Food.css">
     <link rel="stylesheet" href="../../CSS/navbar.css">
 
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
     <meta charset="UTF-8">
     <title>Kamu - Food Categories</title>
 </head>
@@ -34,8 +38,16 @@
                 </div>
                 <hr id="seperator">
                 <div id="nav-items" class="nav-items">
-                    <div class="nav-item">
-                        <i class="fas fa-clipboard-list nav-item-icon"></i>My Orders
+                    <div class="nav-item" id="feedback">
+                        <i class="fas fa-clipboard-list nav-item-icon"></i>Feedback
+                        <script>
+                            $(document).ready(function () {
+                                $("#feedback").click(function () {
+                                    document.location.href = "../Common/Feedback.html";
+                                }); {
+                                }
+                            })
+                        </script>
                     </div>    
                     <div class="nav-item" id="cart">
                         <i class="fas fa-shopping-cart nav-item-icon"></i>Cart
@@ -60,9 +72,35 @@
                             })
                         </script>
                     </div>    
-                    <div class="nav-item">
+                    <div class="nav-item"  id="logout">
                         <i class="fas fa-sign-out-alt nav-item-icon"></i>Logout
-                    </div>    
+                        <script>
+                            $(document).ready(function () {
+                                $("#logout").click(function () {
+                                    closeMenu();
+                                    $('#logout-confirmation').modal({
+                                        showClose: false
+                                    });
+                                }); {
+                                }
+                            })
+                        </script>
+                    </div>   
+                    <div id="logout-confirmation" class="modal">
+                            <div class="confirmation-content">
+                                Are you sure you want to logout?
+                            </div>
+                            <div class="modal-footer">
+                                    <div class="ui-grid-a" style="width: 30%; float: right;">
+                                            <div class="ui-block-a">
+                                                <button class="btn-boots btn-light" onclick="connfirmationCancel()"> NO </button>
+                                            </div>
+                                            <div class="ui-block-b">
+                                                <button class="btn-boots btn-primary" onclick="logout()">YES</button>
+                                            </div>
+                                    </div>
+                            </div>
+                        </div> 
                 </div>
             </div>
             <!-- End Navigation-->
@@ -150,6 +188,9 @@
         <div id="footer" class="footer" data-role="footer" data-position="fixed" data-tap-toggle="false">
             <h6 style="color: black">Copyrights &copy; 2019 KAMU All Rights Reserved </h6>
         </div>
+
+
+        
 
     </div>
 </body>

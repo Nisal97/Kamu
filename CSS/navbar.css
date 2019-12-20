@@ -146,3 +146,29 @@ body {
 .nav-item-icon {
     margin-right: 30px;
 }
+
+
+.confirmation-content {
+    min-height: 30px;
+    text-align: center;
+    margin: 20px 10px;
+    font-size: x-large;
+}
+
+.modal-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    border-top: 1px solid #e9ecef;
+    margin-right: 20px;
+}
+
+#logout-confirmation {
+    width: 60%;
+}

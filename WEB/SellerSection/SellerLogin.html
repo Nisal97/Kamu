@@ -21,20 +21,25 @@
 <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-functions.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
 <script src="../../JS/SellerUserAuthentication.js"></script>
-
+<link rel="stylesheet" href="../../../CSS/Food.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
 
 <div data-role="page" id="sellerLoginPage" class="sellerSignIn" >
 
-    <script>
-        function GoBack() {
-            window.location.href = "../Common/Home.html"
-        }
-    </script>
+    <div  id="KamuLogo" style="text-align: center">
+        <div style="float: left; margin-left: 20px">
+            <i id="backBtn" class="fas fa-chevron-left fa-5x foodItemBtn"></i>
+            <script>
+                $(document).ready(function () {
+                    $("#backBtn").click(function () {
+                        document.location.href = "../Common/Home.html";
+                    }); {
+                    }
+                })
+            </script>
+        </div>
+        <h1 id="ButtonNew">Sign In</h1>    </div>
 
-    <div class="abcde" id="abcde">
-        <div class="Fresh Mango" onClick="GoBack();"></div>
-        <h1 class="sky14">Sign In</h1>
-    </div>
 
     <div class="sellerLoginLogo" style="text-align: center">
         <img id="logo1" src="../../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="middle"> <!--Logo-->
@@ -45,7 +50,7 @@
             <td >
                 <img id="usernameIcon" src="../../ImageAssets/icons8-user-100.png" alt="usernameIcon" style="height: 80px; width: 80px;">
             </td>
-            <td width="100px">
+            <td >
 
             </td>
             <td>
@@ -69,26 +74,9 @@
         </tr>
     </table>
 
-    <div class="sellerLoginCredentials" style="text-align: center !important;display: flex; flex-direction: row">
-<!--        <img id="usernameIcon" src="../../ImageAssets/icons8-user-100.png" alt="usernameIcon" style="height: 80px; width: 80px;"> &lt;!&ndash; username icon &ndash;&gt;-->
-<!--        <label for="sellerSignInUserNameInput" class="ui-hidden-accessible">User Name</label>          &lt;!&ndash; username textbox&ndash;&gt;-->
-<!--        <input type="text" name="sellerUserName" id="sellerSignInUserNameInput" placeholder="User Name" value="">-->
+    <div id="sellerSignInButtonArea" >
+        <a href="#" data-role="button" id="sellerSignInButton" class="ui-shadow ui-btn ui-corner-all" onclick="signInAuthentication()" data-transition="slidefade" data-ajax="false">Sign In</a>
     </div>
-    <br/>
-
-    <div class="sellerLoginPassword" style="text-align: center !important;display: flex; flex-direction: row" >
-<!--        <img id="passwordIcon" src="../../ImageAssets/icons8-password-1-100.png" alt="passwordIcon" style="height: 80px; width: 80px;">  &lt;!&ndash; password icon &ndash;&gt;-->
-<!--        <label for="sellerSignInPasswordInput" class="ui-hidden-accessible">Password</label>                  &lt;!&ndash; password textbox &ndash;&gt;-->
-<!--        <input type="password" name="sellerPassword" id="sellerSignInPasswordInput" placeholder="Password" value="" style="margin-right: 100px">-->
-    </div>
-
-    <div id="sellerSignInButtonArea" align="center">
-        <a href="#" id="sellerSignInButton" class="ui-shadow ui-btn ui-corner-all" onclick="signInAuthentication()" data-ajax="false">Sign In</a>
-    </div>
-
-<!--    <div id="sellerSignInButtonArea" style="text-align: center">-->
-<!--        <a href="SellerRequestForm.html" data-role="button" class="ui-btn ui-corner-all" id="sellerSignInButton" data-transition="slidefade" data-ajax="false" onclick="signInAuthentication()">Sign In</a> &lt;!&ndash;sign in button&ndash;&gt;-->
-<!--    </div>-->
 
     <div data-role="footer" id="sellerSignInFooter">
         <p><h1 style="color: black; font-size: 28px; display: inline !important; text-align: center">Don't have an account? </h1><a href="SellerSignUp.html" data-role="text" id="sellerSignUpText" data-transition="slidefade">Sign Up</a></p>

@@ -15,13 +15,18 @@
 }
 
 .sky14 {
-    font-size: 80px;
+    font-size: 70px;
     display: block;
     flex-grow: 1;
     overflow: hidden;
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+#ButtonNew{
+    font-size: 70px;
+    margin-right: 40px;
 }
 
 .abcde .Fresh.Mango {
