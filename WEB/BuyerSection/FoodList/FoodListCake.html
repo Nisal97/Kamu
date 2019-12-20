@@ -13,7 +13,7 @@
 
 <body>
 <div id="foodListCakePage" data-role="page" align="center" class="home">
-    <div data-role="header" id="KamuLogo" style="text-align: center">
+    <div data-role="header" data-position="fixed" id="KamuLogo" style="text-align: center">
         <div style="float: left;">
             <i id="backBtn" class="fas fa-chevron-left fa-5x foodItemBtn"></i>
             <script>
@@ -27,8 +27,12 @@
         </div>
         <img id="logo" src="../../../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="center" style="margin-left: -90px;">
     </div>
+
+    <div>
+        <input id="searchInput" type="text" placeholder="Search..">
+    </div>
         
-        <div>
+        <div id="cakeList">
         <div display: grid>
         <div class="column">
             <h3 id = "fonts">Chocalate Cake</h3>
@@ -121,6 +125,9 @@
         
     </div>
 </div>
+
+<script src="../../../JS/Food/FoodItemCake.js"></script>
+
 </body>
 
 </html>
