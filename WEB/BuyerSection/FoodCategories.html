@@ -38,8 +38,16 @@
                 </div>
                 <hr id="seperator">
                 <div id="nav-items" class="nav-items">
-                    <div class="nav-item">
-                        <i class="fas fa-clipboard-list nav-item-icon"></i>My Orders
+                    <div class="nav-item" id="feedback">
+                        <i class="fas fa-clipboard-list nav-item-icon"></i>Feedback
+                        <script>
+                            $(document).ready(function () {
+                                $("#feedback").click(function () {
+                                    document.location.href = "../Common/Feedback.html";
+                                }); {
+                                }
+                            })
+                        </script>
                     </div>    
                     <div class="nav-item" id="cart">
                         <i class="fas fa-shopping-cart nav-item-icon"></i>Cart
