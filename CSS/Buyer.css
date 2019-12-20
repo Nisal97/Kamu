@@ -109,6 +109,10 @@
     margin-left: 30px;
 }
 
+#logout-confirmation{
+    height: 500%;
+}
+
 .abcdef {
     display: flex;
     /*align-items: center;*/
