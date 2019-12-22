@@ -1,266 +1,542 @@
-.ui-btn{
-    text-align: center;
-    text-decoration: none;
-    font-family: Capriola, serif;
+@media screen and (orientation:portrait){
+
+    .ui-btn{
+        text-align: center;
+        text-decoration: none;
+        font-family: Capriola, serif;
+    }
+
+    #homeButtons{
+        background-position: bottom;
+        vertical-align: bottom;
+        width: 40%;
+        height: 40%;
+        padding-top: 20%;
+    }
+
+    #logo{
+        padding-top: 15%;
+        width: 70%;
+        vertical-align: top;
+        margin-bottom: 200px;
+    }
+
+    .home{
+        position: relative;
+    }
+
+    #footer{
+        position: absolute !important;
+        bottom: 0;
+        width: 100%;
+        background: white;
+        font-size: 28px;
+    }
+
+    #myForm{
+        font-size: 20px;
+    }
+
+    #addLocationByTextFooter{
+        position: absolute !important;
+        bottom: 0;
+        width: 100%;
+        background: white;
+    }
+
+    #buyerLogin{
+        background: #df1f4e;
+        color: white;
+        font-size: 300%;
+        width: 60%;
+        height: 50px;
+    }
+
+    #feedbackButton{
+        background: #df1f4e;
+        color: white;
+        font-size: 250%;
+        width: 60%;
+        height: 100px;
+    }
+
+    #sellerLogin{
+        background: #ee9933;
+        color: white;
+        font-size: 300%;
+        width: 60%;
+        height: 50px;
+    }
+
+    @font-face {
+        font-family: Capriola;
+        src: url('Fonts/Capriola.ttf');
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: BalooBhai;
+        src: url('Fonts/BalooBhai.ttf');
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: Montserrat;
+        src: url('Fonts/Montserrat.ttf');
+        font-style: normal;
+    }
+
+    #contactUSTopic{
+        width: 100%;
+        align-content: center;
+        line-height: 100%;
+        font-size: 400%;
+    }
+
+    #emailButton{
+        background: #df1f4e;
+        font-size: 300%;
+        color: white;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        width: 50%;
+    }
+
+    #callButton{
+        background: #df1f4e;
+        font-size: 300%;
+        color: white;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        width: 50%;
+    }
+
+    #helpButton{
+        background: #df1f4e;
+        font-size: 300%;
+        color: white;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        width: 50%;
+    }
+
+    /* The popup form - hidden by default */
+    .form-popup {
+        display: none;
+        position: fixed;
+        alignment: center;
+        right: 185px;
+        top: 30%;
+        margin-top: 10px;
+        width: 60%;
+        height: 40%;
+        padding: 10px;
+        z-index: 2; /*stay in front of text*/
+        background-color: white;
+        border-radius: 25px;
+        border: 2px solid #df1f4e;
+        text-align: center;
+    }
+
+    /* Add styles to the form container */
+    .form-container {
+        padding: 20px;
+        height: 95%;
+        margin-bottom: 10px;
+        background-color: white;
+    }
+
+    /* When the inputs get focus, do something */
+    .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover {
+        opacity: 1;
+    }
+
+    #ButtonNew{
+        font-size: 70px;
+        margin-right: 40px;
+    }
+
+    div.ex1 {
+        width: 100%;
+        height: 70%;
+        overflow: scroll;
+    }
+    #closeBtn{
+        margin-bottom: 10px;
+        background-color: #df1f4e;
+        color: white;
+        font-size: 25px;
+    }
+
+    #map{
+        padding-top: 50%;
+        width: 100%;
+        height: 50%;
+    }
+
+    /*#addLocationHeader{*/
+    /*    position: fixed;*/
+    /*    left: 0;*/
+    /*    top: 0;*/
+    /*    width: 100%;*/
+    /*    font-size: 30%;*/
+    /*    color: black;*/
+    /*    text-align: center;*/
+    /*}*/
+
+    #selectAreaText{
+        alignment: center;
+        padding-top: 10%;
+        padding-left: 5%;
+        font-size: 250%;
+    }
+
+    .addLocationHeader .Fresh.Mango {
+        background-image: url(https://image.flaticon.com/icons/svg/8/8764.svg);
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        margin: 20px;
+    }
+
+    .addAddressTopic {
+        color: #262626;
+        display: block;
+        flex-grow: 1;
+        overflow: hidden;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 300%;
+    }
+    .addLocationHeader {
+        padding-top: 3%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .mapArea {
+        height: 80%;
+    }
+
+    .confirmLocation{
+        color: #df1f4e;
+        padding-bottom: 10%;
+        width: 80%;
+        padding-top: 55%;
+        padding-left: 20%;
+    }
+
+    .cartButton{
+        color: #df1f4e;
+        padding-bottom: 10%;
+        width: 80%;
+        padding-top: 70%;
+        padding-left: 10%;
+    }
+
+    #confirmLocationButton{
+        background: #df1f4e;
+        color: white;
+        font-family: Capriola, serif;
+        font-size: 200%;
+        height: 80px;
+    }
+
+    .goToMap{
+        width: 80%;
+        padding-left: 20%;
+    }
+    #goToMapButton{
+        background: #df1f4e;
+        color: white;
+        font-family: Capriola, serif;
+        font-size: 200%;
+        height: 80px;
+    }
+
+    .chooseLocationUsingMapText{
+        padding-left: 20%;
+        font-size: 200%;
+    }
+
 }
 
-#homeButtons{
-    background-position: bottom;
-    vertical-align: bottom;
-    width: 40%;
-    height: 40%;
-    padding-top: 20%;
-}
+@media screen and (orientation:landscape){
 
-#logo{
-    padding-top: 15%;
-    width: 70%;
-    vertical-align: top;
-    margin-bottom: 200px;
-}
+    .ui-btn{
+        text-align: center;
+        text-decoration: none;
+        font-family: Capriola, serif;
+    }
 
-.home{
-    position: relative;
-}
+    #homeButtons{
+        background-position: bottom;
+        vertical-align: bottom;
+        width: 40%;
+        height: 40%;
+        padding-top: 20%;
+    }
 
-#footer{
-    position: absolute !important;
-    bottom: 0;
-    width: 100%;
-    background: white;
-    font-size: 28px;
-}
+    #logo{
+        padding-top: 5%;
+        width: 20%;
+        vertical-align: top;
+        margin-bottom: 50px;
+    }
 
-#myForm{
-    font-size: 20px;
-}
+    .home{
+        position: relative;
+    }
 
-#addLocationByTextFooter{
-    position: absolute !important;
-    bottom: 0;
-    width: 100%;
-    background: white;
-}
+    #footer{
+        position: absolute !important;
+        bottom: 0;
+        width: 100%;
+        background: white;
+        font-size: 10px;
+    }
 
-#buyerLogin{
-    background: #df1f4e;
-    color: white;
-    font-size: 300%;
-    width: 60%;
-    height: 50px;
-}
+    #myForm{
+        font-size: 20px;
+    }
 
-#feedbackButton{
-    background: #df1f4e;
-    color: white;
-    font-size: 250%;
-    width: 60%;
-    height: 100px;
-}
+    #addLocationByTextFooter{
+        position: absolute !important;
+        bottom: 0;
+        width: 100%;
+        background: white;
+    }
 
-#sellerLogin{
-    background: #ee9933;
-    color: white;
-    font-size: 300%;
-    width: 60%;
-    height: 50px;
-}
+    #buyerLogin{
+        background: #df1f4e;
+        color: white;
+        font-size: 150%;
+        text-align: center;
+        width: 60%;
+        height: 15px;
+    }
 
-@font-face {
-    font-family: Capriola;
-    src: url('Fonts/Capriola.ttf');
-    font-style: normal;
-}
+    #feedbackButton{
+        background: #df1f4e;
+        color: white;
+        font-size: 250%;
+        width: 60%;
+        height: 100px;
+    }
 
-@font-face {
-    font-family: BalooBhai;
-    src: url('Fonts/BalooBhai.ttf');
-    font-style: normal;
-}
+    #sellerLogin{
+        background: #ee9933;
+        color: white;
+        font-size: 150%;
+        width: 60%;
+        height: 15px;
+    }
 
-@font-face {
-    font-family: Montserrat;
-    src: url('Fonts/Montserrat.ttf');
-    font-style: normal;
-}
+    @font-face {
+        font-family: Capriola;
+        src: url('Fonts/Capriola.ttf');
+        font-style: normal;
+    }
 
-#contactUSTopic{
-    width: 100%;
-    align-content: center;
-    line-height: 100%;
-    font-size: 400%;
-}
+    @font-face {
+        font-family: BalooBhai;
+        src: url('Fonts/BalooBhai.ttf');
+        font-style: normal;
+    }
 
-#emailButton{
-    background: #df1f4e;
-    font-size: 300%;
-    color: white;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    width: 50%;
-}
+    @font-face {
+        font-family: Montserrat;
+        src: url('Fonts/Montserrat.ttf');
+        font-style: normal;
+    }
 
-#callButton{
-    background: #df1f4e;
-    font-size: 300%;
-    color: white;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    width: 50%;
-}
+    #contactUSTopic{
+        width: 100%;
+        align-content: center;
+        line-height: 100%;
+        font-size: 400%;
+    }
 
-#helpButton{
-    background: #df1f4e;
-    font-size: 300%;
-    color: white;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    width: 50%;
-}
+    #emailButton{
+        background: #df1f4e;
+        font-size: 300%;
+        color: white;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        width: 50%;
+    }
 
-/* The popup form - hidden by default */
-.form-popup {
-    display: none;
-    position: fixed;
-    alignment: center;
-    right: 185px;
-    top: 30%;
-    margin-top: 10px;
-    width: 60%;
-    height: 40%;
-    padding: 10px;
-    z-index: 2; /*stay in front of text*/
-    background-color: white;
-    border-radius: 25px;
-    border: 2px solid #df1f4e;
-    text-align: center;
-}
+    #callButton{
+        background: #df1f4e;
+        font-size: 300%;
+        color: white;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        width: 50%;
+    }
 
-/* Add styles to the form container */
-.form-container {
-    padding: 20px;
-    height: 95%;
-    margin-bottom: 10px;
-    background-color: white;
-}
+    #helpButton{
+        background: #df1f4e;
+        font-size: 300%;
+        color: white;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        width: 50%;
+    }
 
-/* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
-}
+    /* The popup form - hidden by default */
+    .form-popup {
+        display: none;
+        position: fixed;
+        alignment: center;
+        right: 185px;
+        top: 30%;
+        margin-top: 10px;
+        width: 60%;
+        height: 40%;
+        padding: 10px;
+        z-index: 2; /*stay in front of text*/
+        background-color: white;
+        border-radius: 25px;
+        border: 2px solid #df1f4e;
+        text-align: center;
+    }
 
-/* Add some hover effects to buttons */
-.form-container .btn:hover {
-    opacity: 1;
-}
+    /* Add styles to the form container */
+    .form-container {
+        padding: 20px;
+        height: 95%;
+        margin-bottom: 10px;
+        background-color: white;
+    }
 
-#ButtonNew{
-    font-size: 70px;
-    margin-right: 40px;
-}
+    /* When the inputs get focus, do something */
+    .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
 
-div.ex1 {
-    width: 100%;
-    height: 70%;
-    overflow: scroll;
-}
-#closeBtn{
-    margin-bottom: 10px;
-    background-color: #df1f4e;
-    color: white;
-    font-size: 25px;
-}
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover {
+        opacity: 1;
+    }
 
-#map{
-    padding-top: 50%;
-    width: 100%;
-    height: 50%;
-}
+    #ButtonNew{
+        font-size: 70px;
+        margin-right: 40px;
+    }
 
-/*#addLocationHeader{*/
-/*    position: fixed;*/
-/*    left: 0;*/
-/*    top: 0;*/
-/*    width: 100%;*/
-/*    font-size: 30%;*/
-/*    color: black;*/
-/*    text-align: center;*/
-/*}*/
+    div.ex1 {
+        width: 100%;
+        height: 70%;
+        overflow: scroll;
+    }
+    #closeBtn{
+        margin-bottom: 10px;
+        background-color: #df1f4e;
+        color: white;
+        font-size: 25px;
+    }
 
-#selectAreaText{
-    alignment: center;
-    padding-top: 10%;
-    padding-left: 5%;
-    font-size: 250%;
-}
+    #map{
+        padding-top: 50%;
+        width: 100%;
+        height: 50%;
+    }
 
-.addLocationHeader .Fresh.Mango {
-    background-image: url(https://image.flaticon.com/icons/svg/8/8764.svg);
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    margin: 20px;
-}
+    /*#addLocationHeader{*/
+    /*    position: fixed;*/
+    /*    left: 0;*/
+    /*    top: 0;*/
+    /*    width: 100%;*/
+    /*    font-size: 30%;*/
+    /*    color: black;*/
+    /*    text-align: center;*/
+    /*}*/
 
-.addAddressTopic {
-    color: #262626;
-    display: block;
-    flex-grow: 1;
-    overflow: hidden;
-    text-align: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-size: 300%;
-}
-.addLocationHeader {
-    padding-top: 3%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+    #selectAreaText{
+        alignment: center;
+        padding-top: 10%;
+        padding-left: 5%;
+        font-size: 250%;
+    }
 
-.mapArea {
-    height: 80%;
-}
+    .addLocationHeader .Fresh.Mango {
+        background-image: url(https://image.flaticon.com/icons/svg/8/8764.svg);
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        margin: 20px;
+    }
 
-.confirmLocation{
-    color: #df1f4e;
-    padding-bottom: 10%;
-    width: 80%;
-    padding-top: 55%;
-    padding-left: 20%;
-}
+    .addAddressTopic {
+        color: #262626;
+        display: block;
+        flex-grow: 1;
+        overflow: hidden;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 300%;
+    }
+    .addLocationHeader {
+        padding-top: 3%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-.cartButton{
-    color: #df1f4e;
-    padding-bottom: 10%;
-    width: 80%;
-    padding-top: 70%;
-    padding-left: 10%;
-}
+    .mapArea {
+        height: 80%;
+    }
 
-#confirmLocationButton{
-    background: #df1f4e;
-    color: white;
-    font-family: Capriola, serif;
-    font-size: 200%;
-    height: 80px;
-}
+    .confirmLocation{
+        color: #df1f4e;
+        padding-bottom: 10%;
+        width: 80%;
+        padding-top: 55%;
+        padding-left: 20%;
+    }
 
-.goToMap{
-    width: 80%;
-    padding-left: 20%;
-}
-#goToMapButton{
-    background: #df1f4e;
-    color: white;
-    font-family: Capriola, serif;
-    font-size: 200%;
-    height: 80px;
-}
+    .cartButton{
+        color: #df1f4e;
+        padding-bottom: 10%;
+        width: 80%;
+        padding-top: 70%;
+        padding-left: 10%;
+    }
 
-.chooseLocationUsingMapText{
-    padding-left: 20%;
-    font-size: 200%;
+    #confirmLocationButton{
+        background: #df1f4e;
+        color: white;
+        font-family: Capriola, serif;
+        font-size: 200%;
+        height: 80px;
+    }
+
+    .goToMap{
+        width: 80%;
+        padding-left: 20%;
+    }
+    #goToMapButton{
+        background: #df1f4e;
+        color: white;
+        font-family: Capriola, serif;
+        font-size: 200%;
+        height: 80px;
+    }
+
+    .chooseLocationUsingMapText{
+        padding-left: 20%;
+        font-size: 200%;
+    }
+
 }
