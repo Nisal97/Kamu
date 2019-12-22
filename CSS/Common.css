@@ -6,6 +6,25 @@
         font-family: Capriola, serif;
     }
 
+    #feedbackTitle{
+        font-size: 250%;
+        padding-top: 7%;
+        padding-left: 3%
+    }
+
+    #buyerLoginLogo{
+        margin-bottom: 20px;
+    }
+    .buttonsCont{
+        margin-bottom: 70px;
+    }
+
+    .questionsSet{
+        font-size: 150%;
+        padding-top: 5%;
+        padding-left: 5%
+    }
+
     #homeButtons{
         background-position: bottom;
         vertical-align: bottom;
@@ -35,6 +54,12 @@
 
     #myForm{
         font-size: 20px;
+    }
+    .feedBackSubmit{
+        padding-top: 10%;
+    }
+    .feedBackSubmit{
+        padding-top: 10%
     }
 
     #addLocationByTextFooter{
@@ -327,9 +352,9 @@
     #feedbackButton{
         background: #df1f4e;
         color: white;
-        font-size: 250%;
+        font-size: 150%;
         width: 60%;
-        height: 100px;
+        height: 50px;
     }
 
     #sellerLogin{
@@ -429,9 +454,38 @@
         opacity: 1;
     }
 
+    .questionsSet{
+        font-size: 120%;
+        padding-top: 2%;
+        padding-left: 5%
+    }
+
+    .feedBackSubmit{
+        padding-top: 2%
+    }
+
     #ButtonNew{
-        font-size: 70px;
+        font-size: 50px;
         margin-right: 40px;
+    }
+    .buttonsCont{
+        display: inline-block;
+        height: 15px;
+        width: 300px;
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+    #contMar{
+        margin-bottom: 20px;
+        width:100%;
+        text-align: center;
+    }
+
+    #buyerLoginLogo{
+        padding-top: 2%;
+        width: 20%;
+        vertical-align: top;
+        margin-bottom: 12px;
     }
 
     div.ex1 {
@@ -444,6 +498,12 @@
         background-color: #df1f4e;
         color: white;
         font-size: 25px;
+    }
+
+    #feedbackTitle{
+        font-size: 150%;
+        padding-top: 7%;
+        padding-left: 3%
     }
 
     #map{
