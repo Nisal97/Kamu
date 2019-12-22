@@ -311,10 +311,10 @@
     }
 
     #logo{
-        padding-top: 5%;
-        width: 20%;
+        padding-top: 2%;
+        width: 25%;
         vertical-align: top;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
     }
 
     .home{
@@ -343,10 +343,10 @@
     #buyerLogin{
         background: #df1f4e;
         color: white;
-        font-size: 150%;
+        font-size: 160%;
         text-align: center;
         width: 60%;
-        height: 15px;
+        height: 30px;
     }
 
     #feedbackButton{
@@ -360,9 +360,9 @@
     #sellerLogin{
         background: #ee9933;
         color: white;
-        font-size: 150%;
+        font-size: 160%;
         width: 60%;
-        height: 15px;
+        height: 30px;
     }
 
     @font-face {
