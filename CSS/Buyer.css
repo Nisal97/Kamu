@@ -1,185 +1,375 @@
-#buyerLoginTopic{
-    width: 70%;
-    background: white;
-    font-size: 400%;
-    padding-left: 15%;
+@media screen and (orientation:portrait){
+    #buyerLoginTopic{
+        width: 70%;
+        background: white;
+        font-size: 400%;
+        padding-left: 15%;
+    }
+
+    #logo1{
+        width: 35%;
+        vertical-align: top;
+        align-content: center;
+        padding-bottom: 25%;
+    }
+
+    #dataArea {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    #buyerSignInButtonArea{
+
+        height: 40%;
+        padding-top: 20%;
+        width: 40%;
+        margin-left: 30%;
+        margin-right: 40%
+
+    }
+
+    #signUpButton{
+        background: #df1f4e;
+        color: white;
+        width: 100%;
+    }
+
+    #buyerSignInButton{
+
+        background: #df1f4e;
+        font-size: 300%;
+        color: white;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        width: 80%;
+    }
+
+    #buyerSignInFooter{
+        position: absolute !important;
+        bottom: 0;
+        width: 100%;
+        background: white;
+        text-align: center;
+    }
+
+    #usernameIcon{
+        width: 10%;
+        height: 10%;
+        padding-left: 20%;
+    }
+
+    #passwordIcon{
+        width: 10%;
+        height: 10%;
+        padding-left: 20%;
+    }
+
+    #usernameTextBox{
+        width: 300px;
+    }
+
+    #buyerSignInFooter{
+        position: absolute !important;
+        bottom: 0;
+        width: 100%;
+        background: white;
+    }
+    #passwordTextBox{
+        width: 50%;
+    }
+    #buyerSignUpText{
+        border: 0;
+        padding: 0;
+        font-size: 28px;
+        background-color: white;
+        text-align: center;
+    }
+
+    .abcde {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .sky14 {
+        font-size: 80px;
+        display: block;
+        flex-grow: 1;
+        overflow: hidden;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .abcde .Fresh.Mango {
+        background-image: url(https://image.flaticon.com/icons/svg/8/8764.svg);
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        margin-left: 30px;
+    }
+
+    #logout-confirmation{
+        height: 500%;
+    }
+
+    .abcdef {
+        display: flex;
+        /*align-items: center;*/
+        justify-content: space-evenly;
+    }
+
+    #ButtonNew{
+        font-size: 70px;
+        margin-right: 40px;
+    }
+
+    .sky15 {
+        font-size: 50px;
+        display: block;
+        flex-grow: 1;
+        overflow: hidden;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .abcdef .Fresh.MangoD {
+        margin-left: 20px;
+        cursor: pointer;
+        width: 80px;
+        height: 80px;
+    }
+
+    #buyerSignInUserNameInput{
+        font-size:35px;
+        height: 100px;
+        width : 400px;
+    }
+    #buyerSignInPasswordInput{
+        font-size:35px;
+        height: 100px;
+        width : 400px;
+    }
+    #buyerSignInFooter{
+        position: absolute !important;
+        bottom: 0;
+        width: 100%;
+        background: white;
+        text-align: center;
+        /*padding-left: 38%;*/
+    }
+    #sellerSignUpText{
+        border: 0;
+        padding: 0;
+        font-size: 28px;
+        background-color: white;
+        text-align: center;
+    }
+    #kamuLogoBuyer{
+        height: 322px;
+        margin-bottom: 50px;
+    }
+    #signUpButton{
+        background: #df1f4e;
+        font-size: 300%;
+        color: white;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        width: 80%;
+    }
+    .buyerdetails{
+        font-size:35px;
+        height: 100px;
+        width : 400px;
+    }
+}
+@media screen and (orientation:landscape){
+    #buyerLoginTopic{
+        width: 70%;
+        background: white;
+        font-size: 400%;
+        padding-left: 15%;
+    }
+
+    #logo1{
+        width: 35%;
+        vertical-align: top;
+        align-content: center;
+        padding-bottom: 25%;
+    }
+
+    #dataArea {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    #buyerSignInButtonArea{
+
+        height: 40%;
+        padding-top: 20%;
+        width: 40%;
+        margin-left: 30%;
+        margin-right: 40%
+
+    }
+
+    #signUpButton{
+        background: #df1f4e;
+        color: white;
+        width: 100%;
+    }
+
+    #buyerSignInButton{
+
+        background: #df1f4e;
+        font-size: 300%;
+        color: white;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        width: 80%;
+    }
+
+    #buyerSignInFooter{
+        position: absolute !important;
+        bottom: 0;
+        width: 100%;
+        background: white;
+        text-align: center;
+    }
+
+    #usernameIcon{
+        width: 10%;
+        height: 10%;
+        padding-left: 20%;
+    }
+
+    #passwordIcon{
+        width: 10%;
+        height: 10%;
+        padding-left: 20%;
+    }
+
+    #usernameTextBox{
+        width: 300px;
+    }
+
+    #buyerSignInFooter{
+        position: absolute !important;
+        bottom: 0;
+        width: 100%;
+        background: white;
+    }
+    #passwordTextBox{
+        width: 50%;
+    }
+    #buyerSignUpText{
+        border: 0;
+        padding: 0;
+        font-size: 28px;
+        background-color: white;
+        text-align: center;
+    }
+
+    .abcde {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .sky14 {
+        font-size: 80px;
+        display: block;
+        flex-grow: 1;
+        overflow: hidden;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .abcde .Fresh.Mango {
+        background-image: url(https://image.flaticon.com/icons/svg/8/8764.svg);
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        margin-left: 30px;
+    }
+
+    #logout-confirmation{
+        height: 500%;
+    }
+
+    .abcdef {
+        display: flex;
+        /*align-items: center;*/
+        justify-content: space-evenly;
+    }
+
+    #ButtonNew{
+        font-size: 70px;
+        margin-right: 40px;
+    }
+
+    .sky15 {
+        font-size: 50px;
+        display: block;
+        flex-grow: 1;
+        overflow: hidden;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .abcdef .Fresh.MangoD {
+        margin-left: 20px;
+        cursor: pointer;
+        width: 80px;
+        height: 80px;
+    }
+
+    #buyerSignInUserNameInput{
+        font-size:35px;
+        height: 100px;
+        width : 400px;
+    }
+    #buyerSignInPasswordInput{
+        font-size:35px;
+        height: 100px;
+        width : 400px;
+    }
+    #buyerSignInFooter{
+        position: absolute !important;
+        bottom: 0;
+        width: 100%;
+        background: white;
+        text-align: center;
+        /*padding-left: 38%;*/
+    }
+    #sellerSignUpText{
+        border: 0;
+        padding: 0;
+        font-size: 28px;
+        background-color: white;
+        text-align: center;
+    }
+    #kamuLogoBuyer{
+        height: 322px;
+        margin-bottom: 50px;
+    }
+    #signUpButton{
+        background: #df1f4e;
+        font-size: 300%;
+        color: white;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        width: 80%;
+    }
+    .buyerdetails{
+        font-size:35px;
+        height: 100px;
+        width : 400px;
+    }
 }
 
-#logo1{
-    width: 35%;
-    vertical-align: top;
-    align-content: center;
-    padding-bottom: 25%;
-}
-
-#dataArea {
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
-#buyerSignInButtonArea{
-
-    height: 40%;
-    padding-top: 20%;
-    width: 40%;
-    margin-left: 30%;
-    margin-right: 40%
-
-}
-
-#signUpButton{
-    background: #df1f4e;
-    color: white;
-    width: 100%;
-}
-
-#buyerSignInButton{
-
-    background: #df1f4e;
-    font-size: 300%;
-    color: white;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    width: 80%;
-}
-
-#buyerSignInFooter{
-    position: absolute !important;
-    bottom: 0;
-    width: 100%;
-    background: white;
-    text-align: center;
-}
-
-#usernameIcon{
-    width: 10%;
-    height: 10%;
-    padding-left: 20%;
-}
-
-#passwordIcon{
-    width: 10%;
-    height: 10%;
-    padding-left: 20%;
-}
-
-#usernameTextBox{
-    width: 300px;
-}
-
-#buyerSignInFooter{
-    position: absolute !important;
-    bottom: 0;
-    width: 100%;
-    background: white;
-}
-#passwordTextBox{
-    width: 50%;
-}
-#buyerSignUpText{
-    border: 0;
-    padding: 0;
-    font-size: 28px;
-    background-color: white;
-    text-align: center;
-}
-
-.abcde {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.sky14 {
-    font-size: 80px;
-    display: block;
-    flex-grow: 1;
-    overflow: hidden;
-    text-align: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.abcde .Fresh.Mango {
-    background-image: url(https://image.flaticon.com/icons/svg/8/8764.svg);
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    margin-left: 30px;
-}
-
-#logout-confirmation{
-    height: 500%;
-}
-
-.abcdef {
-    display: flex;
-    /*align-items: center;*/
-    justify-content: space-evenly;
-}
-
-#ButtonNew{
-    font-size: 70px;
-    margin-right: 40px;
-}
-
-.sky15 {
-    font-size: 50px;
-    display: block;
-    flex-grow: 1;
-    overflow: hidden;
-    text-align: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.abcdef .Fresh.MangoD {
-    margin-left: 20px;
-    cursor: pointer;
-    width: 80px;
-    height: 80px;
-}
-
-#buyerSignInUserNameInput{
-    font-size:35px;
-    height: 100px;
-    width : 400px;
-}
-#buyerSignInPasswordInput{
-    font-size:35px;
-    height: 100px;
-    width : 400px;
-}
-#buyerSignInFooter{
-    position: absolute !important;
-    bottom: 0;
-    width: 100%;
-    background: white;
-    text-align: center;
-    /*padding-left: 38%;*/
-}
-#sellerSignUpText{
-    border: 0;
-    padding: 0;
-    font-size: 28px;
-    background-color: white;
-    text-align: center;
-}
-#kamuLogoBuyer{
-    height: 322px;
-    margin-bottom: 50px;
-}
-#signUpButton{
-    background: #df1f4e;
-    font-size: 300%;
-    color: white;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    width: 80%;
-}
-.buyerdetails{
-    font-size:35px;
-    height: 100px;
-    width : 400px;
-}
