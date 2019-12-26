@@ -632,39 +632,39 @@
         background-color: #ee9933;
         color: white;
         width: 45%;
-        font-size: 40px;
+        font-size: 20px;
     }
 
     #yesBtn{
         background-color: #ee9933;
         color: white;
         width: 45%;
-        font-size: 40px;
+        font-size: 20px;
     }
 
     #cancelBtn{
         background-color: #ee9933;
         color: white;
         width: 45%;
-        font-size: 40px;
+        font-size: 20px;
     }
 
     #okBtn{
         background-color: #ee9933;
         color: white;
         width: 45%;
-        font-size: 40px;
+        font-size: 20px;
     }
 
     .title{
-        font-size: 50px;
+        font-size: 30px;
         text-align: center;
     }
 
     .details{
-        font-size: 30px;
+        font-size: 20px;
         text-align: center;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
     }
 
     .ui-block-a{
@@ -740,8 +740,8 @@
         top: 50vh;
         left: 50vw;
         transform: translate(-50%,-50%);
-        height: 400px;
-        width: 750px;
+        height: 200px;
+        width: 500px;
         margin: 20px;
         background-color: white;
         border-radius: 10px;
