@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="../../CSS/Common.css">
     <link rel="stylesheet" href="../../../CSS/Food.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 <body>
 
@@ -52,36 +54,47 @@
     <div style="text-align : center;">
         <img id="buyerLoginLogo" src="../../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="center"> <!--Logo-->
     </div>
-
     <br/>
 
+    <div class="overlay1">
+        <div class="form-popup" id="myForm" style="overflow: scroll">
+            <form action="/action_page.php" class="form-container">
+                <h1>Help</h1>
 
-    <div class="form-popup" id="myForm">
-        <form action="/action_page.php" class="form-container">
-            <h1>Help</h1>
-
-            <div class="ex1">1. How to place an order in KAMU? <br/>
-                Sign in to your account or create and account in KAMU.<br/>
-                Select your favourite food category.<br/>
-                Then select the food item.<br/>
-                Then Place the order.<br/>
-                <br/><br/>
-                2.How to sell with KAMU?<br/>
-                Submit your form using sell now screen.<br/>
-                Our agent will contact you soon after placing an order.<br/>
-                Then you will be proceed with your food items</div>
+                <div class="ex1">1. How to place an order in KAMU? <br/>
+                    Sign in to your account or create and account in KAMU.<br/>
+                    Select your favourite food category.<br/>
+                    Then select the food item.<br/>
+                    Then Place the order.<br/>
+                    <br/><br/>
+                    2.How to sell with KAMU?<br/>
+                    Submit your form using sell now screen.<br/>
+                    Our agent will contact you soon after placing an order.<br/>
+                    Then you will be proceed with your food items</div>
 
                 <button type="button" id="closeBtn" class="btn cancel" onclick="closeForm()">Close</button>
 
-        </form>
+            </form>
+        </div>
     </div>
 
+
     <script>
+
+        $('.overlay1').on('click', function(e) {
+            if (e.target !== this) {
+                return;
+            }
+            $('.overlay1').hide();
+
+        });
         function openForm() {
+            $('.overlay1').show();
             document.getElementById("myForm").style.display = "block";
         }
 
         function closeForm() {
+            $('.overlay1').hide();
             document.getElementById("myForm").style.display = "none";
         }
     </script>
