@@ -599,4 +599,8 @@
         font-size: 200%;
     }
 
+    #backBtn{
+        font-size: 50px !important;
+    }
+
 }
