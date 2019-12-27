@@ -51,6 +51,7 @@ body {
     padding: 0;
     list-style: none;
     transition: .8s;
+    overflow-y: scroll;
 }
 
 .menu li a {
