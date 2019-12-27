@@ -331,6 +331,8 @@
 
     #myForm{
         font-size: 20px;
+        height: 60%;
+        width: 50%;
     }
 
     #addLocationByTextFooter{
@@ -423,9 +425,8 @@
         position: fixed;
         alignment: center;
         right: 185px;
-        top: 30%;
-        margin-top: 10px;
-        width: 60%;
+        top: 20%;
+        width: 70%;
         height: 40%;
         padding: 10px;
         z-index: 2; /*stay in front of text*/
@@ -592,6 +593,17 @@
         font-family: Capriola, serif;
         font-size: 200%;
         height: 80px;
+    }
+
+    .overlay1 {
+        z-index:100;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(128,128,128,0.5);
+        display: none;
     }
 
     .chooseLocationUsingMapText{
