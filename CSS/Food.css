@@ -330,6 +330,12 @@
     background-color: #f8f9fa !important;
     border-color: #f8f9fa;
   }
+
+  #KamuLogo1{
+    text-align: center;
+    border-color: white;
+    background-color: white;
+  }
 }
 
 
@@ -676,5 +682,11 @@
   #outer{
     width: 100%;
     text-align: center;
+  }
+
+  #KamuLogo1{
+    text-align: center;
+    border-color: white;
+    background-color: white;
   }
 }

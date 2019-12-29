@@ -7,14 +7,22 @@
     <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <!--    <script src = "https://checkout.stripe.com/checkout.js" ></script>-->
     <link rel="stylesheet" href="../../../CSS/Common.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
     <link rel="stylesheet" href="../../../CSS/Food.css">
 </head>
 
 <body>
+
+<script>
+    function goToCheckout() {
+        window.location.href = "../CheckoutPage.html";
+    }
+</script>
+
     <div data-role="page" class="cardPaymentDetailsPage">
 
-        <div  id="KamuLogo" style="text-align: center">
+        <div  id="KamuLogo1" style="text-align: center">
             <div style="float: left; margin-left: 20px">
                 <i onClick="GoBack();" class="fas fa-chevron-left fa-5x foodItemBtn"></i>
 
@@ -27,7 +35,7 @@
             </div>
             <h1 id="ButtonNew">Add Card</h1>    </div>
 
-        <div class="cardDetailsForm" style="padding-top: 20%">
+        <div class="cardDetailsForm">
             <form id="frmBooking" name="bookingForm" action="post" action="_self">
 
                 <div class="tablePartOne" style="width: 80%;padding-left: 10%">
@@ -56,18 +64,44 @@
                 </div>
 
                 <div class="tableButtonArea">
-                    <table align="center">
+                    <table id="cardButtonTable">
                         <tr>
-                            <td><button id="cardDetailsCancelButton" style="color: white; background-color: #df1f4e; font-family: Capriola, serif">Cancel</button></td>
+                            <td><button id="cardDetailsCancelButton" style="color: white; background-color: #df1f4e; font-family: Capriola, serif;width: 100px" onclick="goToCheckout()">Cancel</button></td>
                             <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
                             <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                            <td><button id="cardDetailsConfirmButton" style="color: white; background-color: #df1f4e; font-family: Capriola, serif">Save</button></td>
+                            <td><button id="cardDetailsConfirmButton" style="color: white; background-color: #df1f4e; font-family: Capriola, serif;width: 100px" onclick="$('.overlay1').show();">Save</button></td>
                         </tr>
                     </table>
+
+                    <div class="overlay1">
+                        <div class="modal" style="overflow:scroll">
+                            <h1 class="title" >Request</h1>
+                            <h2 class="details">Do you want to proceed with the order?</h2>
+                            <div data-role="header" id="buttonSubmit" style=" margin-right:10px; display: flex; flex-direction: row ">
+                                <button type="button" id="okBtn" class="btnCancel" onClick="window.location.reload();">Ok</button>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </form>
         </div>
+
+        <script>
+
+            $('.overlay1').on('click', function(e) {
+                if (e.target !== this) {
+                    return;
+                }
+                $('.overlay1').hide();
+
+            });
+
+            function closeForm() {
+                $('.overlay2').hide();
+
+            }
+        </script>
 
         <div data-role="footer" class="cardPaymentFooter" data-position="fixed">
             <b><p align="center">I have read and accept the <u>Terms of Service</u> and <u>Privacy Policy</u></p></b>
