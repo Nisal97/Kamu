@@ -214,6 +214,7 @@
   }
 
   #addToCart {
+    font-size: 40px;
     background: #df1f4e;
     color: white;
     padding-bottom: 20px;
@@ -562,6 +563,7 @@
   }
 
   #addToCart{
+    font-size: 30px;
     background: #df1f4e;
     color: white;
     padding-bottom: 20px;
