@@ -334,6 +334,17 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (orientation:landscape){
   @font-face {
     font-family: Capriola;
@@ -559,6 +570,7 @@
     height: 40%;
     padding-bottom: 7%;
     padding-top: 7%;
+    display: inline-block;
   }
 
   .plusMinusBtn{
@@ -659,5 +671,10 @@
     color: #212529;
     background-color: #f8f9fa !important;
     border-color: #f8f9fa;
+  }
+
+  #outer{
+    width: 100%;
+    text-align: center;
   }
 }
