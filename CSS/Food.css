@@ -1,231 +1,237 @@
-@font-face {
-  font-family: Capriola;
-  src: url('Fonts/Capriola.ttf');
-  font-style: normal;
-}
+@media screen and (orientation:portrait) {
+  @font-face {
+    font-family: Capriola;
+    src: url('Fonts/Capriola.ttf');
+    font-style: normal;
+  }
 
-@font-face {
-  font-family: BalooBhai;
-  src: url('Fonts/BalooBhai.ttf');
-  font-style: normal;
-}
+  @font-face {
+    font-family: BalooBhai;
+    src: url('Fonts/BalooBhai.ttf');
+    font-style: normal;
+  }
 
-@font-face {
-  font-family: Montserrat;
-  src: url('Fonts/Montserrat.ttf');
-  font-style: normal;
-}
+  @font-face {
+    font-family: Montserrat;
+    src: url('Fonts/Montserrat.ttf');
+    font-style: normal;
+  }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
 
-* {
-  box-sizing: border-box;
-}
+  * {
+    box-sizing: border-box;
+  }
 
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 500px;
-}
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 500px;
+  }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* Style the buttons */
-.btn {
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  background-color: #f1f1f1;
-  cursor: pointer;
-}
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
-.btn:hover {
-  background-color: #ddd;
-}
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
 
-.btn.active {
-  background-color: #666;
-  color: white;
-}
+  .btn:hover {
+    background-color: #ddd;
+  }
 
-.grid-container {
-display: grid;
-grid-template-columns: auto auto auto auto;
-grid-gap: 20px 50px;
-background-color: #2196F3;
-padding: 10px;
-}
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
 
-.grid-container > div {
-background-color: rgba(255, 255, 255, 0.8);
-text-align: center;
-padding: 20px 0;
-font-size: 30px;
-}
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 20px 50px;
+    background-color: #2196F3;
+    padding: 10px;
+  }
 
-.home{
-  position: relative;
-}
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
 
-#dataArea{
-  padding-left: 30px;
-  padding-right: 30px;
-  height: 40px;
-}
+  .home {
+    position: relative;
+  }
 
-#logo {
-  padding-top: 0%;
-  width: 13%;
-}
+  #dataArea {
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 40px;
+  }
 
-.footer{
-  /* padding-bottom: 1px;
-  width: 100%; */
-  background-color: white !important;
-}
+  #logo {
+    padding-top: 0%;
+    width: 13%;
+  }
 
-.column {
-  float: left;
-  width: 47.8%;
-  padding: 10px;
-  margin: 10px;
-  background-color: white;
-  border-radius: 25px;
-  border-style: solid;
-  margin-bottom: 60px;
-}
+  .footer {
+    /* padding-bottom: 1px;
+    width: 100%; */
+    background-color: white !important;
+  }
 
-#fonts {
-  font-family: Montserrat;
-  font-size: xx-large;
-}
+  .column {
+    float: left;
+    width: 47.8%;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 25px;
+    border-style: solid;
+    margin-bottom: 60px;
+  }
 
-.imageText {
-  width: 70%;
-  height: 300px;
-  background-size: cover !important;
-  border-radius: 25px;
-  position: relative;
-  color: white;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
+  #fonts {
+    font-family: Montserrat;
+    font-size: xx-large;
+  }
 
-#KamuLogo{
-  text-align: center;
-  border-color: white;
-  background-color: white;
- }
- 
-.foodList {
-  width: 350px;
-  height: 350px;
-}
+  .imageText {
+    width: 70%;
+    height: 300px;
+    background-size: cover !important;
+    border-radius: 25px;
+    position: relative;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-.foodItem {
-  width: 500px;
-  height: 500px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
+  #KamuLogo {
+    text-align: center;
+    border-color: white;
+    background-color: white;
+  }
 
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: BalooBhai;
-  font-size: 600%;
-  font-weight: 700;
-}
+  .foodList {
+    width: 350px;
+    height: 350px;
+  }
 
-#foodItemTopic{
-  font-size: 60px;
-  font-family: Montserrat;
-  font-weight: 300;
-  margin: 20px;
-}
+  .foodItem {
+    width: 500px;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 
-#foodItemDes{
-  padding-left: 150px;
-  padding-right: 150px;
-  font-size: 35px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: BalooBhai;
+    font-size: 600%;
+    font-weight: 700;
+  }
 
-.header-logo {
-  width: 3%;
-  height: auto;
-  vertical-align: top;
-  margin: 5px;
-}
-.foodItemBtn{
-  margin: 20px;
-}
+  #foodItemTopic {
+    font-size: 60px;
+    font-family: Montserrat;
+    font-weight: 300;
+    margin: 20px;
+  }
 
- .quantity {
-  width: 50%;
-}
+  #foodItemDes {
+    padding-left: 150px;
+    padding-right: 150px;
+    font-size: 35px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 
-button[class*=btn] {
-  width: 80%;
-  height: auto;
-  background-color: #E1E8EE;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-}
-.minus-btn img {
-  margin-bottom: 3px;
-}
-.plus-btn img {
-  margin-top: 2px;
-}
-button:focus,
-input:focus {
-  outline:0;
-}
+  .header-logo {
+    width: 3%;
+    height: auto;
+    vertical-align: top;
+    margin: 5px;
+  }
 
-.line {
-  border: 2px solid #df1f4e;
-  border-radius: 2px;
-}
+  .foodItemBtn {
+    margin: 20px;
+  }
 
-#addToCart{
-  background: #df1f4e;
+  .quantity {
+    width: 50%;
+  }
+
+  button[class*=btn] {
+    width: 80%;
+    height: auto;
+    background-color: #E1E8EE;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .minus-btn img {
+    margin-bottom: 3px;
+  }
+
+  .plus-btn img {
+    margin-top: 2px;
+  }
+
+  button:focus,
+  input:focus {
+    outline: 0;
+  }
+
+  .line {
+    border: 2px solid #df1f4e;
+    border-radius: 2px;
+  }
+
+  #addToCart {
+    background: #df1f4e;
     color: white;
     padding-bottom: 20px;
     padding-top: 20px;
-    width: 80%;
-}
+    width: 100%;
+  }
 
-#CartButtons{
-  background-position: bottom;
-  vertical-align: bottom;
-  width: 40%;
-  height: 40%;
-  padding-bottom: 7%;
-  padding-top: 7%;
-}
+  #CartButtons {
+    background-position: bottom;
+    vertical-align: bottom;
+    width: 40%;
+    height: 40%;
+    padding-bottom: 7%;
+    padding-top: 7%;
+  }
 
-.plusMinusBtn{
-  display: inline-block;
+  .plusMinusBtn {
+    display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0;
     font-size: 14px;
@@ -236,90 +242,451 @@ input:focus {
     vertical-align: middle;
     cursor: pointer;
     border: 1px solid transparent;
-}
+  }
 
-.row{
-  margin-right: -15px;
+  .row {
+    margin-right: -15px;
     margin-left: -15px;
+  }
+
+  #count {
+    text-align: center;
+    font-size: larger;
+  }
+
+  [data-role="header"] {
+    background-color: white !important;
+  }
+
+  .modal {
+    padding: 0 !important;
+    max-width: 900px !important;
+    text-align: center !important;
+  }
+
+  .modal-header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: justify;
+    /* justify-content: space-between; */
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+  }
+
+  .copy-url {
+    white-space: nowrap;
+    font-size: medium;
+  }
+
+  .modal-content {
+    padding: 20px;
+  }
+
+  #shareModal {
+    position: fixed;
+    bottom: 10%;
+    left: 5%;
+  }
+
+  #qr-modal {
+    width: 31%;
+  }
+
+  #qrcode {
+    padding: 12px;
+  }
+
+  .btn-boots {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    width: 50%;
+  }
+
+  .btn-primary {
+    color: #fff;
+    background-color: #df1f4e !important;
+    border-color: #df1f4e;
+  }
+
+  .btn-light {
+    color: #212529;
+    background-color: #f8f9fa !important;
+    border-color: #f8f9fa;
+  }
+
+  #KamuLogo1{
+    text-align: center;
+    border-color: white;
+    background-color: white;
+  }
 }
 
-#count {
-  text-align: center;
-  font-size: larger;
-}
 
-[data-role="header"] {
-  background-color: white !important;
-}
 
-.modal {
-  padding: 0 !important;
-  max-width: 900px !important;
-  text-align: center !important;
-}
-.modal-header {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -ms-flex-pack: justify;
-  /* justify-content: space-between; */
-  padding: 1rem;
-  border-bottom: 1px solid #e9ecef;
-  border-top-left-radius: .3rem;
-  border-top-right-radius: .3rem;
-}
 
-.copy-url {
-  white-space: nowrap;
-  font-size: medium;
-}
 
-.modal-content {
-  padding: 20px;
-}
 
-#shareModal {
-  position: fixed;
-  bottom: 10%;
-  left: 5%;
-}
 
-#qr-modal {
-  width: 31%;
-}
 
-#qrcode {
-  padding: 12px;
-}
 
-.btn-boots {
-  display: inline-block;
-  font-weight: 400;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border: 1px solid transparent;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: .25rem;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  width: 50%;
-}
 
-.btn-primary {
-  color: #fff;
-  background-color: #df1f4e !important;
-  border-color: #df1f4e;
-}
 
-.btn-light {
-  color: #212529;
-  background-color: #f8f9fa !important;
-  border-color: #f8f9fa;  
+
+
+
+@media screen and (orientation:landscape){
+  @font-face {
+    font-family: Capriola;
+    src: url('Fonts/Capriola.ttf');
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: BalooBhai;
+    src: url('Fonts/BalooBhai.ttf');
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: Montserrat;
+    src: url('Fonts/Montserrat.ttf');
+    font-style: normal;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 500px;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: #ddd;
+  }
+
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 20px 50px;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+
+  .home{
+    position: relative;
+  }
+
+  #dataArea{
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 40px;
+  }
+
+  #logo {
+    padding-top: 0%;
+    width: 13%;
+  }
+
+  .footer{
+    /* padding-bottom: 1px;
+    width: 100%; */
+    background-color: white !important;
+  }
+
+  .column {
+    float: left;
+    width: 47.8%;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 25px;
+    border-style: solid;
+    margin-bottom: 60px;
+  }
+
+  #fonts {
+    font-family: Montserrat;
+    font-size: xx-large;
+  }
+
+  .imageText {
+    width: 70%;
+    height: 300px;
+    background-size: cover !important;
+    border-radius: 25px;
+    position: relative;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  #KamuLogo{
+    text-align: center;
+    border-color: white;
+    background-color: white;
+  }
+
+  .foodList {
+    width: 350px;
+    height: 350px;
+  }
+
+  .foodItem {
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: BalooBhai;
+    font-size: 600%;
+    font-weight: 700;
+  }
+
+  #foodItemTopic{
+    font-size: 60px;
+    font-family: Montserrat;
+    font-weight: 300;
+    margin: 20px;
+  }
+
+  #foodItemDes{
+    padding-left: 150px;
+    padding-right: 150px;
+    font-size: 35px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .header-logo {
+    width: 3%;
+    height: auto;
+    vertical-align: top;
+    margin: 5px;
+  }
+  .foodItemBtn{
+    margin: 20px;
+  }
+
+  .quantity {
+    width: 50%;
+  }
+
+  button[class*=btn] {
+    width: 80%;
+    height: auto;
+    background-color: #E1E8EE;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+  .minus-btn img {
+    margin-bottom: 3px;
+  }
+  .plus-btn img {
+    margin-top: 2px;
+  }
+  button:focus,
+  input:focus {
+    outline:0;
+  }
+
+  .line {
+    border: 2px solid #df1f4e;
+    border-radius: 2px;
+  }
+
+  #addToCart{
+    background: #df1f4e;
+    color: white;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 80%;
+  }
+
+  #CartButtons{
+    background-position: bottom;
+    vertical-align: bottom;
+    width: 40%;
+    height: 40%;
+    padding-bottom: 7%;
+    padding-top: 7%;
+    display: inline-block;
+  }
+
+  .plusMinusBtn{
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+
+  .row{
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  #count {
+    text-align: center;
+    font-size: larger;
+  }
+
+  [data-role="header"] {
+    background-color: white !important;
+  }
+
+  .modal {
+    padding: 0 !important;
+    max-width: 900px !important;
+    text-align: center !important;
+  }
+  .modal-header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: justify;
+    /* justify-content: space-between; */
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+  }
+
+  .copy-url {
+    white-space: nowrap;
+    font-size: medium;
+  }
+
+  .modal-content {
+    padding: 20px;
+  }
+
+  #shareModal {
+    position: fixed;
+    bottom: 10%;
+    left: 5%;
+  }
+
+  #qr-modal {
+    width: 31%;
+  }
+
+  #qrcode {
+    padding: 12px;
+  }
+
+  .btn-boots {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    width: 50%;
+  }
+
+  .btn-primary {
+    color: #fff;
+    background-color: #df1f4e !important;
+    border-color: #df1f4e;
+  }
+
+  .btn-light {
+    color: #212529;
+    background-color: #f8f9fa !important;
+    border-color: #f8f9fa;
+  }
+
+  #outer{
+    width: 100%;
+    text-align: center;
+  }
+
+  #KamuLogo1{
+    text-align: center;
+    border-color: white;
+    background-color: white;
+  }
 }

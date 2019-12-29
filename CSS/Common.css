@@ -292,7 +292,29 @@
         font-size: 200%;
     }
 
+    .cardDetailsForm{
+        padding-top: 20%;
+        padding-left: 10%;
+    }
+
+    #cardButtonTable{
+        padding-left: 29%;
+    }
+
+    #KamuLogoMap {
+        text-align: center;
+        border-color: white;
+        background-color: white;
+    }
+
 }
+
+
+
+
+
+
+
 
 @media screen and (orientation:landscape){
 
@@ -466,7 +488,7 @@
     }
 
     #ButtonNew{
-        font-size: 50px;
+        font-size: 50px !important;
         margin-right: 40px;
     }
     .buttonsCont{
@@ -525,7 +547,7 @@
 
     #selectAreaText{
         alignment: center;
-        padding-top: 10%;
+        margin-top: 10%;
         padding-left: 5%;
         font-size: 250%;
     }
@@ -561,9 +583,8 @@
 
     .confirmLocation{
         color: #df1f4e;
-        padding-bottom: 10%;
         width: 80%;
-        padding-top: 55%;
+        margin-top: 10%;
         padding-left: 20%;
     }
 
@@ -615,4 +636,49 @@
         font-size: 50px !important;
     }
 
+    .cardDetailsForm{
+        padding-left: 10%;
+    }
+
+    #cardButtonTable{
+        padding-left: 29%;
+    }
+
+    .overlay1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(128, 128, 128, 0.5);
+        display: none;
+    }
+
+    .modal {
+        position: fixed;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
+        height: 400px;
+        width: 750px;
+        margin: 20px;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    #KamuLogoMap{
+        text-align: center;
+        border-color: white;
+        background-color: white;
+        font-size: 20px !important;
+    }
+
+    #ButtonNewMap{
+        font-size: 40px;
+    }
+
+    #backArrow{
+        font-size: 40px;
+        padding-top: 0;
+    }
 }

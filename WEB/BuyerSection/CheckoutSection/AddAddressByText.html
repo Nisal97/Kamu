@@ -23,7 +23,7 @@
 
     <div  id="KamuLogo" style="text-align: center">
         <div style="float: left; margin-left: 20px" data-transition="slidefade">
-            <i onClick="GoBack();" class="fas fa-chevron-left fa-5x foodItemBtn"></i>
+            <i onClick="GoBack();" class="fas fa-chevron-left fa-5x foodItemBtn" id="backArrow"></i>
 
             <script>
                 function GoBack() {
@@ -32,7 +32,7 @@
 
             </script>
         </div>
-        <h1 id="ButtonNew">Add Address</h1>    </div>
+        <h1 id="ButtonNewMap">Add Address</h1>    </div>
 
     <div class="addressDropdowns" style="padding-top: 5%">
         <p align="center" class="details" style="font-size: 200%"><b>Select Your Area Here</b></p>
@@ -97,7 +97,7 @@
     </div>
 
 
-    <div data-role="footer" id="addLocationByTextFooter">
+    <div data-role="footer" id="addLocationByTextFooter" data-position="fixed">
         <p align="center">Copyrights &copy; 2019 KAMU All Rights Reserved</p>
     </div>
 
