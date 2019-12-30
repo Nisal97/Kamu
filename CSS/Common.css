@@ -271,8 +271,8 @@
         background: #df1f4e;
         color: white;
         font-family: Capriola, serif;
-        font-size: 200%;
-        height: 80px;
+        font-size: 250%;
+        height: 100px;
     }
 
     .goToMap{
@@ -283,8 +283,8 @@
         background: #df1f4e;
         color: white;
         font-family: Capriola, serif;
-        font-size: 200%;
-        height: 80px;
+        font-size: 250%;
+        height: 100px;
     }
 
     .chooseLocationUsingMapText{
@@ -305,6 +305,15 @@
         text-align: center;
         border-color: white;
         background-color: white;
+    }
+
+    #ButtonNewMap{
+        font-size: 50px;
+    }
+
+    #backArrow{
+        font-size: 50px;
+        padding-top: 0;
     }
 
 }
@@ -681,4 +690,5 @@
         font-size: 40px;
         padding-top: 0;
     }
+
 }
