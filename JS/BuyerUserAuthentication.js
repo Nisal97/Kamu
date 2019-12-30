@@ -40,6 +40,8 @@ function buyerSignInAuthentication(){
         .then(function(error) {
             var errorMessage = error.message;
             console.log(errorMessage);
+            var cartItems = [];
+            localStorage.setItem("cartItems", JSON.stringify(cartItems));
             window.location.href = "FoodCategories.html";
         })
         .catch(function(error) {
