@@ -23,7 +23,7 @@
 <script src="../../JS/SellerUserAuthentication.js"></script>
 <link rel="stylesheet" href="../../../CSS/Food.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <div data-role="page" id="sellerSignUpPage" class="sellerSignUp">
 
@@ -40,6 +40,11 @@
         </div>
         <h1 id="ButtonNew">Sign Up</h1>    </div>
 
+    <script>
+        function cancelForm() {
+            $('.overlay1').hide();
+        }
+    </script>
 
     <div id ="dataArea">
         <div class="sellerLoginLogo" id="kamuLogoSeller" style="text-align: center">
@@ -71,9 +76,35 @@
         </div>
         <br/>
 
+        <div class="overlay1">
+            <div class="modal" style="overflow:scroll">
+                <h1 class="title" >Error!</h1>
+                <h2 class="details">
+                    <!--                <script>-->
+                    <!--                    document.getElementById("details").innerHTML = sessionStorage.getItem("errorM");-->
+                    <!--                </script>-->
+                </h2>
+                <div  id="buttonSubmit" align="center">
+                    <button type="button" id="cancelBtn" class="btnCancel" onclick="cancelForm()">Ok</button>
+                </div>
+            </div>
+        </div>
+
         <div id="buttonSignUp" align="center">
             <a href="#" id="signUpButton" class="ui-shadow ui-btn ui-corner-all" onclick="signUpAuthentication();submitSellerSignUpData();" data-ajax="false">Sign Up</a>
         </div>
+
+        <script>
+
+            $('.overlay1').on('click', function(e) {
+                if (e.target !== this) {
+                    return;
+                }
+                $('.overlay1').hide();
+
+            });
+
+        </script>
 
         <div id="footer" class="footer" data-role="footer" data-position="fixed" style="background-color: white !important;">
             <h1 style="color: black; font-size: 28px; display: inline !important; text-align: center">Already have an account?  </h1><a href="SellerLogin.html" data-role="text" id="sellerSignUpText" data-transition="slidefade">Sign In</a>
