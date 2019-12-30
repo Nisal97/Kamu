@@ -14,6 +14,17 @@
 
 <body>
 
+<script>
+
+    function checkRadioButton() {
+
+    }
+    function disableAddPaymentMethod() {
+        document.getElementById("cashOnDeliveryButton").click();
+        document.getElementById("addCardDetailsButton").disabled = true;
+    }
+</script>
+
 <div>
     <div data-role="header" id="KamuLogo" style="text-align: center">
         <div style="float: left;">
@@ -50,13 +61,13 @@
 
     <div class="paymentRadioButtons">
     <form style="font-size: 40px">
-        <input type="radio" name="paymentMethod" value="cash" data-role="none" style="width: 40px; height: 40px"> Cash On Delivery<br>
+        <input type="radio" name="paymentMethod" value="cash" data-role="none" style="width: 40px; height: 40px" id="cashOnDeliveryButton" onclick="disableAddPaymentMethod()"> Cash On Delivery<br>
         <input type="radio" name="paymentMethod" value="card" data-role="none" style="width: 40px; height: 40px"> Card Payment<br>
 
         <div class="cartButton" style="padding-left: 25%; padding-right: 25%">
             <a href="CheckoutSection/CardPaymentPage.html" data-role="button" class="ui-btn ui-corner-all" data-transition="slidefade" data-ajax="false"
                style="font-size: 30px; background: #df1f4e;
-               color: white; font-family: Capriola, serif; width: 100%; padding-bottom: 20px;padding-top: 20px">Add Payment Method</a>
+               color: white; font-family: Capriola, serif; width: 100%; padding-bottom: 20px;padding-top: 20px" id="addCardDetailsButton">Add Payment Method</a>
         </div>
     </form>
     </div>
