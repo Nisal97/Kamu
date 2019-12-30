@@ -8,6 +8,7 @@
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="../../JS/navbar.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="../../CSS/Food.css">
     <link rel="stylesheet" href="../../CSS/navbar.css">
@@ -22,7 +23,12 @@
 
 <body>
     <div id="foodcategoriesPage" data-role="page" align="center" class="home">
+        <script>
+            function closeForm() {
+                $('.overlay2').hide();
 
+            }
+        </script>
         <div data-role="header" id="KamuLogo" data-position="fixed">
             <img id="logo" src="../../ImageAssets/KamuLogo.png" alt="Kamu Logo" style="margin-left: -90px;" align="center">
 
@@ -87,31 +93,27 @@
                         <script>
                             $(document).ready(function () {
                                 $("#logout").click(function () {
-                                    closeMenu();
-                                    $('#logout-confirmation').modal({
-                                        showClose: false
-                                    });
+                                    $('.overlay2').show();
+                                    // closeMenu();
+                                    // $('#logout-confirmation').modal({
+                                    //     showClose: false
+                                    // });
                                 }); {
                                 }
                             })
                         </script>
                     </div>
 
-                    <div id="logout-confirmation" class="modal">
-                            <div class="confirmation-content">
-                                Are you sure you want to logout?
-                            </div>
-                            <div class="modal-footer" align="center">
-                                    <div class="ui-grid-a" style="width: 50%;height: 40% ">
-                                            <div class="ui-block-a">
-                                                <button class="btn-boots btn-light" onclick="connfirmationCancel()"> NO </button>
-                                            </div>
-                                            <div class="ui-block-b">
-                                                <button class="btn-boots btn-primary" onclick="logout()">YES</button>
-                                            </div>
-                                    </div>
+                    <div class="overlay2">
+                        <div class="modal2" style="overflow:scroll">
+                            <h1 class="title">Logout</h1>
+                            <h2 class="details">Are You sure you want to logout?</h2>
+                            <div data-role="header" id="buttonLogout" style=" margin-right:10px; display: flex; flex-direction: row ">
+                                <button type="button" id="noBtn" class="btnCancel" onclick="closeForm()">No</button>
+                                <button type="button" id="yesBtn" class="btnCancel" onclick="window.location.href='../Common/Home.html'">Yes</button>
                             </div>
                         </div>
+                    </div>
 
                 </div>
             </div>
@@ -119,6 +121,18 @@
 
         </div>
 
+
+        <script>
+
+            $('.overlay2').on('click', function(e) {
+                if (e.target !== this) {
+                    return;
+                }
+                $('.overlay2').hide();
+
+            });
+
+        </script>
         <div class="imageText" id="foodCategoryDonut" data-inset="true"
             style="background: url(../../ImageAssets/Foods/Categories/CDonuts.jpg);">
             <div class="centered">DONUTS</div>
