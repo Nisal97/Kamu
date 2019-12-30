@@ -63,6 +63,9 @@ function signInAuthentication(){
         .catch(function(error) {
             var errorMessage = error.message;
             console.log(errorMessage);
+            sessionStorage.setItem("errorM", errorMessage);
+            $('.overlay1').show();
+
         });
 }
 
