@@ -10,6 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
     <link rel="stylesheet" href="../../../CSS/Food.css">
+
 </head>
 
 <body>
@@ -34,7 +35,11 @@
                 </script>
             </div>
             <h1 id="ButtonNew">Add Card</h1>    </div>
-
+            <script>
+                function cancelForm() {
+                    $('.overlay2').hide();
+                }
+            </script>
         <div class="cardDetailsForm">
             <form id="frmBooking" name="bookingForm" action="post" action="_self">
 
@@ -69,16 +74,16 @@
                             <td><button id="cardDetailsCancelButton" style="color: white; background-color: #df1f4e; font-family: Capriola, serif;width: 100px" onclick="goToCheckout()">Cancel</button></td>
                             <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
                             <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                            <td><button id="cardDetailsConfirmButton" style="color: white; background-color: #df1f4e; font-family: Capriola, serif;width: 100px" onclick="$('.overlay1').show();">Save</button></td>
+                            <td><button id="cardDetailsConfirmButton" style="color: white; background-color: #df1f4e; font-family: Capriola, serif;width: 100px" onclick="$('.overlay2').show();">Save</button></td>
                         </tr>
                     </table>
 
-                    <div class="overlay1">
-                        <div class="modal" style="overflow:scroll">
+                    <div class="overlay2">
+                        <div class="modal2" style="overflow:scroll">
                             <h1 class="title" >Request</h1>
                             <h2 class="details">Do you want to proceed with the order?</h2>
-                            <div data-role="header" id="buttonSubmit" style=" margin-right:10px; display: flex; flex-direction: row ">
-                                <button type="button" id="okBtn" class="btnCancel" onClick="window.location.reload();">Ok</button>
+                            <div  id="buttonSubmit" align="center">
+                                <button type="button" id="noBtn" class="btnCancel" onClick="window.location.reload();">Ok</button>
                             </div>
                         </div>
                     </div>
@@ -89,18 +94,14 @@
 
         <script>
 
-            $('.overlay1').on('click', function(e) {
+            $('.overlay2').on('click', function(e) {
                 if (e.target !== this) {
                     return;
                 }
-                $('.overlay1').hide();
+                $('.overlay2').hide();
 
             });
 
-            function closeForm() {
-                $('.overlay2').hide();
-
-            }
         </script>
 
         <div data-role="footer" class="cardPaymentFooter" data-position="fixed">
