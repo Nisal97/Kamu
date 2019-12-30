@@ -25,7 +25,7 @@ function buyerSignUpAuthentication() {
         }).catch(function (error) {
             var errorMessage = error.message;
             console.log(errorMessage);
-            sessionStorage.setItem("errorM", errorMessage);
+            sessionStorage.setItem("errorM", "Invalid credentials. Please check again.");
             $('.overlay1').show();
         });
     }else{
@@ -51,7 +51,7 @@ function buyerSignInAuthentication(){
         .catch(function(error) {
             var errorMessage = error.message;
             console.log(errorMessage);
-            sessionStorage.setItem("errorM", errorMessage);
+            sessionStorage.setItem("errorM", "Invalid credentials. Please check again.");
             $('.overlay1').show();
         });
 }

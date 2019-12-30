@@ -42,13 +42,13 @@ function signUpAuthentication() {
         }).catch(function (error) {
             var errorMessage = error.message;
             console.log(errorMessage);
-            sessionStorage.setItem("errorM", errorMessage);
-            $('.overlay1').show();
+            sessionStorage.setItem("errorM", "Invalid credentials. Please check again.");
+            $('.overlay2').show();
         });
     }else{
         window.alert("Passwords should be match to proceed");
-        sessionStorage.setItem("errorM", errorMessage);
-        $('.overlay1').show();
+        sessionStorage.setItem("errorM", "Invalid credentials. Please check again.");
+        $('.overlay2').show();
     }
 
 }
@@ -67,7 +67,8 @@ function signInAuthentication(){
         .catch(function(error) {
             var errorMessage = error.message;
             console.log(errorMessage);
-            sessionStorage.setItem("errorM", errorMessage);
+            sessionStorage.setItem("errorM", "Invalid credentials. Please check again.");
+            console.log("errorM - " + sessionStorage.getItem("errorM"));
             $('.overlay1').show();
 
         });

@@ -75,13 +75,14 @@
         </div>
         <br/>
 
-        <div class="overlay1">
+        <div id="alertDiv" class="overlay1">
             <div class="modal" style="overflow:scroll">
                 <h1 class="title" >Error!</h1>
-                <h2 class="details">
-                    <!--                <script>-->
-                    <!--                    document.getElementById("details").innerHTML = sessionStorage.getItem("errorM");-->
-                    <!--                </script>-->
+                <h2 id="errorAlert" class="details">
+                    <script>
+                        document.getElementById("errorAlert").innerHTML = "";
+                        document.getElementById("errorAlert").innerHTML = sessionStorage.getItem("errorM");
+                    </script>
                 </h2>
                 <div  id="buttonSubmit" align="center">
                     <button type="button" id="cancelBtn" class="btnCancel" onclick="cancelForm()">Ok</button>
