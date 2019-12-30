@@ -42,9 +42,13 @@ function signUpAuthentication() {
         }).catch(function (error) {
             var errorMessage = error.message;
             console.log(errorMessage);
+            sessionStorage.setItem("errorM", errorMessage);
+            $('.overlay1').show();
         });
     }else{
         window.alert("Passwords should be match to proceed");
+        sessionStorage.setItem("errorM", errorMessage);
+        $('.overlay1').show();
     }
 
 }
@@ -78,5 +82,7 @@ function signOutFromSeller() {
         .catch(function (reason) {
             var errorMessage = reason.message;
             console.log(errorMessage);
+            sessionStorage.setItem("errorM", errorMessage);
+            // $('.overlay1').show();
         })
 }
