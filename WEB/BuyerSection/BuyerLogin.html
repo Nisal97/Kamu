@@ -26,6 +26,8 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
 <script src="../../JS/BuyerUserAuthentication.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
 <div data-role="page" id="buyerLoginPage" class="buyerSignIn" style="background: white">
 
@@ -42,7 +44,11 @@
             </script>
         </div>
         <h1 id="ButtonNew">Sign In</h1>    </div>
-
+        <script>
+            function cancelForm() {
+                $('.overlay1').hide();
+            }
+        </script>
 
     <div class="sellerLoginLogo" style="text-align: center">
         <img id="logo1" src="../../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="middle"> <!--Logo-->
@@ -77,17 +83,34 @@
         </tr>
     </table>
 
-<!--    <div class="buyerLoginCredentials" style="text-align: center !important;display: flex; flex-direction: row">-->
-<!--        <img id="usernameIcon" src="../../ImageAssets/icons8-user-100.png" alt="usernameIcon"> &lt;!&ndash; username icon &ndash;&gt;-->
-<!--        <label for="buyerSignInUserName" class="ui-hidden-accessible">User Name</label>          &lt;!&ndash; username textbox&ndash;&gt;-->
-<!--        <input type="text" name="buyerUserName" id="buyerSignInUserName" placeholder="User Name" value="">-->
-<!--    </div>-->
-<!--    <br>-->
-<!--    <div class="buyerLoginPassword" style="text-align: center !important;display: flex; flex-direction: row">-->
-<!--        <img id="passwordIcon" src="../../ImageAssets/icons8-password-1-100.png" alt="passwordIcon">  &lt;!&ndash; password icon &ndash;&gt;-->
-<!--        <label for="buyerSignInPassword" class="ui-hidden-accessible">Password</label>                  &lt;!&ndash; password textbox &ndash;&gt;-->
-<!--        <input type="password" name="buyerPassword" id="buyerSignInPassword" placeholder="Password" value="">-->
-<!--    </div>-->
+
+    <div class="overlay1">
+        <div class="modal" style="overflow:scroll">
+            <h1 class="title" >Error!</h1>
+            <h2 class="details">
+                <!--                <script>-->
+                <!--                    document.getElementById("details").innerHTML = sessionStorage.getItem("errorM");-->
+                <!--                </script>-->
+            </h2>
+            <div  id="buttonSubmit" align="center">
+                <button type="button" id="cancelBtn" class="btnCancel" onclick="cancelForm()">Ok</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        document.getElementById("details").innerHTML = sessionStorage.getItem("errorM");
+
+        $('.overlay1').on('click', function(e) {
+            if (e.target !== this) {
+                return;
+            }
+            $('.overlay1').hide();
+
+        });
+
+    </script>
 
     <div id="buyerSignInButtonArea">
         <a href="" data-role="button" class="ui-btn ui-corner-all" id="buyerSignInButton" data-transition="slidefade" data-ajax="false" onclick="buyerSignInAuthentication()">Sign In</a> <!--sign in button-->

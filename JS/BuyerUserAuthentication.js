@@ -25,9 +25,13 @@ function buyerSignUpAuthentication() {
         }).catch(function (error) {
             var errorMessage = error.message;
             console.log(errorMessage);
+            sessionStorage.setItem("errorM", errorMessage);
+            $('.overlay1').show();
         });
     }else{
         window.alert("Passwords should be match to proceed");
+        sessionStorage.setItem("errorM", errorMessage);
+        $('.overlay1').show();
     }
 }
 
@@ -40,11 +44,15 @@ function buyerSignInAuthentication(){
         .then(function(error) {
             var errorMessage = error.message;
             console.log(errorMessage);
+            var cartItems = [];
+            localStorage.setItem("cartItems", JSON.stringify(cartItems));
             window.location.href = "FoodCategories.html";
         })
         .catch(function(error) {
             var errorMessage = error.message;
             console.log(errorMessage);
+            sessionStorage.setItem("errorM", errorMessage);
+            $('.overlay1').show();
         });
 }
 

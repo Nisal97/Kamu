@@ -41,11 +41,11 @@
             </script>
         </div>
         <h1 id="ButtonNew">Sign In</h1>    </div>
-<script>
-    function cancelForm() {
-        $('.overlay1').hide();
-    }
-</script>
+    <script>
+        function cancelForm() {
+            $('.overlay1').hide();
+        }
+    </script>
 
     <div class="sellerLoginLogo" style="text-align: center">
         <img id="logo1" src="../../ImageAssets/KamuLogo.png" alt="Kamu Logo" align="middle"> <!--Logo-->
@@ -83,15 +83,20 @@
     <div class="overlay1">
         <div class="modal" style="overflow:scroll">
             <h1 class="title" >Error!</h1>
-            <h2 class="details">Check Username and Password</h2>
-            <div data-role="header" id="buttonSubmit" style=" margin-right:10px; display: flex; flex-direction: row ">
-                <button type="button" id="cancelBtn" class="btnCancel" onclick="cancelForm()">Cancel</button>
-<!--                <button type="button" id="okBtn" class="btnCancel" onClick="window.location.reload();">Ok</button>-->
+            <h2 class="details">
+<!--                <script>-->
+<!--                    document.getElementById("details").innerHTML = sessionStorage.getItem("errorM");-->
+<!--                </script>-->
+            </h2>
+            <div  id="buttonSubmit" align="center">
+                <button type="button" id="cancelBtn" class="btnCancel" onclick="cancelForm()">Ok</button>
             </div>
         </div>
     </div>
 
     <script>
+
+        document.getElementById("details").innerHTML = sessionStorage.getItem("errorM");
 
         $('.overlay1').on('click', function(e) {
             if (e.target !== this) {
@@ -105,6 +110,8 @@
 
     <div id="sellerSignInButtonArea" >
         <a href="#" data-role="button" id="sellerSignInButton" class="ui-shadow ui-btn ui-corner-all" onclick="signInAuthentication()" data-transition="slidefade" data-ajax="false">Sign In</a>
+
+<!--        <a href="#" data-role="button" id="sellerSignInButton" class="ui-shadow ui-btn ui-corner-all" onclick="$('.overlay1').show();" data-transition="slidefade" data-ajax="false">Sign In</a>-->
     </div>
 
     <div id="footer" class="footer" data-role="footer" data-position="fixed" style="background-color: white !important;">
