@@ -10,7 +10,10 @@ console.log("cartArray- " + cartArray);
 console.log("cartArray[1]- " + cartArray[0]);
 
 var newCartArray = cartArray.slice(0);
-localStorage.setItem("checkoutItems", JSON.stringify(newCartArray));
+
+if(newCartArray.length > 0){
+    localStorage.setItem("checkoutItems", JSON.stringify(newCartArray));
+}
 
 readTextFile("../../FileAssets/testFile.txt");
 

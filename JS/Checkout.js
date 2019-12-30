@@ -104,6 +104,7 @@ function calculateTotal() {
 function clearCart() {
     var cartItems = [];
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    console.log("cart cleared.");
     location.reload();
 
 }
