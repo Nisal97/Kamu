@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../../CSS/Common.css">
     <link rel="stylesheet" href="../../CSS/Food.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 <body>
 
@@ -27,7 +29,12 @@
                 </script>
             </div>
             <h1 id="ButtonNew">Feedback</h1>    </div>
-
+            <script>
+                function cancelForm() {
+                    $('.overlay2').hide();
+                    submitFeedback()
+                }
+            </script>
 
             <div class="feedbackText" >
                 <p id="feedbackTitle" ><b>Happy with our service?<br/> Please be kind to give us a feedback!</b></p>
@@ -131,9 +138,30 @@
                 </div>
                 <br/>
             </div>
+            <div class="overlay2" style="z-index: 100">
+                <div class="modal2" style="overflow:scroll">
+                    <h1 class="title" >Success</h1>
+                    <h2 class="details"> Feedback has been successfully submitted!</h2>
+                    <div  id="buttonSubmit" align="center">
+                        <button type="button" id="noBtn" class="btnCancel" onclick="cancelForm()">Ok</button>
+                    </div>
+                </div>
+            </div>
 
+            <script>
+
+
+                $('.overlay2').on('click', function(e) {
+                    if (e.target !== this) {
+                        return;
+                    }
+                    $('.overlay2').hide();
+
+                });
+
+            </script>
             <div class="feedBackSubmit" style="padding-left: 25%">
-                <button id="feedbackButton" onclick="submitFeedback()">Submit Feedback</button>
+                <button id="feedbackButton" onclick="$('.overlay2').show();">Submit Feedback</button>
             </div>
         </div>
 
