@@ -219,6 +219,7 @@
     padding-bottom: 20px;
     padding-top: 20px;
     width: 100%;
+    font-size: 30px;
   }
 
   #CartButtons {
@@ -566,6 +567,7 @@
     color: white;
     padding-bottom: 20px;
     padding-top: 20px;
+    font-size: 30px;
     width: 80%;
   }
 
