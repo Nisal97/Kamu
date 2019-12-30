@@ -18,6 +18,38 @@
         padding-right: 30px;
     }
 
+    .overlay1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(128,128,128,0.5);
+        display: none;
+    }
+
+    .overlay2 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(128,128,128,0.5);
+        display: none;
+    }
+
+    .modal {
+        position: fixed;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%,-50%);
+        height: 400px;
+        width: 750px;
+        margin: 20px;
+        background-color: white;
+        border-radius: 10px;
+    }
+
     #buyerSignInButtonArea{
 
         height: 40%;
@@ -343,6 +375,38 @@
         height: 80px;
         width : 400px;
     }
+    .overlay1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(128,128,128,0.5);
+        display: none;
+    }
+
+    .overlay2 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(128,128,128,0.5);
+        display: none;
+    }
+
+    .modal {
+        position: fixed;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%,-50%);
+        height: 200px;
+        width: 500px;
+        margin: 20px;
+        background-color: white;
+        border-radius: 10px;
+    }
+
     #buyerSignInFooter{
         position: absolute !important;
         bottom: 0;
