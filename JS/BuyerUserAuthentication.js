@@ -30,7 +30,7 @@ function buyerSignUpAuthentication() {
         });
     }else{
         window.alert("Passwords should be match to proceed");
-        sessionStorage.setItem("errorM", errorMessage);
+        sessionStorage.setItem("errorM", "Invalid credentials. Please check again.");
         $('.overlay1').show();
     }
 }
