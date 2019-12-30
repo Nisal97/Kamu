@@ -59,7 +59,7 @@
             <label for="enteredAddressTextBox" class="enterAdd" style="font-size: 200%"><b>Enter your address here</b></label><!-- password textbox -->
             <br/>
         <div style="width: 90%; padding-left: 10%">
-            <input type="text" name="enteredAddressText" id="enteredAddressTextBox" placeholder="No. 50, 6th Lane" value="" style="font-size: 200%">
+            <input type="text" name="enteredAddressText" id="enteredAddressTextBox" placeholder="Informatics Institute of Technology, Ramakrishna Road" value="" style="font-size: 200%">
         </div>
     </div>
 
@@ -78,6 +78,7 @@
             console.log(locationByText);
             if(selectedText == null || selectedText === "" && addressText == null || addressText === ""){
                 console.log('please fill the address');
+                document.getElementById("confirmLocationButton").disabled = true;
             }else{
                 window.location.href = ('../CheckoutPage.html');
             }
