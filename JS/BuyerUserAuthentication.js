@@ -25,9 +25,13 @@ function buyerSignUpAuthentication() {
         }).catch(function (error) {
             var errorMessage = error.message;
             console.log(errorMessage);
+            sessionStorage.setItem("errorM", errorMessage);
+            $('.overlay1').show();
         });
     }else{
         window.alert("Passwords should be match to proceed");
+        sessionStorage.setItem("errorM", errorMessage);
+        $('.overlay1').show();
     }
 }
 
@@ -47,6 +51,8 @@ function buyerSignInAuthentication(){
         .catch(function(error) {
             var errorMessage = error.message;
             console.log(errorMessage);
+            sessionStorage.setItem("errorM", errorMessage);
+            $('.overlay1').show();
         });
 }
 
