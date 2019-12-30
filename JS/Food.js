@@ -38,15 +38,23 @@ function viewFoodItem() {
 
 function increaseItemCount() {
     var count = getItemCount();
+    if (count < 100) {
     setItemCount(count+1);
-
+    }
+ else {
+    count =100;
+}
     console.log("[item, count] = [" + getItem() + ", " + getItemCount() + "]");
 }
 
 function decreaseItemCount() {
     var count = getItemCount();
+    if (count > 1) {
     setItemCount(count-1);
-
+    }
+    else {
+        count =1;
+    }
     console.log("[item, count] = [" + getItem() + ", " + getItemCount() + "]");
 
 }
