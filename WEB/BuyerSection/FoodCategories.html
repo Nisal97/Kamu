@@ -97,7 +97,7 @@
                                     var link = "mailto:teamleviathansiit@gmail.com"+
                                         // "?cc=CCaddress@example.com"+
                                         "&subject=" + escape("Favorite List of Kamu App")+
-                                        "&body=" + escape("This is body");
+                                        "&body=" + escape(localStorage.getItem("favouriteList"));
                                     window.location.href = link;
                                 }); {
                                 }
