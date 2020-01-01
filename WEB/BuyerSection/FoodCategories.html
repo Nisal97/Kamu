@@ -89,7 +89,27 @@
                         </script>
                     </div>
                     <div class="nav-item" id="favouriteList">
-                        <i class="fas fa-phone-alt nav-item-icon"></i>Send favourite List
+                        <i class="fas fa-heart nav-item-icon"></i>Send favourite List
+<!--            <a href="mailto:no-one@snai1mai1.com?subject=look at this website&body=Hi,I found this website and thought you might like it http://www.geocities.com/wowhtml/">tell a friend</a>-->
+                        <script>
+                            // $(document).ready(function() {
+                            //     $('#favouriteList').click(function() {
+                            //         $('#fr1').attr('action',
+                            //             'mailto:test@test.com?subject=' +
+                            //             $('#tb1').val() + '&body=' + $('#tb2').val());
+                            //         $('#fr1').submit();
+                            //     });
+                            // });
+                            //
+                                var link = "mailto:teamleviathansiit@gmail.com"+
+                                    // "?cc=CCaddress@example.com"+
+                                    "&subject=" + escape("Favorite List of Kamu App")+
+                                    "&body=" + escape("This is body");
+                                window.location.href = link;
+
+                        </script>
+
+
                     </div>
 
                     <div class="nav-item"  id="logout">
@@ -98,10 +118,6 @@
                             $(document).ready(function () {
                                 $("#logout").click(function () {
                                     $('.overlay2').show();
-                                    // closeMenu();
-                                    // $('#logout-confirmation').modal({
-                                    //     showClose: false
-                                    // });
                                 }); {
                                 }
                             })
