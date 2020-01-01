@@ -1,64 +1,132 @@
-body {
-    margin: 0;
-    padding: 0;
-    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
-    background: linear-gradient(to right, #25c481, #25b7c4);
+@media screen and (orientation:portrait) {
+    body {
+        margin: 0;
+        padding: 0;
+        background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+        background: linear-gradient(to right, #25c481, #25b7c4);
+    }
+
+    #splash {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        animation: moment-on 1s linear 3s;
+        animation-fill-mode: forwards;
+    }
+
+    #wrapper {
+        padding-top: 50%;
+        opacity: 0;
+        animation: moment-off 0s linear 5s;
+        animation-fill-mode: forwards;
+        text-align: center;
+        color: #555;
+        margin: 20px 20px;
+        height: 100%;
+        background-image: url("../ImageAssets/Game/BackgroundGame.png");
+    }
+
+    h1 {
+        text-shadow: 0 1.5px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    .one-edge-shadow {
+        -webkit-box-shadow: 0 8px 6px -6px black;
+        -moz-box-shadow: 0 8px 6px -6px black;
+        box-shadow: 0 8px 6px -6px black;
+    }
+
+
+    @keyframes moment-on {
+        from {opacity: 1;}
+        10% {opacity: 0.1;}
+        to {opacity: 0;}
+    }
+
+    @keyframes moment-off {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    #splashFrontPic{
+        height: 80%;
+        width: 80%;
+    }
+
+    #splashFrontText{
+        font-family: BalooBhai, serif;
+        font-size: 40px;
+        color: black;
+    }
 }
 
-#splash {
-    width: 100%;
-    height: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
+@media screen and (orientation:landscape) {
+    body {
+        margin: 0;
+        padding: 0;
+        background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+        background: linear-gradient(to right, #25c481, #25b7c4);
+    }
 
-    animation: moment-on 1s linear 5s;
-    animation-fill-mode: forwards;
+    #splash {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        animation: moment-on 1s linear 3s;
+        animation-fill-mode: forwards;
+    }
+
+    #wrapper {
+        padding-top: 50%;
+        opacity: 0;
+        animation: moment-off 0s linear 5s;
+        animation-fill-mode: forwards;
+        text-align: center;
+        color: #555;
+        margin: 20px 20px;
+        height: 100%;
+        background-image: url("../ImageAssets/Game/BackgroundGame.png");
+    }
+
+    h1 {
+        text-shadow: 0 1.5px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    .one-edge-shadow {
+        -webkit-box-shadow: 0 8px 6px -6px black;
+        -moz-box-shadow: 0 8px 6px -6px black;
+        box-shadow: 0 8px 6px -6px black;
+    }
+
+
+    @keyframes moment-on {
+        from {opacity: 1;}
+        10% {opacity: 0.1;}
+        to {opacity: 0;}
+    }
+
+    @keyframes moment-off {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    #splashFrontPic{
+        height: 80%;
+        width: 80%;
+    }
+
+    #splashFrontText{
+        font-family: BalooBhai, serif;
+        font-size: 40px;
+        color: black;
+    }
 }
 
-#wrapper {
-    opacity: 0;
-    animation: moment-off 0s linear 5s;
-    animation-fill-mode: forwards;
-    text-align: center;
-    color: #555;
-    border: 1px solid #aaa;
-    border-radius: 10px;
-    margin: 20px 20px;
-    height: 80%;
-    background-color: #fff;
-}
-
-h1 {
-    text-shadow: 0 1.5px 0 rgba(0, 0, 0, 0.3);
-}
-
-.one-edge-shadow {
-    -webkit-box-shadow: 0 8px 6px -6px black;
-    -moz-box-shadow: 0 8px 6px -6px black;
-    box-shadow: 0 8px 6px -6px black;
-}
-
-
-@keyframes moment-on {
-    from {opacity: 1;}
-    10% {opacity: 0.1;}
-    to {opacity: 0;}
-}
-
-@keyframes moment-off {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-#splashFrontPic{
-    height: 80%;
-    width: 80%;
-}
-
-#splashFrontText{
-    font-family: BalooBhai, serif;
-    font-size: 40px;
-    color: black;
-}
