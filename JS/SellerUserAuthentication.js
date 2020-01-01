@@ -46,7 +46,6 @@ function signUpAuthentication() {
             $('.overlay2').show();
         });
     }else{
-        window.alert("Passwords should be match to proceed");
         sessionStorage.setItem("errorM", "Invalid credentials. Please check again.");
         $('.overlay2').show();
     }
