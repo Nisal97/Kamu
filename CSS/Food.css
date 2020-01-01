@@ -238,8 +238,8 @@
     vertical-align: bottom;
     width: 40%;
     height: 40%;
-    padding-bottom: 7%;
-    padding-top: 7%;
+    /*padding-bottom: 7%;*/
+    /*padding-top: 7%;*/
   }
 
   #CartButtons2 {
@@ -247,8 +247,8 @@
     vertical-align: bottom;
     width: 40%;
     height: 40%;
-    padding-bottom: 7%;
-    padding-top: 7%;
+    /*padding-bottom: 7%;*/
+    /*padding-top: 7%;*/
   }
 
   .plusMinusBtn {
@@ -639,13 +639,33 @@
     width: 80%;
   }
 
+  #favouriteButton{
+    font-size: 30px;
+    background: #df1f4e;
+    color: white;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 30px;
+    width: 80%;
+  }
+
   #CartButtons{
     background-position: bottom;
     vertical-align: bottom;
     width: 40%;
     height: 40%;
-    padding-bottom: 7%;
-    padding-top: 7%;
+    /*padding-bottom: 7%;*/
+    /*padding-top: 7%;*/
+    display: inline-block;
+  }
+
+  #CartButtons2{
+    background-position: bottom;
+    vertical-align: bottom;
+    width: 40%;
+    height: 40%;
+    /*padding-bottom: 7%;*/
+    /*padding-top: 7%;*/
     display: inline-block;
   }
 
