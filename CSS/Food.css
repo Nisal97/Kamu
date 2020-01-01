@@ -223,7 +223,26 @@
     font-size: 30px;
   }
 
+  #favouriteButton {
+    font-size: 40px;
+    background: #df1f4e;
+    color: white;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 100%;
+    font-size: 30px;
+  }
+
   #CartButtons {
+    background-position: bottom;
+    vertical-align: bottom;
+    width: 40%;
+    height: 40%;
+    padding-bottom: 7%;
+    padding-top: 7%;
+  }
+
+  #CartButtons2 {
     background-position: bottom;
     vertical-align: bottom;
     width: 40%;
