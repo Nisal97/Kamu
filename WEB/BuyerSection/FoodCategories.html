@@ -96,7 +96,7 @@
                                 $("#favouriteList").click(function () {
                                     var link = "mailto:teamleviathansiit@gmail.com"+
                                         // "?cc=CCaddress@example.com"+
-                                        "&subject=" + escape("Favorite List of Kamu App")+
+                                        "?subject=" + escape("Favorite List of Kamu App")+
                                         "&body=" + escape(localStorage.getItem("favouriteList"));
                                     window.location.href = link;
                                 }); {
