@@ -29,7 +29,6 @@ function buyerSignUpAuthentication() {
             $('.overlay1').show();
         });
     }else{
-        window.alert("Passwords should be match to proceed");
         sessionStorage.setItem("errorM", "Invalid credentials. Please check again.");
         $('.overlay1').show();
     }
