@@ -119,6 +119,32 @@ function getItemNo() {
     }
 }
 
+function addToFavourites() {
+    bindModalEvents();
+    var itemId = getItem();
+    if(typeof foodList == 'undefined') {
+        document.getElementById(itemId).hidden = false;
+    }
+    else {
+        var itemCode1 = foodList[itemId];
+        var itemName = foodList[itemId].name;
+        // console.log('item = ', item);
+
+        var favouriteListArray = localStorage.getItem("favouriteList");
+        var favouriteList = JSON.parse(favouriteListArray);
+
+        var favArray;
+        if((favouriteList != undefined) || (favouriteList != null)){
+            favArray = favouriteList.concat([itemName]);
+        } else {
+            favArray = [itemName];
+        }
+        localStorage.setItem("favouriteList", JSON.stringify(favArray));
+        console.log("favArray - " + favArray);
+        console.log("favouriteList - " + favouriteList);
+    }
+}
+
 function addToCart(itemCode) {
 
     if (itemQuantity > 0) {
