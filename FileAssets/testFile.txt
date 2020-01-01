@@ -1,36 +1,36 @@
-101, Choconut, 1000
+101, Choconut, 70
 102, Black Forest, 100
-103, Butter Scotch Cookies, 500
-104, Glazed, 300
-105, Chocolate Surprise, 80
-106, Sugar Rush, 1200
-107, Chocolate Cake, 1000
-108, Ribbon Cake, 100
-109, Vanilla Fudge Cake, 500
-110, Chocalate Coffee Cake, 300
-111, Chocalate Chip Cake, 80
-112, Marble Cake, 1200
-113, Carrot Juice, 1000
+103, Butter Scotch Cookies, 120
+104, Glazed, 80
+105, Chocolate Surprise, 90
+106, Sugar Rush, 50
+107, Chocolate Cake, 300
+108, Ribbon Cake, 250
+109, Vanilla Fudge Cake, 450
+110, Chocalate Coffee Cake, 480
+111, Chocalate Chip Cake, 500
+112, Marble Cake, 480
+113, Carrot Juice, 150
 114, Lime Juice, 100
-115, Orange Juice, 500
-116, Papaya Juice, 300
-117, Pineapple Juice, 80
-118, Watermelon Juice, 1200
-119, Chicken Bacon, 1000
-120, Devilled Beef, 100
-121, Devilled Chicken, 500
-122, Hot Buffer Cuttle Fish, 300
-123, Hot and Spicy Chicken, 80
-124, Sausage Delight, 1200
-125, Cutlet, 1000
-126, Pastry, 100
-127, Roll, 500
-128, Samosa, 300
-129, Patty, 80
-130, Vegetable Roti, 1200
-131, Crab Soup, 1000
-132, Diced Chicken Soup, 100
+115, Orange Juice, 150
+116, Papaya Juice, 170
+117, Pineapple Juice, 250
+118, Watermelon Juice, 120
+119, Chicken Bacon, 1600
+120, Devilled Beef, 1300
+121, Devilled Chicken, 1500
+122, Hot Buffer Cuttle Fish, 2200
+123, Hot and Spicy Chicken, 1800
+124, Sausage Delight, 1500
+125, Cutlet, 40
+126, Pastry, 70
+127, Roll, 60
+128, Samosa, 50
+129, Patty, 70
+130, Vegetable Roti, 40
+131, Crab Soup, 480
+132, Diced Chicken Soup, 200
 133, Prawn Soup, 500
-134, Sea Food Soup, 300
-135, Sweet Corn Soup, 80
-136, Vegetable Sour Soup, 1200
+134, Sea Food Soup, 280
+135, Sweet Corn Soup, 180
+136, Vegetable Sour Soup, 130
