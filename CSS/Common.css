@@ -63,8 +63,7 @@
     }
 
     #addLocationByTextFooter{
-        position: absolute !important;
-        bottom: 0;
+        padding-bottom: 0;
         width: 100%;
         background: white;
     }
